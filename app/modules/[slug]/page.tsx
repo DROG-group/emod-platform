@@ -11,8 +11,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ModulePage({ params }: { params: { slug: string } }) {
-  const module = modules.find((m) => m.slug === params.slug);
+export default async function ModulePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const module = modules.find((m) => m.slug === slug);
 
   if (!module) {
     notFound();
