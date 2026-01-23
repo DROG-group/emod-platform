@@ -9,8 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        purple: "#6b4ce6",
-        "purple-light": "#8b6cf6",
+        purple: {
+          DEFAULT: "#6b4ce6",
+          light: "#8b6cf6",
+        },
         gold: "#d4a000",
       },
     },
