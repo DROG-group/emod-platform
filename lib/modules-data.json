@@ -1,7 +1,7 @@
 [
   {
     "id": "Module-AI-Information-Manipulation-Intro",
-    "title": "Module: Introduction to AI and Information Manipulation",
+    "title": "Introduction to AI and Information Manipulation",
     "slug": "Module-AI-Information-Manipulation-Intro",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -13,7 +13,7 @@
   },
   {
     "id": "Module-Deepfakes-Synthetic-Media",
-    "title": "Module: Deepfakes and Synthetic Media",
+    "title": "Deepfakes and Synthetic Media",
     "slug": "Module-Deepfakes-Synthetic-Media",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -25,7 +25,7 @@
   },
   {
     "id": "Module-AI-Targeting-Personalization",
-    "title": "Module: AI-Powered Targeting and Personalization",
+    "title": "AI-Powered Targeting and Personalization",
     "slug": "Module-AI-Targeting-Personalization",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -37,7 +37,7 @@
   },
   {
     "id": "Module-Bots-Automated-Amplification",
-    "title": "Module: Bots and Automated Amplification",
+    "title": "Bots and Automated Amplification",
     "slug": "Module-Bots-Automated-Amplification",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -49,7 +49,7 @@
   },
   {
     "id": "Module-AI-Detection-Defense",
-    "title": "Module: AI for Detection and Defense",
+    "title": "AI for Detection and Defense",
     "slug": "Module-AI-Detection-Defense",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -61,7 +61,7 @@
   },
   {
     "id": "Module-Hybrid-Threats-Definition",
-    "title": "Module: Hybrid Threats - Definition and Examples",
+    "title": "Hybrid Threats - Definition and Examples",
     "slug": "Module-Hybrid-Threats-Definition",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -73,7 +73,7 @@
   },
   {
     "id": "Module-Defending-Hybrid-Threats",
-    "title": "Module: Defending Against Hybrid Threats",
+    "title": "Defending Against Hybrid Threats",
     "slug": "Module-Defending-Hybrid-Threats",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -85,7 +85,7 @@
   },
   {
     "id": "Module-Introduction-Counter-Messaging",
-    "title": "Module: Introduction to Counter-Messaging",
+    "title": "Introduction to Counter-Messaging",
     "slug": "Module-Introduction-Counter-Messaging",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -97,7 +97,7 @@
   },
   {
     "id": "Module-Prebunking-Inoculation",
-    "title": "Module: Prebunking and Inoculation Theory",
+    "title": "Prebunking and Inoculation Theory",
     "slug": "Module-Prebunking-Inoculation",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -109,7 +109,7 @@
   },
   {
     "id": "Module-Debunking-Best-Practices",
-    "title": "Module: Debunking Best Practices",
+    "title": "Debunking Best Practices",
     "slug": "Module-Debunking-Best-Practices",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -121,7 +121,7 @@
   },
   {
     "id": "Module-Strategic-Communication",
-    "title": "Module: Strategic Communication (StratCom)",
+    "title": "Strategic Communication (StratCom)",
     "slug": "Module-Strategic-Communication",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -133,7 +133,7 @@
   },
   {
     "id": "Module-Counter-Narrative-Development",
-    "title": "Module: Counter-Narrative Development",
+    "title": "Counter-Narrative Development",
     "slug": "Module-Counter-Narrative-Development",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -145,7 +145,7 @@
   },
   {
     "id": "Module-Measuring-Effectiveness",
-    "title": "Module: Measuring Counter-Messaging Effectiveness",
+    "title": "Measuring Counter-Messaging Effectiveness",
     "slug": "Module-Measuring-Effectiveness",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -157,7 +157,7 @@
   },
   {
     "id": "Module-Understanding-Basic-Statistics",
-    "title": "Module: Understanding Basic Statistics",
+    "title": "Understanding Basic Statistics",
     "slug": "Module-Understanding-Basic-Statistics",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -169,7 +169,7 @@
   },
   {
     "id": "Module-Reading-Research-Studies",
-    "title": "Module: Reading Research Studies",
+    "title": "Reading Research Studies",
     "slug": "Module-Reading-Research-Studies",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -181,7 +181,7 @@
   },
   {
     "id": "Module-Understanding-Polling",
-    "title": "Module: Understanding Polling",
+    "title": "Understanding Polling",
     "slug": "Module-Understanding-Polling",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -193,7 +193,7 @@
   },
   {
     "id": "Module-Data-Visualization-Best-Practices",
-    "title": "Module: Data Visualization Best Practices",
+    "title": "Data Visualization Best Practices",
     "slug": "Module-Data-Visualization-Best-Practices",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -205,7 +205,7 @@
   },
   {
     "id": "Module-Open-Data-Transparency",
-    "title": "Module: Open Data and Transparency",
+    "title": "Open Data and Transparency",
     "slug": "Module-Open-Data-Transparency",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -217,7 +217,7 @@
   },
   {
     "id": "Module-Introduction-Detection",
-    "title": "Module: Introduction to Detection and Verification",
+    "title": "Introduction to Detection and Verification",
     "slug": "Module-Introduction-Detection",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -229,7 +229,7 @@
   },
   {
     "id": "Module-Technical-Detection-Methods",
-    "title": "Module: Technical Detection Methods",
+    "title": "Technical Detection Methods",
     "slug": "Module-Technical-Detection-Methods",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -241,7 +241,7 @@
   },
   {
     "id": "Module-Behavioral-Analysis",
-    "title": "Module: Behavioral Analysis for Detection",
+    "title": "Behavioral Analysis for Detection",
     "slug": "Module-Behavioral-Analysis",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -253,7 +253,7 @@
   },
   {
     "id": "Module-Network-Analysis-Detection",
-    "title": "Module: Network Analysis for Detection",
+    "title": "Network Analysis for Detection",
     "slug": "Module-Network-Analysis-Detection",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -265,7 +265,7 @@
   },
   {
     "id": "Module-Content-Verification-Tools",
-    "title": "Module: Content Verification Tools",
+    "title": "Content Verification Tools",
     "slug": "Module-Content-Verification-Tools",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -277,7 +277,7 @@
   },
   {
     "id": "Module-Crowdsourced-Verification",
-    "title": "Module: Crowdsourced Verification",
+    "title": "Crowdsourced Verification",
     "slug": "Module-Crowdsourced-Verification",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -289,7 +289,7 @@
   },
   {
     "id": "Module-Professional-Fact-Checking",
-    "title": "Module: Professional Fact-Checking",
+    "title": "Professional Fact-Checking",
     "slug": "Module-Professional-Fact-Checking",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -409,7 +409,7 @@
   },
   {
     "id": "Module-Evaluating-Sources",
-    "title": "Module: Evaluating Sources",
+    "title": "Evaluating Sources",
     "slug": "Module-Evaluating-Sources",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -421,7 +421,7 @@
   },
   {
     "id": "Module-Identifying-Bias",
-    "title": "Module: Identifying Bias",
+    "title": "Identifying Bias",
     "slug": "Module-Identifying-Bias",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -433,7 +433,7 @@
   },
   {
     "id": "Module-Understanding-News-Production",
-    "title": "Module: Understanding News Production",
+    "title": "Understanding News Production",
     "slug": "Module-Understanding-News-Production",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -445,7 +445,7 @@
   },
   {
     "id": "Module-Visual-Literacy",
-    "title": "Module: Visual Literacy - Images and Video",
+    "title": "Visual Literacy - Images and Video",
     "slug": "Module-Visual-Literacy",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -457,7 +457,7 @@
   },
   {
     "id": "Module-Data-Literacy-Basics",
-    "title": "Module: Data Literacy Basics",
+    "title": "Data Literacy Basics",
     "slug": "Module-Data-Literacy-Basics",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -469,7 +469,7 @@
   },
   {
     "id": "Module-Fact-Checking-Fundamentals",
-    "title": "Module: Fact-Checking Fundamentals",
+    "title": "Fact-Checking Fundamentals",
     "slug": "Module-Fact-Checking-Fundamentals",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -481,7 +481,7 @@
   },
   {
     "id": "Module-Platforms-Democracy",
-    "title": "Module: Platforms and Democracy",
+    "title": "Platforms and Democracy",
     "slug": "Module-Platforms-Democracy",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -493,7 +493,7 @@
   },
   {
     "id": "Module-Content-Moderation-Challenges",
-    "title": "Module: Content Moderation Challenges",
+    "title": "Content Moderation Challenges",
     "slug": "Module-Content-Moderation-Challenges",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -505,7 +505,7 @@
   },
   {
     "id": "Module-Algorithmic-Amplification",
-    "title": "Module: Algorithmic Amplification",
+    "title": "Algorithmic Amplification",
     "slug": "Module-Algorithmic-Amplification",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -517,7 +517,7 @@
   },
   {
     "id": "Module-Platform-Regulation-Approaches",
-    "title": "Module: Platform Regulation Approaches",
+    "title": "Platform Regulation Approaches",
     "slug": "Module-Platform-Regulation-Approaches",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -529,7 +529,7 @@
   },
   {
     "id": "Module-Transparency-Accountability",
-    "title": "Module: Transparency and Accountability",
+    "title": "Transparency and Accountability",
     "slug": "Module-Transparency-Accountability",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -541,7 +541,7 @@
   },
   {
     "id": "Module-Platform-Cooperation",
-    "title": "Module: Platform Cooperation and Information Sharing",
+    "title": "Platform Cooperation and Information Sharing",
     "slug": "Module-Platform-Cooperation",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -553,7 +553,7 @@
   },
   {
     "id": "Module-What-is-Disinformation",
-    "title": "Module: What is Disinformation?",
+    "title": "What is Disinformation?",
     "slug": "Module-What-is-Disinformation",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -565,7 +565,7 @@
   },
   {
     "id": "Module-How-Information-Spreads-Online",
-    "title": "Module: How Information Spreads Online",
+    "title": "How Information Spreads Online",
     "slug": "Module-How-Information-Spreads-Online",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -577,7 +577,7 @@
   },
   {
     "id": "Module-Basic-FIMI-Concepts",
-    "title": "Module: Basic FIMI Concepts",
+    "title": "Basic FIMI Concepts",
     "slug": "Module-Basic-FIMI-Concepts",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -589,7 +589,7 @@
   },
   {
     "id": "Module-Echo-Chambers-Filter-Bubbles",
-    "title": "Module: Echo Chambers and Filter Bubbles",
+    "title": "Echo Chambers and Filter Bubbles",
     "slug": "Module-Echo-Chambers-Filter-Bubbles",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -601,7 +601,7 @@
   },
   {
     "id": "Module-Recognizing-Manipulation-Tactics",
-    "title": "Module: Recognizing Manipulation Tactics",
+    "title": "Recognizing Manipulation Tactics",
     "slug": "Module-Recognizing-Manipulation-Tactics",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -613,7 +613,7 @@
   },
   {
     "id": "Module-Cognitive-Biases-Belief",
-    "title": "Module: Why People Believe - Cognitive Biases and Psychology",
+    "title": "Why People Believe - Cognitive Biases and Psychology",
     "slug": "Module-Cognitive-Biases-Belief",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -625,7 +625,7 @@
   },
   {
     "id": "Module-What-Is-FIMI",
-    "title": "Module: What is FIMI?",
+    "title": "What is FIMI?",
     "slug": "Module-What-Is-FIMI",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -637,7 +637,7 @@
   },
   {
     "id": "Module-State-NonState-Actors",
-    "title": "Module: State vs Non-State Actors in FIMI",
+    "title": "State vs Non-State Actors in FIMI",
     "slug": "Module-State-NonState-Actors",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -649,7 +649,7 @@
   },
   {
     "id": "Module-FIMI-Tactics-Techniques",
-    "title": "Module: FIMI Tactics and Techniques",
+    "title": "FIMI Tactics and Techniques",
     "slug": "Module-FIMI-Tactics-Techniques",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -661,7 +661,7 @@
   },
   {
     "id": "Module-FIMI-Case-Studies",
-    "title": "Module: FIMI Case Studies",
+    "title": "FIMI Case Studies",
     "slug": "Module-FIMI-Case-Studies",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -673,7 +673,7 @@
   },
   {
     "id": "Module-Attribution-Challenges",
-    "title": "Module: Attribution Challenges in FIMI",
+    "title": "Attribution Challenges in FIMI",
     "slug": "Module-Attribution-Challenges",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -685,7 +685,7 @@
   },
   {
     "id": "Module-Impact-Assessment",
-    "title": "Module: Assessing FIMI Impact",
+    "title": "Assessing FIMI Impact",
     "slug": "Module-Impact-Assessment",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -697,7 +697,7 @@
   },
   {
     "id": "Module-EU-Response-FIMI",
-    "title": "Module: The EU Response to FIMI",
+    "title": "The EU Response to FIMI",
     "slug": "Module-EU-Response-FIMI",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -709,7 +709,7 @@
   },
   {
     "id": "Module-Economics-Disinformation",
-    "title": "Module: The Economics of Disinformation",
+    "title": "The Economics of Disinformation",
     "slug": "Module-Economics-Disinformation",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
@@ -721,7 +721,7 @@
   },
   {
     "id": "Module-Economic-Solutions",
-    "title": "Module: Economic Solutions to Disinformation",
+    "title": "Economic Solutions to Disinformation",
     "slug": "Module-Economic-Solutions",
     "author": "SAUFEX Consortium",
     "date": "2026-01-23",
