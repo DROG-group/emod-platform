@@ -1,3 +1,12 @@
+export type Audience =
+  | "citizens"
+  | "policymakers"
+  | "journalists"
+  | "researchers"
+  | "platform-teams"
+  | "comms-professionals"
+  | "educators";
+
 export interface Module {
   id: string;
   title: string;
@@ -9,6 +18,7 @@ export interface Module {
   moduleNumber?: number;
   estimatedTime: string;
   content?: string;
+  audiences?: Audience[];
 }
 
 export interface LearningPath {
