@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import modulesData from "@/lib/modules-data.json";
 import { Module } from "@/types/module";
+import ModuleViewer from "@/components/ModuleViewer";
 
 const modules = modulesData as Module[];
 
@@ -19,121 +20,125 @@ export default async function ModulePage({ params }: { params: Promise<{ slug: s
     notFound();
   }
 
-  // Convert markdown content to HTML (simple version - just paragraphs)
-  const contentSections = module.content
-    ?.split(/\[screen \d+\]/)
-    .filter(Boolean)
-    .map((section) => section.trim())
-    .filter((section) => section.length > 0);
+  // Find next and previous modules in the same learning path
+  const pathModules = modules
+    .filter((m) => m.learningPath === module.learningPath)
+    .sort((a, b) => (a.moduleNumber || 0) - (b.moduleNumber || 0));
+
+  const currentIndex = pathModules.findIndex((m) => m.slug === module.slug);
+  const prevModule = currentIndex > 0 ? pathModules[currentIndex - 1] : null;
+  const nextModule = currentIndex < pathModules.length - 1 ? pathModules[currentIndex + 1] : null;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-100">
       {/* Module Header */}
-      <section className="bg-gradient-to-r from-purple to-purple-light text-white py-16">
-        <div className="container max-w-4xl">
+      <section className="bg-white border-b border-gray-200">
+        <div className="container py-6">
           <Link
             href="/dashboard"
-            className="inline-flex items-center gap-2 text-purple-100 hover:text-white mb-6 transition-colors"
+            className="inline-flex items-center gap-2 text-gray-500 hover:text-purple text-sm font-medium mb-4 transition-colors"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            Back to Dashboard
+            Back to Modules
           </Link>
-          {module.learningPath && (
-            <div className="inline-block bg-white/20 px-4 py-1 rounded-full text-sm font-semibold mb-4">
-              {module.learningPath}
+
+          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+            <div>
+              {module.learningPath && (
+                <span className="inline-block bg-purple/10 text-purple px-3 py-1 rounded-full text-sm font-medium mb-3">
+                  {module.learningPath}
+                </span>
+              )}
+              <h1 className="text-2xl lg:text-3xl font-bold text-gray-900">{module.title}</h1>
+              {module.description && (
+                <p className="text-gray-600 mt-2 max-w-2xl">{module.description}</p>
+              )}
             </div>
-          )}
-          <h1 className="text-4xl lg:text-5xl font-bold mb-4">{module.title}</h1>
-          <div className="flex items-center gap-6 text-purple-100">
-            <span className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="10"/>
-                <polyline points="12 6 12 12 16 14"/>
-              </svg>
-              {module.estimatedTime}
-            </span>
-            <span className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-              </svg>
-              {module.author}
-            </span>
-            <span className="flex items-center gap-2">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              {new Date(module.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
-            </span>
-          </div>
-        </div>
-      </section>
 
-      {/* Module Description */}
-      {module.description && (
-        <section className="py-8 bg-white border-b border-gray-200">
-          <div className="container max-w-4xl">
-            <p className="text-xl text-gray-700 leading-relaxed">{module.description}</p>
-          </div>
-        </section>
-      )}
-
-      {/* Module Content */}
-      <section className="py-16">
-        <div className="container max-w-4xl">
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 lg:p-12">
-            <div className="prose prose-lg max-w-none">
-              {contentSections && contentSections.length > 0 ? (
-                contentSections.map((section, idx) => (
-                  <div key={idx} className="mb-12 pb-12 border-b border-gray-200 last:border-0">
-                    <div
-                      className="module-content"
-                      dangerouslySetInnerHTML={{
-                        __html: section
-                          .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-                          .replace(/\*(.+?)\*/g, "<em>$1</em>")
-                          .replace(/^#{1,6}\s+(.+)$/gm, (_, text) => `<h2 class="text-2xl font-bold text-gray-900 mb-4 mt-8">${text}</h2>`)
-                          .replace(/^•\s+(.+)$/gm, "<li>$1</li>")
-                          .replace(/(<li>.*<\/li>\n?)+/g, '<ul class="list-disc pl-6 space-y-2 my-4">$&</ul>')
-                          .replace(/\n\n/g, "</p><p class='mb-4 text-gray-700 leading-relaxed'>")
-                          .replace(/^\[(.+)\]\((.+)\)$/gm, '<a href="$2" class="text-purple hover:underline">$1</a>')
-                          .replace(/^(?!<[h|u|l|p|s|a])(.+)$/gm, "<p class='mb-4 text-gray-700 leading-relaxed'>$1</p>")
-                      }}
-                    />
-                    {idx < (contentSections?.length || 0) - 1 && (
-                      <div className="mt-8 text-center text-sm text-gray-400">
-                        Screen {idx + 1} of {contentSections?.length}
-                      </div>
-                    )}
-                  </div>
-                ))
-              ) : (
-                <div className="text-gray-600">
-                  <p>Module content is being prepared. Please check back soon.</p>
-                </div>
+            <div className="flex items-center gap-4 text-sm text-gray-500 lg:text-right">
+              <span className="flex items-center gap-1.5">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                {module.estimatedTime}
+              </span>
+              {module.moduleNumber && (
+                <span className="flex items-center gap-1.5">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
+                  </svg>
+                  Module {module.moduleNumber}
+                </span>
               )}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Navigation */}
+      {/* Module Content */}
+      <section className="py-8 lg:py-12">
+        <div className="container">
+          {module.content ? (
+            <ModuleViewer content={module.content} title={module.title} />
+          ) : (
+            <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-center">
+              <p className="text-gray-500">Module content is being prepared. Please check back soon.</p>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Module Navigation */}
       <section className="py-8 bg-white border-t border-gray-200">
-        <div className="container max-w-4xl">
-          <div className="flex items-center justify-between">
-            <Link href="/dashboard" className="btn btn-outline">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-              Back to Dashboard
-            </Link>
-            <Link href="/dashboard" className="btn btn-primary">
-              View All Modules
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center justify-between gap-4">
+              {prevModule ? (
+                <Link
+                  href={`/modules/${prevModule.slug}`}
+                  className="flex-1 group p-4 bg-gray-50 rounded-xl hover:bg-purple/5 transition-colors text-left"
+                >
+                  <span className="text-xs text-gray-500 uppercase tracking-wide">Previous</span>
+                  <p className="font-medium text-gray-900 group-hover:text-purple transition-colors mt-1 flex items-center gap-2">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                    {prevModule.title}
+                  </p>
+                </Link>
+              ) : (
+                <div className="flex-1" />
+              )}
+
+              <Link
+                href="/dashboard"
+                className="px-4 py-2 text-gray-500 hover:text-purple transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                </svg>
+              </Link>
+
+              {nextModule ? (
+                <Link
+                  href={`/modules/${nextModule.slug}`}
+                  className="flex-1 group p-4 bg-gray-50 rounded-xl hover:bg-purple/5 transition-colors text-right"
+                >
+                  <span className="text-xs text-gray-500 uppercase tracking-wide">Next</span>
+                  <p className="font-medium text-gray-900 group-hover:text-purple transition-colors mt-1 flex items-center justify-end gap-2">
+                    {nextModule.title}
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </p>
+                </Link>
+              ) : (
+                <div className="flex-1" />
+              )}
+            </div>
           </div>
         </div>
       </section>
