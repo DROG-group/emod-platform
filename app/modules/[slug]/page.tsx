@@ -82,7 +82,12 @@ export default async function ModulePage({ params }: { params: Promise<{ slug: s
       <section className="py-8 lg:py-12">
         <div className="container">
           {module.content ? (
-            <ModuleViewer content={module.content} title={module.title} />
+            <ModuleViewer
+              content={module.content}
+              title={module.title}
+              moduleId={module.id}
+              learningPath={module.learningPath || null}
+            />
           ) : (
             <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-center">
               <p className="text-gray-500">Module content is being prepared. Please check back soon.</p>

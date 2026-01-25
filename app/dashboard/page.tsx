@@ -4,6 +4,8 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import modulesData from "@/lib/modules-data.json";
 import { Module, Audience } from "@/types/module";
+import { useAuth } from "@/contexts/AuthContext";
+import { useProgress } from "@/hooks/useProgress";
 
 const modules = modulesData as Module[];
 
@@ -19,6 +21,8 @@ const AUDIENCES: { id: Audience; label: string; description: string; icon: strin
 
 export default function Dashboard() {
   const [selectedAudience, setSelectedAudience] = useState<Audience | null>(null);
+  const { user, profile } = useAuth();
+  const { isCompleted, getPathProgress, getLastViewed, progress } = useProgress();
 
   const filteredModules = useMemo(() => {
     if (!selectedAudience) return modules;
@@ -38,9 +42,42 @@ export default function Dashboard() {
 
   const totalModules = filteredModules.length;
   const learningPaths = Object.keys(groupedModules).length;
+  const lastViewed = getLastViewed();
+  const lastViewedModule = lastViewed ? modules.find(m => m.id === lastViewed.module_id) : null;
+  const completedCount = progress.filter(p => p.completed).length;
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Welcome Section for Logged In Users */}
+      {user && (
+        <section className="bg-gradient-to-r from-purple to-purple-light text-white">
+          <div className="container py-6">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div>
+                <h2 className="text-xl font-bold">
+                  Welcome back, {profile?.full_name?.split(' ')[0] || 'Learner'}!
+                </h2>
+                <p className="text-purple-100 text-sm mt-1">
+                  You've completed {completedCount} of {modules.length} modules
+                </p>
+              </div>
+              {lastViewedModule && (
+                <Link
+                  href={`/modules/${lastViewedModule.slug}`}
+                  className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg font-medium transition-colors"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  Continue: {lastViewedModule.title.length > 30 ? lastViewedModule.title.slice(0, 30) + '...' : lastViewedModule.title}
+                </Link>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Header */}
       <section className="bg-white border-b border-gray-200">
         <div className="container py-8 lg:py-12">
@@ -127,6 +164,12 @@ export default function Dashboard() {
               <span className="text-2xl font-bold text-purple-light">{Math.round(totalModules * 8 / 60)}+</span>
               <span className="text-gray-400 text-sm">Hours</span>
             </div>
+            {user && (
+              <div className="flex items-center gap-2">
+                <span className="text-2xl font-bold text-green-400">{completedCount}</span>
+                <span className="text-gray-400 text-sm">Completed</span>
+              </div>
+            )}
             {selectedAudience && (
               <button
                 onClick={() => setSelectedAudience(null)}
@@ -158,100 +201,143 @@ export default function Dashboard() {
             </div>
           ) : (
             <div className="space-y-8">
-              {Object.entries(groupedModules).map(([pathName, pathModules]) => (
-                <div key={pathName} className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
-                  {/* Path Header */}
-                  <div className="bg-gradient-to-r from-purple to-purple-light px-6 py-5 text-white">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h2 className="text-xl lg:text-2xl font-bold">{pathName}</h2>
-                        <p className="text-purple-100 text-sm mt-1">
-                          {pathModules.length} modules • ~{pathModules.length * 8} min
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+              {Object.entries(groupedModules).map(([pathName, pathModules]) => {
+                const pathProgress = user ? getPathProgress(pathName, pathModules.length) : 0;
+                const pathCompletedCount = user ? pathModules.filter(m => isCompleted(m.id)).length : 0;
 
-                  {/* Modules List */}
-                  <div className="divide-y divide-gray-100">
-                    {pathModules
-                      .sort((a, b) => (a.moduleNumber || 0) - (b.moduleNumber || 0))
-                      .map((module) => (
-                        <Link
-                          key={module.id}
-                          href={`/modules/${module.slug}`}
-                          className="group flex items-start gap-4 p-4 lg:p-5 hover:bg-gray-50 transition-colors"
-                        >
-                          {/* Module Number */}
-                          <div className="flex-shrink-0 w-10 h-10 bg-purple/10 text-purple rounded-lg flex items-center justify-center text-sm font-bold group-hover:bg-purple group-hover:text-white transition-colors">
-                            {module.moduleNumber || "•"}
-                          </div>
-
-                          {/* Module Content */}
-                          <div className="flex-1 min-w-0">
-                            <h3 className="font-semibold text-gray-900 group-hover:text-purple transition-colors">
-                              {module.title}
-                            </h3>
-                            <p className="text-sm text-gray-500 mt-1 line-clamp-1">
-                              {module.description}
-                            </p>
-                            <div className="flex items-center gap-3 mt-2">
-                              <span className="text-xs text-gray-400 flex items-center gap-1">
-                                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                  <circle cx="12" cy="12" r="10"/>
-                                  <polyline points="12 6 12 12 16 14"/>
-                                </svg>
-                                {module.estimatedTime}
-                              </span>
-                              {module.audiences && module.audiences.length > 0 && (
-                                <div className="flex gap-1">
-                                  {module.audiences.slice(0, 2).map((aud) => (
-                                    <span
-                                      key={aud}
-                                      className="text-xs"
-                                      title={AUDIENCES.find((a) => a.id === aud)?.label}
-                                    >
-                                      {AUDIENCES.find((a) => a.id === aud)?.icon}
-                                    </span>
-                                  ))}
-                                  {module.audiences.length > 2 && (
-                                    <span className="text-xs text-gray-400">
-                                      +{module.audiences.length - 2}
-                                    </span>
-                                  )}
-                                </div>
-                              )}
+                return (
+                  <div key={pathName} className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm">
+                    {/* Path Header */}
+                    <div className="bg-gradient-to-r from-purple to-purple-light px-6 py-5 text-white">
+                      <div className="flex items-center justify-between">
+                        <div className="flex-1">
+                          <h2 className="text-xl lg:text-2xl font-bold">{pathName}</h2>
+                          <p className="text-purple-100 text-sm mt-1">
+                            {pathModules.length} modules • ~{pathModules.length * 8} min
+                          </p>
+                        </div>
+                        {user && (
+                          <div className="text-right ml-4">
+                            <div className="text-sm text-purple-100">
+                              {pathCompletedCount}/{pathModules.length} completed
+                            </div>
+                            <div className="mt-2 w-32 h-2 bg-white/20 rounded-full overflow-hidden">
+                              <div
+                                className="h-full bg-white rounded-full transition-all duration-300"
+                                style={{ width: `${pathProgress}%` }}
+                              />
                             </div>
                           </div>
+                        )}
+                      </div>
+                    </div>
 
-                          {/* Arrow */}
-                          <div className="flex-shrink-0 text-gray-300 group-hover:text-purple transition-colors">
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
-                          </div>
-                        </Link>
-                      ))}
+                    {/* Modules List */}
+                    <div className="divide-y divide-gray-100">
+                      {pathModules
+                        .sort((a, b) => (a.moduleNumber || 0) - (b.moduleNumber || 0))
+                        .map((module) => {
+                          const completed = user && isCompleted(module.id);
+
+                          return (
+                            <Link
+                              key={module.id}
+                              href={`/modules/${module.slug}`}
+                              className="group flex items-start gap-4 p-4 lg:p-5 hover:bg-gray-50 transition-colors"
+                            >
+                              {/* Module Number / Completion Status */}
+                              <div className={`flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold transition-colors ${
+                                completed
+                                  ? 'bg-green-100 text-green-600'
+                                  : 'bg-purple/10 text-purple group-hover:bg-purple group-hover:text-white'
+                              }`}>
+                                {completed ? (
+                                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                  </svg>
+                                ) : (
+                                  module.moduleNumber || "•"
+                                )}
+                              </div>
+
+                              {/* Module Content */}
+                              <div className="flex-1 min-w-0">
+                                <h3 className={`font-semibold transition-colors ${
+                                  completed
+                                    ? 'text-gray-500'
+                                    : 'text-gray-900 group-hover:text-purple'
+                                }`}>
+                                  {module.title}
+                                </h3>
+                                <p className="text-sm text-gray-500 mt-1 line-clamp-1">
+                                  {module.description}
+                                </p>
+                                <div className="flex items-center gap-3 mt-2">
+                                  <span className="text-xs text-gray-400 flex items-center gap-1">
+                                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                      <circle cx="12" cy="12" r="10"/>
+                                      <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                    {module.estimatedTime}
+                                  </span>
+                                  {completed && (
+                                    <span className="text-xs text-green-600 font-medium">
+                                      Completed
+                                    </span>
+                                  )}
+                                  {module.audiences && module.audiences.length > 0 && !completed && (
+                                    <div className="flex gap-1">
+                                      {module.audiences.slice(0, 2).map((aud) => (
+                                        <span
+                                          key={aud}
+                                          className="text-xs"
+                                          title={AUDIENCES.find((a) => a.id === aud)?.label}
+                                        >
+                                          {AUDIENCES.find((a) => a.id === aud)?.icon}
+                                        </span>
+                                      ))}
+                                      {module.audiences.length > 2 && (
+                                        <span className="text-xs text-gray-400">
+                                          +{module.audiences.length - 2}
+                                        </span>
+                                      )}
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
+
+                              {/* Arrow */}
+                              <div className="flex-shrink-0 text-gray-300 group-hover:text-purple transition-colors">
+                                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                </svg>
+                              </div>
+                            </Link>
+                          );
+                        })}
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           )}
         </div>
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-12 bg-white border-t border-gray-200">
-        <div className="container text-center">
-          <h2 className="text-2xl font-bold mb-3">Ready to Begin?</h2>
-          <p className="text-gray-600 mb-6 max-w-xl mx-auto">
-            Start with any module that interests you. All content is free and self-paced.
-          </p>
-          <Link href="/register" className="btn btn-primary">
-            Create Free Account
-          </Link>
-        </div>
-      </section>
+      {!user && (
+        <section className="py-12 bg-white border-t border-gray-200">
+          <div className="container text-center">
+            <h2 className="text-2xl font-bold mb-3">Ready to Track Your Progress?</h2>
+            <p className="text-gray-600 mb-6 max-w-xl mx-auto">
+              Create a free account to save your progress, pick up where you left off, and earn completion certificates.
+            </p>
+            <Link href="/register" className="btn btn-primary">
+              Create Free Account
+            </Link>
+          </div>
+        </section>
+      )}
     </div>
   );
 }

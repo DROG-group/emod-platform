@@ -1,10 +1,15 @@
 "use client";
 
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
+import { useAuth } from "@/contexts/AuthContext";
+import { useProgress } from "@/hooks/useProgress";
+import Link from "next/link";
 
 interface ModuleViewerProps {
   content: string;
   title: string;
+  moduleId: string;
+  learningPath: string | null;
 }
 
 interface Section {
@@ -42,8 +47,11 @@ function getSectionIcon(title: string): string {
   return '📄';
 }
 
-export default function ModuleViewer({ content, title }: ModuleViewerProps) {
+export default function ModuleViewer({ content, title, moduleId, learningPath }: ModuleViewerProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [hasRestored, setHasRestored] = useState(false);
+  const { user } = useAuth();
+  const { markViewed, markCompleted, isCompleted, getModuleProgress } = useProgress();
 
   const sections = useMemo(() => {
     const parts = content.split(/^## /gm).filter(Boolean);
@@ -71,6 +79,24 @@ export default function ModuleViewer({ content, title }: ModuleViewerProps) {
     return result;
   }, [content]);
 
+  // Restore last section position on mount
+  useEffect(() => {
+    if (user && !hasRestored) {
+      const progress = getModuleProgress(moduleId);
+      if (progress && progress.last_section_index > 0 && progress.last_section_index < sections.length) {
+        setCurrentIndex(progress.last_section_index);
+      }
+      setHasRestored(true);
+    }
+  }, [user, hasRestored, moduleId, getModuleProgress, sections.length]);
+
+  // Track section view when section changes
+  useEffect(() => {
+    if (user && hasRestored) {
+      markViewed(moduleId, learningPath, currentIndex);
+    }
+  }, [currentIndex, user, hasRestored, moduleId, learningPath, markViewed]);
+
   const goToNext = useCallback(() => {
     if (currentIndex < sections.length - 1) {
       setCurrentIndex(currentIndex + 1);
@@ -87,8 +113,15 @@ export default function ModuleViewer({ content, title }: ModuleViewerProps) {
     setCurrentIndex(index);
   }, []);
 
+  const handleComplete = useCallback(async () => {
+    if (user) {
+      await markCompleted(moduleId, learningPath);
+    }
+  }, [user, moduleId, learningPath, markCompleted]);
+
   const currentSection = sections[currentIndex];
   const progress = ((currentIndex + 1) / sections.length) * 100;
+  const moduleCompleted = isCompleted(moduleId);
 
   if (sections.length === 0) {
     return (
@@ -154,12 +187,33 @@ export default function ModuleViewer({ content, title }: ModuleViewerProps) {
             </button>
 
             {currentIndex === sections.length - 1 ? (
-              <span className="text-green-600 font-medium flex items-center gap-2">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                Module Complete!
-              </span>
+              <div className="flex items-center gap-3">
+                {moduleCompleted ? (
+                  <span className="text-green-600 font-medium flex items-center gap-2">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Module Complete!
+                  </span>
+                ) : user ? (
+                  <button
+                    onClick={handleComplete}
+                    className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-all"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    Mark as Complete
+                  </button>
+                ) : (
+                  <Link
+                    href="/login"
+                    className="flex items-center gap-2 px-4 py-2 bg-purple text-white rounded-lg font-medium hover:bg-purple-dark transition-all"
+                  >
+                    Sign in to save progress
+                  </Link>
+                )}
+              </div>
             ) : (
               <button
                 onClick={goToNext}
