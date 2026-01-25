@@ -61,6 +61,12 @@ export default function RootLayout({
                   Glossary
                 </Link>
                 <Link
+                  href="/handbook"
+                  className="hidden lg:block text-gray-600 hover:text-purple font-medium px-3 py-2 rounded-lg hover:bg-purple/5 transition-all"
+                >
+                  For Educators
+                </Link>
+                <Link
                   href="/register"
                   className="btn btn-primary text-sm lg:text-base ml-2"
                 >
@@ -105,6 +111,11 @@ export default function RootLayout({
                   <li>
                     <Link href="/faq" className="hover:text-white transition-colors">
                       FAQ
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/handbook" className="hover:text-white transition-colors">
+                      Teachers Handbook
                     </Link>
                   </li>
                 </ul>
