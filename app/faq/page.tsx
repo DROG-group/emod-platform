@@ -13,7 +13,7 @@ const FAQ_ITEMS: FAQItem[] = [
   // About EMOD
   {
     question: "What is EMOD?",
-    answer: "EMOD (European Master of Countering Disinformation) is a free e-learning platform developed by the SAUFEX consortium. It provides comprehensive training on identifying, understanding, and countering foreign information manipulation and interference (FIMI).",
+    answer: "EMOD (European Master of Countering Disinformation) is a free e-learning platform developed by the SAUFEX consortium. It covers identification, analysis, and response to foreign information manipulation and interference (FIMI).",
     category: "About EMOD",
   },
   {

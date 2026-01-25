@@ -128,7 +128,7 @@ const GLOSSARY_TERMS: Term[] = [
   },
   {
     term: "Verification",
-    definition: "The process of confirming whether information, images, or videos are authentic and accurately represent what they claim. Essential skill for journalists and researchers.",
+    definition: "The process of confirming whether information, images, or videos are authentic and accurately represent what they claim. A core practice for journalists and researchers.",
     category: "Detection & Analysis",
     relatedTerms: ["OSINT", "Fact-checking"],
   },

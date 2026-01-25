@@ -27,10 +27,9 @@ export default function AboutPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">What is EMOD?</h2>
               <div className="prose prose-gray max-w-none">
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  <strong>EMOD</strong> (European Master of Countering Disinformation) is a comprehensive
-                  e-learning platform designed to equip professionals and citizens with the knowledge
-                  and skills needed to identify, understand, and counter foreign information manipulation
-                  and interference (FIMI).
+                  <strong>EMOD</strong> (European Master of Countering Disinformation) is a free
+                  e-learning platform covering the identification, analysis, and response to
+                  foreign information manipulation and interference (FIMI).
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-4">
                   The platform offers <strong>64 modules</strong> across <strong>10 learning paths</strong>,
@@ -77,7 +76,8 @@ export default function AboutPage() {
                   </p>
                   <p className="text-gray-700 leading-relaxed">
                     EMOD represents the educational pillar of SAUFEX - making expert knowledge
-                    accessible to everyone who wants to build resilience against disinformation.
+                    accessible to anyone who wants to understand how information manipulation works
+                    and what can be done about it.
                   </p>
                 </div>
                 <a
@@ -183,7 +183,7 @@ export default function AboutPage() {
         <div className="container text-center">
           <h2 className="text-2xl lg:text-3xl font-bold mb-4">Ready to Start Learning?</h2>
           <p className="text-purple-100 mb-8 max-w-xl mx-auto">
-            Explore our modules and build your resilience against information manipulation.
+            Explore our modules and learn practical methods for identifying and countering disinformation.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/dashboard" className="btn bg-white text-purple hover:bg-gray-100">

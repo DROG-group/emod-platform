@@ -48,8 +48,8 @@ export default function Dashboard() {
             Learning Modules
           </h1>
           <p className="text-gray-600 max-w-2xl">
-            Explore our comprehensive collection of modules on countering disinformation,
-            understanding FIMI, and protecting democratic processes.
+            64 modules across 10 learning paths covering disinformation detection,
+            FIMI analysis, and intervention selection using the DIM framework.
           </p>
         </div>
       </section>
