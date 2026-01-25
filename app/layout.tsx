@@ -41,7 +41,7 @@ export default function RootLayout({
                   EMOD
                 </span>
               </Link>
-              <div className="flex items-center gap-2 lg:gap-4">
+              <div className="flex items-center gap-1 lg:gap-2">
                 <Link
                   href="/dashboard"
                   className="text-gray-600 hover:text-purple font-medium px-3 py-2 rounded-lg hover:bg-purple/5 transition-all"
@@ -49,14 +49,20 @@ export default function RootLayout({
                   Modules
                 </Link>
                 <Link
-                  href="/login"
-                  className="text-gray-600 hover:text-gray-900 font-medium px-3 py-2 rounded-lg hover:bg-gray-100 transition-all"
+                  href="/about"
+                  className="hidden sm:block text-gray-600 hover:text-purple font-medium px-3 py-2 rounded-lg hover:bg-purple/5 transition-all"
                 >
-                  Sign In
+                  About
+                </Link>
+                <Link
+                  href="/glossary"
+                  className="hidden md:block text-gray-600 hover:text-purple font-medium px-3 py-2 rounded-lg hover:bg-purple/5 transition-all"
+                >
+                  Glossary
                 </Link>
                 <Link
                   href="/register"
-                  className="btn btn-primary text-sm lg:text-base"
+                  className="btn btn-primary text-sm lg:text-base ml-2"
                 >
                   Get Started
                 </Link>
@@ -69,7 +75,7 @@ export default function RootLayout({
         </main>
         <footer className="bg-gray-900 text-white">
           <div className="container mx-auto px-4 py-12">
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
               <div>
                 <Image
                   src="/saufex-logo.svg"
@@ -84,7 +90,7 @@ export default function RootLayout({
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold mb-4">Quick Links</h4>
+                <h4 className="font-semibold mb-4">Learn</h4>
                 <ul className="space-y-2 text-gray-400 text-sm">
                   <li>
                     <Link href="/dashboard" className="hover:text-white transition-colors">
@@ -92,13 +98,28 @@ export default function RootLayout({
                     </Link>
                   </li>
                   <li>
-                    <Link href="/register" className="hover:text-white transition-colors">
-                      Create Account
+                    <Link href="/glossary" className="hover:text-white transition-colors">
+                      Glossary
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/faq" className="hover:text-white transition-colors">
+                      FAQ
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold mb-4">About</h4>
+                <ul className="space-y-2 text-gray-400 text-sm">
+                  <li>
+                    <Link href="/about" className="hover:text-white transition-colors">
+                      About EMOD
                     </Link>
                   </li>
                   <li>
                     <a href="https://saufex.eu" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                      About SAUFEX
+                      SAUFEX Project
                     </a>
                   </li>
                 </ul>
