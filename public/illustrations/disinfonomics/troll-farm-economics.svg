@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+  <defs>
+    <filter id="trollShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">Troll Farm Economics</text>
+  <text x="400" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">How commercial influence operations work</text>
+
+  <!-- Structure diagram -->
+  <g filter="url(#trollShadow)" transform="translate(30, 70)">
+    <rect width="360" height="180" rx="12" fill="white" stroke="#8b5cf6" stroke-width="2"/>
+    <text x="180" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#5b21b6">Typical Troll Farm Structure</text>
+
+    <!-- Hierarchy -->
+    <g transform="translate(30, 45)">
+      <rect width="120" height="35" rx="6" fill="#f3e8ff"/>
+      <text x="60" y="15" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#5b21b6">Client</text>
+      <text x="60" y="27" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#7c3aed">(Pays for campaign)</text>
+    </g>
+
+    <line x1="90" y1="80" x2="90" y2="95" stroke="#c4b5fd" stroke-width="2"/>
+    <line x1="90" y1="95" x2="90" y2="105" stroke="#c4b5fd" stroke-width="2"/>
+
+    <g transform="translate(30, 105)">
+      <rect width="120" height="35" rx="6" fill="#ede9fe"/>
+      <text x="60" y="15" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#5b21b6">Manager</text>
+      <text x="60" y="27" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#7c3aed">(Directs operations)</text>
+    </g>
+
+    <line x1="90" y1="140" x2="90" y2="155" stroke="#c4b5fd" stroke-width="2"/>
+
+    <!-- Operators row -->
+    <g transform="translate(10, 155)">
+      <rect width="60" height="20" rx="4" fill="#ddd6fe"/>
+      <text x="30" y="14" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#5b21b6">Op 1</text>
+    </g>
+    <g transform="translate(75, 155)">
+      <rect width="60" height="20" rx="4" fill="#ddd6fe"/>
+      <text x="30" y="14" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#5b21b6">Op 2</text>
+    </g>
+    <g transform="translate(140, 155)">
+      <rect width="60" height="20" rx="4" fill="#ddd6fe"/>
+      <text x="30" y="14" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#5b21b6">Op 3</text>
+    </g>
+
+    <!-- Right side: accounts -->
+    <g transform="translate(210, 45)">
+      <rect width="130" height="130" rx="8" fill="#f8fafc" stroke="#e2e8f0"/>
+      <text x="65" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#475569">Fake Accounts</text>
+
+      <g transform="translate(15, 30)">
+        <circle cx="12" cy="12" r="10" fill="#e2e8f0"/>
+        <circle cx="40" cy="12" r="10" fill="#e2e8f0"/>
+        <circle cx="68" cy="12" r="10" fill="#e2e8f0"/>
+        <circle cx="96" cy="12" r="10" fill="#e2e8f0"/>
+      </g>
+      <g transform="translate(15, 55)">
+        <circle cx="12" cy="12" r="10" fill="#e2e8f0"/>
+        <circle cx="40" cy="12" r="10" fill="#e2e8f0"/>
+        <circle cx="68" cy="12" r="10" fill="#e2e8f0"/>
+        <circle cx="96" cy="12" r="10" fill="#e2e8f0"/>
+      </g>
+      <g transform="translate(15, 80)">
+        <circle cx="12" cy="12" r="10" fill="#e2e8f0"/>
+        <circle cx="40" cy="12" r="10" fill="#e2e8f0"/>
+        <circle cx="68" cy="12" r="10" fill="#e2e8f0"/>
+        <circle cx="96" cy="12" r="10" fill="#e2e8f0"/>
+      </g>
+
+      <text x="65" y="120" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#64748b">50-500+ accounts/operator</text>
+    </g>
+  </g>
+
+  <!-- Economics -->
+  <g filter="url(#trollShadow)" transform="translate(410, 70)">
+    <rect width="360" height="180" rx="12" fill="white" stroke="#10b981" stroke-width="2"/>
+    <text x="180" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#166534">The Numbers</text>
+
+    <g transform="translate(20, 45)">
+      <rect width="155" height="55" rx="6" fill="#f0fdf4"/>
+      <text x="77" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#166534">Operator Salary</text>
+      <text x="77" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#15803d">$400-1000</text>
+      <text x="77" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#22c55e">per month</text>
+    </g>
+
+    <g transform="translate(185, 45)">
+      <rect width="155" height="55" rx="6" fill="#f0fdf4"/>
+      <text x="77" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#166534">Client Cost</text>
+      <text x="77" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#15803d">$5-50k</text>
+      <text x="77" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#22c55e">per campaign</text>
+    </g>
+
+    <g transform="translate(20, 110)">
+      <rect width="155" height="55" rx="6" fill="#fef3c7"/>
+      <text x="77" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#92400e">Output/Day</text>
+      <text x="77" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#b45309">100-300</text>
+      <text x="77" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#d97706">posts per operator</text>
+    </g>
+
+    <g transform="translate(185, 110)">
+      <rect width="155" height="55" rx="6" fill="#fef2f2"/>
+      <text x="77" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#991b1b">Account Lifespan</text>
+      <text x="77" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#dc2626">2-6 weeks</text>
+      <text x="77" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#ef4444">before detection</text>
+    </g>
+  </g>
+
+  <!-- Services offered -->
+  <g filter="url(#trollShadow)" transform="translate(30, 270)">
+    <rect width="740" height="130" rx="12" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="370" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#1e293b">Services Offered by Commercial Operations</text>
+
+    <g transform="translate(20, 40)">
+      <rect width="170" height="75" rx="8" fill="#fef2f2"/>
+      <text x="85" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#991b1b">Reputation Attack</text>
+      <text x="85" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#dc2626">Smear campaigns against</text>
+      <text x="85" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#dc2626">competitors, critics, or</text>
+      <text x="85" y="62" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#dc2626">political opponents</text>
+    </g>
+
+    <g transform="translate(200, 40)">
+      <rect width="170" height="75" rx="8" fill="#fef3c7"/>
+      <text x="85" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#92400e">Astroturfing</text>
+      <text x="85" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#b45309">Create fake grassroots</text>
+      <text x="85" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#b45309">support for products,</text>
+      <text x="85" y="62" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#b45309">policies, or candidates</text>
+    </g>
+
+    <g transform="translate(380, 40)">
+      <rect width="170" height="75" rx="8" fill="#eff6ff"/>
+      <text x="85" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#1e40af">Trend Manipulation</text>
+      <text x="85" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#3b82f6">Artificially boost hashtags</text>
+      <text x="85" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#3b82f6">and topics to trending</text>
+      <text x="85" y="62" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#3b82f6">status</text>
+    </g>
+
+    <g transform="translate(560, 40)">
+      <rect width="170" height="75" rx="8" fill="#f3e8ff"/>
+      <text x="85" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#5b21b6">Narrative Seeding</text>
+      <text x="85" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#7c3aed">Plant stories that may</text>
+      <text x="85" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#7c3aed">be picked up by</text>
+      <text x="85" y="62" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#7c3aed">mainstream media</text>
+    </g>
+  </g>
+</svg>

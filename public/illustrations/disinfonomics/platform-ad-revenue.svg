@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+  <defs>
+    <filter id="adShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+    <marker id="adArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">How Ad Revenue Funds Misinformation</text>
+  <text x="400" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">The programmatic advertising problem</text>
+
+  <!-- Flow diagram -->
+  <!-- Brand -->
+  <g filter="url(#adShadow)" transform="translate(30, 80)">
+    <rect width="130" height="100" rx="12" fill="white" stroke="#93c5fd" stroke-width="2"/>
+    <text x="65" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">BRAND</text>
+    <text x="65" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">Wants to reach</text>
+    <text x="65" y="62" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">target audience</text>
+    <rect x="15" y="75" width="100" height="18" rx="4" fill="#eff6ff"/>
+    <text x="65" y="88" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#1e40af">💰 Pays ad platform</text>
+  </g>
+
+  <line x1="165" y1="130" x2="210" y2="130" stroke="#94a3b8" stroke-width="2" marker-end="url(#adArrow)"/>
+
+  <!-- Ad Platform -->
+  <g filter="url(#adShadow)" transform="translate(220, 70)">
+    <rect width="180" height="120" rx="12" fill="white" stroke="#fde68a" stroke-width="2"/>
+    <rect width="180" height="30" rx="12" fill="#f59e0b"/>
+    <rect width="180" height="10" y="20" fill="#f59e0b"/>
+    <text x="90" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="white">AD PLATFORM</text>
+
+    <text x="90" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">Automated placement</text>
+    <text x="90" y="65" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">based on audience</text>
+    <text x="90" y="80" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">demographics &amp; behavior</text>
+
+    <rect x="15" y="92" width="150" height="18" rx="4" fill="#fef3c7"/>
+    <text x="90" y="105" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#92400e">No content vetting</text>
+  </g>
+
+  <line x1="405" y1="130" x2="450" y2="130" stroke="#94a3b8" stroke-width="2" marker-end="url(#adArrow)"/>
+
+  <!-- Split to legitimate and misinfo sites -->
+  <g filter="url(#adShadow)" transform="translate(460, 70)">
+    <rect width="150" height="55" rx="8" fill="white" stroke="#86efac" stroke-width="2"/>
+    <text x="75" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#166534">Legitimate Sites</text>
+    <text x="75" y="40" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#15803d">Quality journalism</text>
+  </g>
+
+  <g filter="url(#adShadow)" transform="translate(460, 135)">
+    <rect width="150" height="55" rx="8" fill="white" stroke="#fecaca" stroke-width="2"/>
+    <text x="75" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#991b1b">Misinfo Sites</text>
+    <text x="75" y="40" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#dc2626">Clickbait &amp; fake news</text>
+  </g>
+
+  <!-- Money icon -->
+  <g transform="translate(625, 100)">
+    <circle cx="40" cy="40" r="35" fill="#fef2f2" stroke="#fecaca" stroke-width="2"/>
+    <text x="40" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" fill="#dc2626">💰</text>
+  </g>
+
+  <text x="705" y="145" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#991b1b">Same</text>
+  <text x="705" y="158" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#991b1b">revenue!</text>
+
+  <!-- Problem explanation -->
+  <g filter="url(#adShadow)" transform="translate(30, 220)">
+    <rect width="740" height="175" rx="12" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="370" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#1e293b">Why This Is A Problem</text>
+
+    <g transform="translate(20, 40)">
+      <rect width="345" height="120" rx="8" fill="#fef2f2"/>
+      <text x="172" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#991b1b">The Perverse Incentive</text>
+      <text x="20" y="42" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626">• Engagement = revenue (regardless of content quality)</text>
+      <text x="20" y="58" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626">• Outrage and sensationalism drive more clicks</text>
+      <text x="20" y="74" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626">• Fake news optimized for virality, not truth</text>
+      <text x="20" y="90" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626">• Brands unknowingly fund misinformation</text>
+      <text x="20" y="106" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626">• Creates economic incentive to produce false content</text>
+    </g>
+
+    <g transform="translate(375, 40)">
+      <rect width="345" height="120" rx="8" fill="#f0fdf4"/>
+      <text x="172" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#166534">Possible Solutions</text>
+      <text x="20" y="42" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">• Ad platform content vetting</text>
+      <text x="20" y="58" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">• Brand safety tools and blocklists</text>
+      <text x="20" y="74" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">• Third-party verification services</text>
+      <text x="20" y="90" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">• Advertiser pressure campaigns</text>
+      <text x="20" y="106" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">• Transparency in ad placement</text>
+    </g>
+  </g>
+</svg>

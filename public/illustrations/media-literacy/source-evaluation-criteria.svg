@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+  <defs>
+    <filter id="srcShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">Source Evaluation: SIFT Method</text>
+  <text x="400" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">Four quick moves to verify information</text>
+
+  <!-- S - Stop -->
+  <g filter="url(#srcShadow)" transform="translate(30, 70)">
+    <rect width="175" height="165" rx="12" fill="white" stroke="#fecaca" stroke-width="2"/>
+    <circle cx="87" cy="40" r="30" fill="#ef4444"/>
+    <text x="87" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="white">S</text>
+    <text x="87" y="90" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#991b1b">STOP</text>
+    <text x="87" y="110" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#dc2626">Before sharing, pause.</text>
+    <text x="87" y="125" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#dc2626">Do you know the source?</text>
+    <text x="87" y="140" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#dc2626">How do you feel?</text>
+    <rect x="15" y="150" width="145" height="10" rx="2" fill="#fef2f2"/>
+  </g>
+
+  <!-- I - Investigate -->
+  <g filter="url(#srcShadow)" transform="translate(220, 70)">
+    <rect width="175" height="165" rx="12" fill="white" stroke="#fde68a" stroke-width="2"/>
+    <circle cx="87" cy="40" r="30" fill="#f59e0b"/>
+    <text x="87" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="white">I</text>
+    <text x="87" y="90" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#92400e">INVESTIGATE</text>
+    <text x="87" y="110" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#b45309">Check the source.</text>
+    <text x="87" y="125" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#b45309">Who is behind this?</text>
+    <text x="87" y="140" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#b45309">Are they credible?</text>
+    <rect x="15" y="150" width="145" height="10" rx="2" fill="#fef3c7"/>
+  </g>
+
+  <!-- F - Find Better Coverage -->
+  <g filter="url(#srcShadow)" transform="translate(410, 70)">
+    <rect width="175" height="165" rx="12" fill="white" stroke="#93c5fd" stroke-width="2"/>
+    <circle cx="87" cy="40" r="30" fill="#3b82f6"/>
+    <text x="87" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="white">F</text>
+    <text x="87" y="90" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#1e40af">FIND BETTER</text>
+    <text x="87" y="110" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#3b82f6">Look for other sources.</text>
+    <text x="87" y="125" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#3b82f6">What do experts say?</text>
+    <text x="87" y="140" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#3b82f6">Cross-reference claims.</text>
+    <rect x="15" y="150" width="145" height="10" rx="2" fill="#eff6ff"/>
+  </g>
+
+  <!-- T - Trace Claims -->
+  <g filter="url(#srcShadow)" transform="translate(600, 70)">
+    <rect width="175" height="165" rx="12" fill="white" stroke="#86efac" stroke-width="2"/>
+    <circle cx="87" cy="40" r="30" fill="#10b981"/>
+    <text x="87" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" font-weight="bold" fill="white">T</text>
+    <text x="87" y="90" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#166534">TRACE CLAIMS</text>
+    <text x="87" y="110" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#15803d">Find the original source.</text>
+    <text x="87" y="125" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#15803d">Is it taken out of context?</text>
+    <text x="87" y="140" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#15803d">What's missing?</text>
+    <rect x="15" y="150" width="145" height="10" rx="2" fill="#f0fdf4"/>
+  </g>
+
+  <!-- Quick questions -->
+  <g filter="url(#srcShadow)" transform="translate(30, 255)">
+    <rect width="740" height="145" rx="12" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="370" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#1e293b">Quick Source Evaluation Questions</text>
+
+    <g transform="translate(20, 40)">
+      <rect width="220" height="90" rx="8" fill="#f8fafc"/>
+      <text x="110" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#475569">Authority</text>
+      <text x="15" y="38" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">• Who wrote this?</text>
+      <text x="15" y="52" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">• What are their credentials?</text>
+      <text x="15" y="66" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">• Is the organization reputable?</text>
+      <text x="15" y="80" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">• Can I verify their identity?</text>
+    </g>
+
+    <g transform="translate(260, 40)">
+      <rect width="220" height="90" rx="8" fill="#f8fafc"/>
+      <text x="110" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#475569">Purpose</text>
+      <text x="15" y="38" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">• Why was this created?</text>
+      <text x="15" y="52" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">• Is it trying to sell something?</text>
+      <text x="15" y="66" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">• Is it persuasion or information?</text>
+      <text x="15" y="80" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">• Who benefits?</text>
+    </g>
+
+    <g transform="translate(500, 40)">
+      <rect width="220" height="90" rx="8" fill="#f8fafc"/>
+      <text x="110" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#475569">Evidence</text>
+      <text x="15" y="38" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">• What evidence is provided?</text>
+      <text x="15" y="52" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">• Are sources cited?</text>
+      <text x="15" y="66" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">• Can claims be verified?</text>
+      <text x="15" y="80" font-family="system-ui, sans-serif" font-size="8" fill="#64748b">• Do other sources agree?</text>
+    </g>
+  </g>
+</svg>

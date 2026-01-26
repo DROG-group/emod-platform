@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+  <defs>
+    <filter id="econShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+    <marker id="econArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">The Disinformation Economy</text>
+  <text x="400" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">Following the money behind false information</text>
+
+  <!-- Supply side -->
+  <g filter="url(#econShadow)" transform="translate(30, 70)">
+    <rect width="200" height="170" rx="12" fill="white" stroke="#fecaca" stroke-width="2"/>
+    <rect width="200" height="35" rx="12" fill="#ef4444"/>
+    <rect width="200" height="10" y="25" fill="#ef4444"/>
+    <text x="100" y="26" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">SUPPLY</text>
+
+    <text x="20" y="55" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#991b1b">Who creates it:</text>
+    <text x="25" y="72" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626">• State-backed operations</text>
+    <text x="25" y="86" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626">• Troll farms for hire</text>
+    <text x="25" y="100" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626">• Profit-driven content mills</text>
+    <text x="25" y="114" font-family="system-ui, sans-serif" font-size="8" fill="#dc2626">• Influencers-for-hire</text>
+
+    <rect x="15" y="130" width="170" height="30" rx="6" fill="#fef2f2"/>
+    <text x="100" y="150" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#991b1b">💰 Produces for payment</text>
+  </g>
+
+  <!-- Arrow -->
+  <line x1="235" y1="155" x2="280" y2="155" stroke="#94a3b8" stroke-width="2" marker-end="url(#econArrow)"/>
+
+  <!-- Distribution -->
+  <g filter="url(#econShadow)" transform="translate(290, 70)">
+    <rect width="220" height="170" rx="12" fill="white" stroke="#fde68a" stroke-width="2"/>
+    <rect width="220" height="35" rx="12" fill="#f59e0b"/>
+    <rect width="220" height="10" y="25" fill="#f59e0b"/>
+    <text x="110" y="26" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">DISTRIBUTION</text>
+
+    <text x="20" y="55" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#92400e">How it spreads:</text>
+    <text x="25" y="72" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">• Social media platforms</text>
+    <text x="25" y="86" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">• Messaging apps</text>
+    <text x="25" y="100" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">• Bot networks</text>
+    <text x="25" y="114" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">• Fake news websites</text>
+
+    <rect x="15" y="130" width="190" height="30" rx="6" fill="#fef3c7"/>
+    <text x="110" y="150" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#92400e">📢 Amplified by algorithms</text>
+  </g>
+
+  <!-- Arrow -->
+  <line x1="515" y1="155" x2="560" y2="155" stroke="#94a3b8" stroke-width="2" marker-end="url(#econArrow)"/>
+
+  <!-- Demand side -->
+  <g filter="url(#econShadow)" transform="translate(570, 70)">
+    <rect width="200" height="170" rx="12" fill="white" stroke="#86efac" stroke-width="2"/>
+    <rect width="200" height="35" rx="12" fill="#10b981"/>
+    <rect width="200" height="10" y="25" fill="#10b981"/>
+    <text x="100" y="26" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">DEMAND</text>
+
+    <text x="20" y="55" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#166534">Who pays/benefits:</text>
+    <text x="25" y="72" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">• Foreign governments</text>
+    <text x="25" y="86" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">• Political campaigns</text>
+    <text x="25" y="100" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">• Commercial interests</text>
+    <text x="25" y="114" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">• Ideological groups</text>
+
+    <rect x="15" y="130" width="170" height="30" rx="6" fill="#f0fdf4"/>
+    <text x="100" y="150" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#166534">🎯 Goals: influence, profit</text>
+  </g>
+
+  <!-- Money flows -->
+  <g filter="url(#econShadow)" transform="translate(30, 260)">
+    <rect width="740" height="140" rx="12" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="370" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#1e293b">💵 Revenue Streams in Disinformation</text>
+
+    <g transform="translate(20, 40)">
+      <rect width="170" height="80" rx="8" fill="#eff6ff"/>
+      <text x="85" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#1e40af">Ad Revenue</text>
+      <text x="85" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#3b82f6">Clickbait fake news sites</text>
+      <text x="85" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#3b82f6">earn from programmatic</text>
+      <text x="85" y="66" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#3b82f6">advertising</text>
+    </g>
+
+    <g transform="translate(200, 40)">
+      <rect width="170" height="80" rx="8" fill="#f3e8ff"/>
+      <text x="85" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#5b21b6">Contracts</text>
+      <text x="85" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#7c3aed">Troll farms paid by</text>
+      <text x="85" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#7c3aed">clients for campaigns</text>
+      <text x="85" y="66" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#7c3aed">$500-$5000+/month</text>
+    </g>
+
+    <g transform="translate(380, 40)">
+      <rect width="170" height="80" rx="8" fill="#fef3c7"/>
+      <text x="85" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#92400e">State Funding</text>
+      <text x="85" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#b45309">Government budgets</text>
+      <text x="85" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#b45309">for influence operations</text>
+      <text x="85" y="66" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#b45309">Millions annually</text>
+    </g>
+
+    <g transform="translate(560, 40)">
+      <rect width="170" height="80" rx="8" fill="#fef2f2"/>
+      <text x="85" y="18" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#991b1b">Donations</text>
+      <text x="85" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#dc2626">Crowdfunded by</text>
+      <text x="85" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#dc2626">ideological supporters</text>
+      <text x="85" y="66" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#dc2626">who believe the content</text>
+    </g>
+  </g>
+</svg>

@@ -56,6 +56,54 @@ illustrations = [
     ('Module-How-Information-Spreads-Online', '## Purpose',
      '/illustrations/disinfo-basics/how-information-spreads.svg',
      'How Information Spreads Online - Understanding viral dynamics'),
+
+    # ========== Media Literacy Fundamentals ==========
+    ('Module-Evaluating-Sources', '## Purpose',
+     '/illustrations/media-literacy/source-evaluation-criteria.svg',
+     'Source Evaluation: SIFT Method - Four quick moves to verify information'),
+
+    ('Module-Cognitive-Biases-Belief', '## Purpose',
+     '/illustrations/media-literacy/cognitive-biases-belief.svg',
+     'Cognitive Biases That Affect Belief - Mental shortcuts that make us vulnerable'),
+
+    ('Module-Visual-Literacy', '## Purpose',
+     '/illustrations/media-literacy/visual-literacy-checklist.svg',
+     'Visual Literacy: Analyzing Images - Questions to ask before trusting visual content'),
+
+    # ========== Platform Governance ==========
+    ('Module-Content-Moderation-Challenges', '## Purpose',
+     '/illustrations/platform-governance/content-moderation-approaches.svg',
+     'Content Moderation Approaches - Different tools platforms use to address harmful content'),
+
+    ('Module-Algorithmic-Amplification', '## Purpose',
+     '/illustrations/platform-governance/algorithmic-amplification.svg',
+     'Algorithmic Amplification - How platform algorithms shape what we see'),
+
+    ('Module-Platform-Regulation-Approaches', '## Purpose',
+     '/illustrations/platform-governance/platform-regulation-approaches.svg',
+     'Platform Regulation Approaches - Different models for governing online platforms'),
+
+    # ========== Disinfonomics ==========
+    ('Module-Disinfonomics-Market-For-Bad-News', '## Purpose',
+     '/illustrations/disinfonomics/disinformation-economy.svg',
+     'The Disinformation Economy - Following the money behind false information'),
+
+    ('Module-Disinfonomics-Influencers-Troll-Farms', '## Purpose',
+     '/illustrations/disinfonomics/troll-farm-economics.svg',
+     'Troll Farm Economics - How commercial influence operations work'),
+
+    ('Module-Disinfonomics-Platforms-Auction-Houses', '## Purpose',
+     '/illustrations/disinfonomics/platform-ad-revenue.svg',
+     'How Ad Revenue Funds Misinformation - The programmatic advertising problem'),
+
+    # ========== Data Analysis ==========
+    ('Module-Understanding-Basic-Statistics', '## Purpose',
+     '/illustrations/data-analysis/understanding-statistics.svg',
+     'Understanding Basic Statistics - Key concepts for evaluating data claims'),
+
+    ('Module-Data-Visualization-Best-Practices', '## Purpose',
+     '/illustrations/data-analysis/data-visualization-pitfalls.svg',
+     'Data Visualization Pitfalls - How charts can mislead and how to spot it'),
 ]
 
 added = 0

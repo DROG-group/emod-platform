@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420">
+  <defs>
+    <filter id="visShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">Visual Literacy: Analyzing Images</text>
+  <text x="400" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">Questions to ask before trusting visual content</text>
+
+  <!-- Image placeholder -->
+  <g filter="url(#visShadow)" transform="translate(30, 65)">
+    <rect width="200" height="150" rx="12" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+    <rect x="20" y="20" width="160" height="90" rx="8" fill="#cbd5e1"/>
+    <text x="100" y="70" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" fill="#64748b">📷</text>
+    <text x="100" y="130" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#475569">Suspicious Image</text>
+  </g>
+
+  <!-- Questions -->
+  <g filter="url(#visShadow)" transform="translate(250, 65)">
+    <rect width="520" height="150" rx="12" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="260" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#1e293b">Critical Questions for Images</text>
+
+    <g transform="translate(20, 35)">
+      <circle cx="10" cy="8" r="8" fill="#ef4444"/>
+      <text x="10" y="12" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="white">1</text>
+      <text x="28" y="12" font-family="system-ui, sans-serif" font-size="9" fill="#1e293b">Where did this image come from? Can I find the original?</text>
+    </g>
+
+    <g transform="translate(20, 60)">
+      <circle cx="10" cy="8" r="8" fill="#f59e0b"/>
+      <text x="10" y="12" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="white">2</text>
+      <text x="28" y="12" font-family="system-ui, sans-serif" font-size="9" fill="#1e293b">When was it actually taken? Does date match the claim?</text>
+    </g>
+
+    <g transform="translate(20, 85)">
+      <circle cx="10" cy="8" r="8" fill="#10b981"/>
+      <text x="10" y="12" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="white">3</text>
+      <text x="28" y="12" font-family="system-ui, sans-serif" font-size="9" fill="#1e293b">What's cropped out? What context is missing?</text>
+    </g>
+
+    <g transform="translate(20, 110)">
+      <circle cx="10" cy="8" r="8" fill="#3b82f6"/>
+      <text x="10" y="12" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="white">4</text>
+      <text x="28" y="12" font-family="system-ui, sans-serif" font-size="9" fill="#1e293b">Has it been digitally altered? Look for inconsistencies.</text>
+    </g>
+  </g>
+
+  <!-- Red flags -->
+  <g filter="url(#visShadow)" transform="translate(30, 235)">
+    <rect width="365" height="165" rx="12" fill="white" stroke="#fecaca" stroke-width="2"/>
+    <text x="182" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#991b1b">🚩 Red Flags in Images</text>
+
+    <g transform="translate(15, 40)">
+      <rect width="165" height="50" rx="6" fill="#fef2f2"/>
+      <text x="82" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#991b1b">Lighting Issues</text>
+      <text x="82" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#dc2626">Shadows going different</text>
+      <text x="82" y="45" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#dc2626">directions</text>
+    </g>
+
+    <g transform="translate(190, 40)">
+      <rect width="165" height="50" rx="6" fill="#fef2f2"/>
+      <text x="82" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#991b1b">Edge Artifacts</text>
+      <text x="82" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#dc2626">Blurry or jagged edges</text>
+      <text x="82" y="45" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#dc2626">around subjects</text>
+    </g>
+
+    <g transform="translate(15, 100)">
+      <rect width="165" height="50" rx="6" fill="#fef2f2"/>
+      <text x="82" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#991b1b">Scale Problems</text>
+      <text x="82" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#dc2626">Objects that don't match</text>
+      <text x="82" y="45" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#dc2626">expected proportions</text>
+    </g>
+
+    <g transform="translate(190, 100)">
+      <rect width="165" height="50" rx="6" fill="#fef2f2"/>
+      <text x="82" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#991b1b">Repeating Patterns</text>
+      <text x="82" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#dc2626">Clone stamp artifacts</text>
+      <text x="82" y="45" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#dc2626">in backgrounds</text>
+    </g>
+  </g>
+
+  <!-- Verification tools -->
+  <g filter="url(#visShadow)" transform="translate(410, 235)">
+    <rect width="360" height="165" rx="12" fill="white" stroke="#86efac" stroke-width="2"/>
+    <text x="180" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#166534">✅ Verification Tools</text>
+
+    <g transform="translate(15, 40)">
+      <rect width="160" height="50" rx="6" fill="#f0fdf4"/>
+      <text x="80" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#166534">Reverse Image Search</text>
+      <text x="80" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#15803d">Google Images, TinEye</text>
+      <text x="80" y="45" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#15803d">Find original source</text>
+    </g>
+
+    <g transform="translate(185, 40)">
+      <rect width="160" height="50" rx="6" fill="#f0fdf4"/>
+      <text x="80" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#166534">EXIF Data</text>
+      <text x="80" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#15803d">Check metadata for</text>
+      <text x="80" y="45" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#15803d">date, location, device</text>
+    </g>
+
+    <g transform="translate(15, 100)">
+      <rect width="160" height="50" rx="6" fill="#f0fdf4"/>
+      <text x="80" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#166534">FotoForensics</text>
+      <text x="80" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#15803d">Error level analysis</text>
+      <text x="80" y="45" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#15803d">Detect manipulations</text>
+    </g>
+
+    <g transform="translate(185, 100)">
+      <rect width="160" height="50" rx="6" fill="#f0fdf4"/>
+      <text x="80" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" font-weight="600" fill="#166534">InVID/WeVerify</text>
+      <text x="80" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#15803d">Video verification</text>
+      <text x="80" y="45" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#15803d">Frame analysis tools</text>
+    </g>
+  </g>
+</svg>
