@@ -63,5 +63,590 @@
         "explanation": "Confirmation bias is the tendency to search for, interpret, and recall information in a way that confirms existing beliefs. This is one of the most exploited psychological vulnerabilities in disinformation campaigns."
       }
     ]
+  },
+  "AI and Hybrid Threats": {
+    "passingScore": 70,
+    "questions": [
+      {
+        "id": "aht-1",
+        "question": "What is a deepfake?",
+        "options": [
+          "A type of computer virus that steals personal data",
+          "AI-generated synthetic media that manipulates someone's likeness or voice",
+          "A hacking technique used to access social media accounts",
+          "An encrypted messaging system"
+        ],
+        "correctIndex": 1,
+        "explanation": "Deepfakes are AI-generated synthetic media that can convincingly manipulate someone's appearance, voice, or actions in video or audio content. They pose significant challenges for verification and trust."
+      },
+      {
+        "id": "aht-2",
+        "question": "What is a key characteristic of social media bots in disinformation campaigns?",
+        "options": [
+          "They only post original content",
+          "They can artificially amplify content at scale to create false impressions of popularity",
+          "They are easily detected by all users",
+          "They only target government officials"
+        ],
+        "correctIndex": 1,
+        "explanation": "Bots can amplify content thousands of times, creating artificial popularity signals that trick both users and algorithms into spreading disinformation further. This coordinated inauthentic behavior is a core tactic in influence operations."
+      },
+      {
+        "id": "aht-3",
+        "question": "What defines a 'hybrid threat'?",
+        "options": [
+          "A threat that only uses cyber attacks",
+          "A coordinated campaign combining military, cyber, information, and economic tactics",
+          "A threat from multiple countries simultaneously",
+          "A computer virus that affects multiple operating systems"
+        ],
+        "correctIndex": 1,
+        "explanation": "Hybrid threats combine conventional and unconventional methods—including military pressure, cyber attacks, disinformation, and economic coercion—to destabilize targets while maintaining deniability."
+      },
+      {
+        "id": "aht-4",
+        "question": "How does AI-powered micro-targeting enhance disinformation effectiveness?",
+        "options": [
+          "It makes content load faster on mobile devices",
+          "It enables personalized manipulation based on individual psychological profiles",
+          "It automatically translates content into different languages",
+          "It helps content creators find better images"
+        ],
+        "correctIndex": 1,
+        "explanation": "AI enables psychographic profiling and micro-targeting, allowing disinformation operators to tailor messages to individuals' fears, beliefs, and vulnerabilities—making manipulation more effective and harder to counter with generic responses."
+      },
+      {
+        "id": "aht-5",
+        "question": "What is a key limitation of AI-based disinformation detection tools?",
+        "options": [
+          "They can only analyze text, not images",
+          "They require human oversight and can produce false positives/negatives",
+          "They only work in English",
+          "They cannot process social media content"
+        ],
+        "correctIndex": 1,
+        "explanation": "While AI detection tools are powerful, they require human oversight because they can flag legitimate content as suspicious (false positives) or miss sophisticated manipulation (false negatives). Human-AI collaboration is essential for effective detection."
+      }
+    ]
+  },
+  "Counter-Messaging Strategies": {
+    "passingScore": 70,
+    "questions": [
+      {
+        "id": "cms-1",
+        "question": "What is 'prebunking' in the context of countering disinformation?",
+        "options": [
+          "Removing false content after it spreads",
+          "Building resistance to manipulation before people encounter it",
+          "Publishing fact-checks in newspapers",
+          "Blocking known disinformation accounts"
+        ],
+        "correctIndex": 1,
+        "explanation": "Prebunking, based on inoculation theory, involves exposing people to weakened forms of manipulation techniques before they encounter real disinformation, building psychological resistance—like a vaccine for the mind."
+      },
+      {
+        "id": "cms-2",
+        "question": "According to debunking best practices, what should you avoid when correcting misinformation?",
+        "options": [
+          "Providing evidence for the correct information",
+          "Repeating the false claim prominently without the correction",
+          "Explaining why the misinformation is wrong",
+          "Using credible sources"
+        ],
+        "correctIndex": 1,
+        "explanation": "Repeating false claims—even to debunk them—can inadvertently reinforce them in memory (the 'familiarity backfire effect'). Effective debunking leads with the truth and minimizes repetition of the false claim."
+      },
+      {
+        "id": "cms-3",
+        "question": "What is a counter-narrative?",
+        "options": [
+          "A legal action against disinformation spreaders",
+          "An alternative story that competes with and undermines harmful narratives",
+          "A government censorship policy",
+          "A type of social media algorithm"
+        ],
+        "correctIndex": 1,
+        "explanation": "Counter-narratives are compelling alternative stories that address the same underlying concerns or emotions as harmful narratives but lead to different, more constructive conclusions. They're more effective than simply saying 'that's false.'"
+      },
+      {
+        "id": "cms-4",
+        "question": "What is Strategic Communication (StratCom) in the context of countering FIMI?",
+        "options": [
+          "Personal communication between diplomats",
+          "Coordinated government messaging to counter hostile narratives and build resilience",
+          "Encrypted military communications",
+          "Social media marketing for businesses"
+        ],
+        "correctIndex": 1,
+        "explanation": "Strategic Communication is coordinated, purposeful communication by governments and institutions to counter disinformation, build public resilience, and advance democratic values—while respecting freedom of expression."
+      },
+      {
+        "id": "cms-5",
+        "question": "How should the effectiveness of counter-messaging be measured?",
+        "options": [
+          "Only by the number of social media shares",
+          "Through multiple metrics including attitude change, reach, and behavioral outcomes",
+          "Solely by website traffic statistics",
+          "By counting the number of fact-checks published"
+        ],
+        "correctIndex": 1,
+        "explanation": "Effective measurement requires multiple metrics: reach (who saw it), engagement (who interacted), attitude change (did beliefs shift), and behavioral outcomes (did actions change). No single metric captures the full picture."
+      }
+    ]
+  },
+  "Data Analysis": {
+    "passingScore": 70,
+    "questions": [
+      {
+        "id": "da-1",
+        "question": "What does a 'correlation' between two variables indicate?",
+        "options": [
+          "One variable directly causes the other",
+          "The variables are related or move together, but not necessarily causally",
+          "The variables are completely unrelated",
+          "The data was collected incorrectly"
+        ],
+        "correctIndex": 1,
+        "explanation": "Correlation means two variables tend to move together, but this doesn't prove causation. Ice cream sales and drowning deaths both rise in summer, but ice cream doesn't cause drowning—both are correlated with warm weather."
+      },
+      {
+        "id": "da-2",
+        "question": "What is the 'margin of error' in a poll?",
+        "options": [
+          "The percentage of people who refused to answer",
+          "A range within which the true population value likely falls",
+          "The number of questions that were unclear",
+          "How much the poll cost to conduct"
+        ],
+        "correctIndex": 1,
+        "explanation": "Margin of error indicates the range of uncertainty in poll results. A poll showing 52% support with ±3% margin means the true value is likely between 49% and 55%. Smaller margins require larger sample sizes."
+      },
+      {
+        "id": "da-3",
+        "question": "What is 'cherry-picking' in data presentation?",
+        "options": [
+          "Using colorful charts to make data more appealing",
+          "Selectively presenting only data that supports a predetermined conclusion",
+          "Collecting data from multiple sources",
+          "Using the most recent data available"
+        ],
+        "correctIndex": 1,
+        "explanation": "Cherry-picking involves selecting only data points that support your argument while ignoring contradictory evidence. It's a common manipulation technique that can make weak claims appear strong."
+      },
+      {
+        "id": "da-4",
+        "question": "Why is peer review important for research studies?",
+        "options": [
+          "It makes research more expensive",
+          "Independent experts evaluate methodology and conclusions before publication",
+          "It delays publication of important findings",
+          "It guarantees the research is 100% correct"
+        ],
+        "correctIndex": 1,
+        "explanation": "Peer review provides quality control: independent experts examine research methods, analysis, and conclusions before publication. While not perfect, it catches many errors and forces researchers to justify their claims."
+      },
+      {
+        "id": "da-5",
+        "question": "What makes a data visualization misleading?",
+        "options": [
+          "Using colors other than black and white",
+          "Truncated axes, inconsistent scales, or omitted context that distorts perception",
+          "Including too much data",
+          "Making charts available online"
+        ],
+        "correctIndex": 1,
+        "explanation": "Misleading visualizations often use truncated Y-axes (starting above zero), inconsistent scales, cherry-picked time ranges, or 3D effects that distort proportions—making small differences look large or vice versa."
+      }
+    ]
+  },
+  "Detection and Verification": {
+    "passingScore": 70,
+    "questions": [
+      {
+        "id": "dv-1",
+        "question": "What is reverse image search used for in verification?",
+        "options": [
+          "Making images appear in search results",
+          "Finding the original source and context of an image",
+          "Editing photos to improve quality",
+          "Translating text in images"
+        ],
+        "correctIndex": 1,
+        "explanation": "Reverse image search helps verify if an image is being used in its original context, has been manipulated, or is being recycled from a different time/place. Tools like Google Images and TinEye are essential for visual verification."
+      },
+      {
+        "id": "dv-2",
+        "question": "What is 'coordinated inauthentic behavior' (CIB)?",
+        "options": [
+          "Legitimate political campaigning",
+          "Groups of accounts working together to mislead about their identity or purpose",
+          "Automated customer service responses",
+          "Sharing content across multiple platforms"
+        ],
+        "correctIndex": 1,
+        "explanation": "CIB refers to networks of accounts that coordinate to artificially amplify content while hiding their true nature or connections. It's a key indicator of influence operations and is prohibited by major platforms."
+      },
+      {
+        "id": "dv-3",
+        "question": "What can metadata analysis reveal about a digital image or document?",
+        "options": [
+          "Only the file size",
+          "Information like creation date, location, device used, and editing history",
+          "The political views of the creator",
+          "How many people have viewed it"
+        ],
+        "correctIndex": 1,
+        "explanation": "Metadata can reveal when and where content was created, what device was used, and whether it's been edited. However, metadata can also be stripped or manipulated, so it's one piece of evidence, not definitive proof."
+      },
+      {
+        "id": "dv-4",
+        "question": "What is the purpose of network analysis in detecting influence operations?",
+        "options": [
+          "Improving internet connection speeds",
+          "Identifying patterns of coordination between accounts that suggest organized manipulation",
+          "Counting the total number of social media users",
+          "Designing better social media platforms"
+        ],
+        "correctIndex": 1,
+        "explanation": "Network analysis examines connections and coordination patterns between accounts. Unusual patterns—like accounts created at similar times, posting identical content, or amplifying each other—can reveal organized influence operations."
+      },
+      {
+        "id": "dv-5",
+        "question": "What is a limitation of automated fact-checking tools?",
+        "options": [
+          "They work too quickly",
+          "They struggle with context, nuance, and rapidly evolving claims",
+          "They are too expensive for anyone to use",
+          "They only check claims in academic papers"
+        ],
+        "correctIndex": 1,
+        "explanation": "Automated tools struggle with context, satire, nuance, and novel claims that aren't in their databases. They work best as aids to human fact-checkers, not replacements. The 'last mile' of verification still requires human judgment."
+      }
+    ]
+  },
+  "Disinfonomics": {
+    "passingScore": 70,
+    "questions": [
+      {
+        "id": "dis-1",
+        "question": "What does the 'Disinfonomics' framework encourage us to view disinformation as?",
+        "options": [
+          "A moral failing of individuals",
+          "An economy of transactions where actors exchange value",
+          "A purely technological problem",
+          "An inevitable aspect of human nature"
+        ],
+        "correctIndex": 1,
+        "explanation": "Disinfonomics shifts from viewing disinformation as 'wrong beliefs' to 'transactions that clear'—understanding it as an economy where actors (merchants, platforms, audiences) exchange value. This reframing enables more effective interventions."
+      },
+      {
+        "id": "dis-2",
+        "question": "According to Disinfonomics, how should we think about social media platforms?",
+        "options": [
+          "As neutral public squares",
+          "As auction houses where attention and visibility are bid on",
+          "As government utilities",
+          "As educational institutions"
+        ],
+        "correctIndex": 1,
+        "explanation": "Platforms function as auction systems where content competes for visibility through engagement signals. Outrage often wins these 'auctions' because it drives engagement, regardless of accuracy or social value."
+      },
+      {
+        "id": "dis-3",
+        "question": "What is the 'counter-economy' problem in fighting disinformation?",
+        "options": [
+          "Counter-disinformation efforts are too expensive",
+          "Some counter-actions accidentally amplify the disinformation they're trying to fight",
+          "There aren't enough fact-checkers available",
+          "Social media companies refuse to cooperate"
+        ],
+        "correctIndex": 1,
+        "explanation": "The counter-economy includes entities that profit from or depend on disinformation existing—including some who fight it. Sometimes debunking a claim gives it more attention than ignoring it would. Strategic silence can be more effective."
+      },
+      {
+        "id": "dis-4",
+        "question": "What does the Transaction Table Framework (TTF) help analysts do?",
+        "options": [
+          "Calculate the financial cost of disinformation campaigns",
+          "Map the exchanges of value between actors in a disinformation ecosystem",
+          "Translate content between languages",
+          "Measure social media engagement rates"
+        ],
+        "correctIndex": 1,
+        "explanation": "TTF helps turn vague observations into specific trades: who pays what to whom, and what they receive in return. If you can write the ledger, you can identify intervention points. If you can't, you're probably dealing in slogans, not analysis."
+      },
+      {
+        "id": "dis-5",
+        "question": "What does 'internalizing externalities' mean in the Disinfonomics framework?",
+        "options": [
+          "Keeping disinformation campaigns secret",
+          "Making actors bear the costs they currently impose on others",
+          "Focusing only on domestic disinformation",
+          "Using internal company resources for content moderation"
+        ],
+        "correctIndex": 1,
+        "explanation": "Externalities are costs imposed on others (societal harm from disinformation). Internalizing them means designing systems where those who create or profit from disinformation bear those costs—making harmful 'trades' unprofitable."
+      }
+    ]
+  },
+  "General": {
+    "passingScore": 70,
+    "questions": [
+      {
+        "id": "gen-1",
+        "question": "What makes a belief 'outrageous' in the context of disinformation?",
+        "options": [
+          "It is held by very few people",
+          "It persists despite contradicting evidence and serves identity or emotional needs",
+          "It is about politics",
+          "It originated on social media"
+        ],
+        "correctIndex": 1,
+        "explanation": "Outrageous beliefs persist not because of lack of information, but because they serve psychological needs—group identity, emotional satisfaction, or meaning-making. This is why simply providing facts often fails to change minds."
+      },
+      {
+        "id": "gen-2",
+        "question": "What is the difference between countering an information 'incident' versus a 'campaign'?",
+        "options": [
+          "There is no meaningful difference",
+          "Incidents are single events; campaigns are coordinated, sustained efforts requiring different responses",
+          "Campaigns are always foreign; incidents are domestic",
+          "Incidents happen online; campaigns happen offline"
+        ],
+        "correctIndex": 1,
+        "explanation": "Incidents are isolated events that may warrant rapid response. Campaigns are sustained, coordinated operations requiring strategic, long-term counter-efforts. Treating a campaign like an incident leads to whack-a-mole responses that fail."
+      },
+      {
+        "id": "gen-3",
+        "question": "Why is attribution not always necessary for effective FIMI response?",
+        "options": [
+          "Because attribution is always easy to determine",
+          "Because you can address harmful content and techniques regardless of who's behind them",
+          "Because foreign actors always admit their involvement",
+          "Because attribution doesn't matter legally"
+        ],
+        "correctIndex": 1,
+        "explanation": "While knowing the source can inform response, you don't need perfect attribution to take action. Content can be labeled, techniques can be inoculated against, and resilience can be built regardless of whether you've proven who's responsible."
+      },
+      {
+        "id": "gen-4",
+        "question": "What are the key elements being protected against FIMI?",
+        "options": [
+          "Only government computer systems",
+          "Democratic processes, public discourse, and societal trust",
+          "Individual social media accounts",
+          "News organization profits"
+        ],
+        "correctIndex": 1,
+        "explanation": "FIMI targets democratic processes (elections, policy debates), public discourse (shared understanding of facts), and societal trust (in institutions, media, each other). These are the 'objects of protection' that response strategies should defend."
+      },
+      {
+        "id": "gen-5",
+        "question": "What evidence distinguishes foreign information manipulation from domestic activity?",
+        "options": [
+          "Foreign content is always in a different language",
+          "Technical indicators, coordination patterns, and alignment with foreign state interests",
+          "Foreign content is always false",
+          "Domestic content is always true"
+        ],
+        "correctIndex": 1,
+        "explanation": "Foreign attribution relies on technical evidence (infrastructure, timing), behavioral patterns (coordination across platforms), and strategic alignment (narratives that benefit a foreign state's interests). No single indicator is definitive."
+      }
+    ]
+  },
+  "Media Literacy Fundamentals": {
+    "passingScore": 70,
+    "questions": [
+      {
+        "id": "mlf-1",
+        "question": "What is the CRAAP test used for?",
+        "options": [
+          "Testing internet connection speed",
+          "Evaluating source credibility through Currency, Relevance, Authority, Accuracy, and Purpose",
+          "Detecting computer viruses",
+          "Measuring social media engagement"
+        ],
+        "correctIndex": 1,
+        "explanation": "CRAAP (Currency, Relevance, Authority, Accuracy, Purpose) is a framework for evaluating information sources. It helps systematically assess whether a source is reliable and appropriate for your needs."
+      },
+      {
+        "id": "mlf-2",
+        "question": "What is the difference between news and opinion content?",
+        "options": [
+          "There is no difference in modern media",
+          "News reports facts and events; opinion interprets and argues positions",
+          "Opinion is always false; news is always true",
+          "News is only in newspapers; opinion is only online"
+        ],
+        "correctIndex": 1,
+        "explanation": "News content reports verified facts and events with attribution. Opinion content interprets events and argues positions. Both are legitimate, but confusing them—or when outlets blur the line—undermines informed decision-making."
+      },
+      {
+        "id": "mlf-3",
+        "question": "What is 'confirmation bias' and why is it important for media literacy?",
+        "options": [
+          "A technical error in news databases",
+          "The tendency to favor information that confirms existing beliefs, making us vulnerable to manipulation",
+          "A method journalists use to verify stories",
+          "A type of online advertising"
+        ],
+        "correctIndex": 1,
+        "explanation": "Confirmation bias leads us to seek, interpret, and remember information that confirms what we already believe. Recognizing this bias in ourselves is essential for consuming media critically and avoiding manipulation."
+      },
+      {
+        "id": "mlf-4",
+        "question": "When should you invest time in fact-checking a claim?",
+        "options": [
+          "Only if it's about politics",
+          "When it triggers strong emotions, will influence your decisions, or you plan to share it",
+          "Never—it's someone else's job",
+          "Only if it appears in print media"
+        ],
+        "correctIndex": 1,
+        "explanation": "Fact-check when: the claim triggers strong emotions (a manipulation signal), you might act on it, or you're considering sharing it. Not everything needs checking—focus effort where it matters most."
+      },
+      {
+        "id": "mlf-5",
+        "question": "What is 'lateral reading' in source evaluation?",
+        "options": [
+          "Reading news articles from left to right",
+          "Opening new tabs to check what other sources say about a website or claim",
+          "Reading multiple articles on the same website",
+          "Scanning headlines without reading full articles"
+        ],
+        "correctIndex": 1,
+        "explanation": "Lateral reading means leaving a website to check what others say about it, rather than relying on the site's own 'About' page. Professional fact-checkers use this technique—it's faster and more reliable than vertical reading."
+      }
+    ]
+  },
+  "Platform Governance": {
+    "passingScore": 70,
+    "questions": [
+      {
+        "id": "pg-1",
+        "question": "Why is content moderation at scale considered an 'impossible' challenge?",
+        "options": [
+          "Moderators refuse to do the work",
+          "The volume is too large for perfect accuracy, and context is essential but hard to automate",
+          "Laws prohibit content moderation",
+          "Users don't report problematic content"
+        ],
+        "correctIndex": 1,
+        "explanation": "Platforms handle billions of posts daily. Perfect moderation is impossible because context matters (satire vs. hate), cultural norms vary, and AI struggles with nuance. Trade-offs between over- and under-moderation are inevitable."
+      },
+      {
+        "id": "pg-2",
+        "question": "How do algorithmic recommendation systems potentially amplify disinformation?",
+        "options": [
+          "They only recommend verified news sources",
+          "They optimize for engagement, which often favors sensational or divisive content",
+          "They automatically remove all false content",
+          "They have no effect on what content people see"
+        ],
+        "correctIndex": 1,
+        "explanation": "Algorithms optimize for engagement metrics (clicks, shares, time spent). Sensational, divisive, or outrage-inducing content often performs well on these metrics—meaning disinformation can be amplified regardless of its accuracy."
+      },
+      {
+        "id": "pg-3",
+        "question": "What is the EU Digital Services Act (DSA) primarily designed to do?",
+        "options": [
+          "Ban all social media in Europe",
+          "Create transparency and accountability requirements for digital platforms",
+          "Replace all platforms with government-run alternatives",
+          "End online advertising entirely"
+        ],
+        "correctIndex": 1,
+        "explanation": "The DSA establishes obligations for platforms including transparency about content moderation, researcher data access, and risk assessments for systemic harms. It represents a comprehensive regulatory approach to platform governance."
+      },
+      {
+        "id": "pg-4",
+        "question": "Why is researcher access to platform data important for understanding disinformation?",
+        "options": [
+          "Researchers want to sell the data",
+          "Independent analysis can reveal patterns, test platform claims, and inform policy",
+          "It makes disinformation easier to spread",
+          "Platforms have no useful data"
+        ],
+        "correctIndex": 1,
+        "explanation": "Researcher access enables independent study of how disinformation spreads, whether platform interventions work, and what systemic risks exist. Without it, we rely solely on platforms' self-reporting."
+      },
+      {
+        "id": "pg-5",
+        "question": "What is a key challenge in cross-platform coordination against FIMI?",
+        "options": [
+          "Platforms speak different languages",
+          "Different policies, competitive concerns, and legal constraints complicate information sharing",
+          "FIMI only operates on one platform at a time",
+          "Platforms have identical moderation systems"
+        ],
+        "correctIndex": 1,
+        "explanation": "Influence operations often span multiple platforms, but platforms have different rules, compete with each other, and face legal constraints on data sharing. Coordination is essential but difficult to achieve effectively."
+      }
+    ]
+  },
+  "Understanding FIMI Operations": {
+    "passingScore": 70,
+    "questions": [
+      {
+        "id": "fimi-1",
+        "question": "What does FIMI stand for?",
+        "options": [
+          "Federal Information Management Initiative",
+          "Foreign Information Manipulation and Interference",
+          "Free Internet Media Index",
+          "Fake Information Monitoring Institute"
+        ],
+        "correctIndex": 1,
+        "explanation": "FIMI (Foreign Information Manipulation and Interference) is the EU term for coordinated efforts by foreign state or state-backed actors to manipulate public opinion and interfere in democratic processes through information operations."
+      },
+      {
+        "id": "fimi-2",
+        "question": "What distinguishes state-sponsored FIMI from independent disinformation?",
+        "options": [
+          "State-sponsored FIMI is always obvious and labeled",
+          "State actors have resources, strategic objectives, and often use proxies for deniability",
+          "Independent disinformation is more harmful",
+          "There is no meaningful difference"
+        ],
+        "correctIndex": 1,
+        "explanation": "State actors have significant resources, long-term strategic goals aligned with foreign policy, and often use proxies (contractors, fake grassroots movements) to maintain deniability. This makes them persistent and sophisticated adversaries."
+      },
+      {
+        "id": "fimi-3",
+        "question": "What is a common FIMI tactic involving fake online personas?",
+        "options": [
+          "Creating authentic journalism",
+          "Building networks of fake accounts that appear to be local citizens to spread narratives",
+          "Hiring real journalists to write stories",
+          "Purchasing legitimate advertising"
+        ],
+        "correctIndex": 1,
+        "explanation": "FIMI operations often create fake personas posing as local citizens, journalists, or experts to give foreign narratives the appearance of domestic authenticity. These networks then amplify messaging and engage real users."
+      },
+      {
+        "id": "fimi-4",
+        "question": "Why is measuring FIMI impact challenging?",
+        "options": [
+          "FIMI campaigns have no measurable effects",
+          "Effects are often indirect, long-term, and difficult to isolate from other factors",
+          "All FIMI campaigns immediately change election results",
+          "Platforms provide complete impact data"
+        ],
+        "correctIndex": 1,
+        "explanation": "FIMI impact is hard to measure because effects may be long-term (eroding trust over years), indirect (influencing influencers), and impossible to isolate from organic activity or other factors affecting public opinion."
+      },
+      {
+        "id": "fimi-5",
+        "question": "How is the European Union responding to FIMI threats?",
+        "options": [
+          "By ignoring the problem entirely",
+          "Through detection capabilities, strategic communication, platform regulation, and building societal resilience",
+          "By banning all foreign media",
+          "By creating state-controlled social media"
+        ],
+        "correctIndex": 1,
+        "explanation": "The EU's response includes: the EEAS FIMI detection team, Strategic Communication task forces, the Digital Services Act for platform accountability, and media literacy programs to build public resilience—a comprehensive, multi-layered approach."
+      }
+    ]
   }
 }
