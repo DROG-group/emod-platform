@@ -19,6 +19,16 @@ export interface ModuleProgress {
   created_at: string
 }
 
+export interface Certificate {
+  id: string
+  user_id: string
+  certificate_code: string
+  learning_path: string
+  recipient_name: string
+  issued_at: string
+  created_at: string
+}
+
 export interface Database {
   public: {
     Tables: {
@@ -31,6 +41,11 @@ export interface Database {
         Row: ModuleProgress
         Insert: Omit<ModuleProgress, 'id' | 'created_at'>
         Update: Partial<Omit<ModuleProgress, 'id' | 'user_id' | 'created_at'>>
+      }
+      certificates: {
+        Row: Certificate
+        Insert: Omit<Certificate, 'id' | 'created_at' | 'issued_at'>
+        Update: Partial<Omit<Certificate, 'id' | 'user_id' | 'created_at'>>
       }
     }
   }
