@@ -1,13 +1,31 @@
 import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
 
+// Routes that require authentication
+const PROTECTED_ROUTES = ['/dashboard']
+
+// Security headers
+const securityHeaders = {
+  'X-Frame-Options': 'DENY',
+  'X-Content-Type-Options': 'nosniff',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+}
+
+function addSecurityHeaders(response: NextResponse): NextResponse {
+  Object.entries(securityHeaders).forEach(([key, value]) => {
+    response.headers.set(key, value)
+  })
+  return response
+}
+
 export async function middleware(request: NextRequest) {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
   const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 
-  // Skip middleware if Supabase is not configured
+  // Skip Supabase middleware if not configured, but still add security headers
   if (!supabaseUrl || !supabaseKey || supabaseUrl === 'your_project_url_here') {
-    return NextResponse.next()
+    return addSecurityHeaders(NextResponse.next())
   }
 
   let supabaseResponse = NextResponse.next({
@@ -33,9 +51,20 @@ export async function middleware(request: NextRequest) {
   )
 
   // Refresh session if expired - required for Server Components
-  await supabase.auth.getUser()
+  const { data: { user } } = await supabase.auth.getUser()
 
-  return supabaseResponse
+  // Check if route requires authentication
+  const isProtectedRoute = PROTECTED_ROUTES.some(route =>
+    request.nextUrl.pathname.startsWith(route)
+  )
+
+  if (isProtectedRoute && !user) {
+    const loginUrl = new URL('/login', request.url)
+    loginUrl.searchParams.set('next', request.nextUrl.pathname)
+    return addSecurityHeaders(NextResponse.redirect(loginUrl))
+  }
+
+  return addSecurityHeaders(supabaseResponse)
 }
 
 export const config = {

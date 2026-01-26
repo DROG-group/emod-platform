@@ -43,3 +43,9 @@ next-env.d.ts
 
 # Vercel
 .vercel
+
+# Claude Code
+.claude/
+
+# Test coverage
+coverage/

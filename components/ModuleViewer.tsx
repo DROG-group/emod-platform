@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo, useCallback, useEffect } from "react";
+import DOMPurify from "isomorphic-dompurify";
 import { useAuth } from "@/contexts/AuthContext";
 import { useProgress } from "@/hooks/useProgress";
 import Link from "next/link";
@@ -20,8 +21,20 @@ interface Section {
   isSubsection?: boolean;
 }
 
-function parseMarkdown(text: string): string {
+function escapeHtml(text: string): string {
   return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function parseMarkdown(text: string): string {
+  // Escape any HTML in input first to prevent XSS
+  const escaped = escapeHtml(text);
+
+  const html = escaped
     // Handle inline images/diagrams: ![alt text](/path/to/image.svg)
     .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<div class="my-6 flex justify-center"><img src="$2" alt="$1" class="max-w-full h-auto rounded-lg shadow-sm border border-gray-200" /></div>')
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
@@ -32,6 +45,12 @@ function parseMarkdown(text: string): string {
     .replace(/\n\n/g, '</p><p class="mb-4 text-gray-700 leading-relaxed">')
     .replace(/^(?!<[huol]|<li|<p|<strong|<div)(.+)$/gm, '<p class="mb-4 text-gray-700 leading-relaxed">$1</p>')
     .replace(/<p class="mb-4 text-gray-700 leading-relaxed"><\/p>/g, '');
+
+  // Sanitize output as defense-in-depth
+  return DOMPurify.sanitize(html, {
+    ALLOWED_TAGS: ['p', 'h3', 'ul', 'li', 'strong', 'em', 'div', 'img'],
+    ALLOWED_ATTR: ['class', 'src', 'alt'],
+  });
 }
 
 function getSectionIcon(title: string): string {
