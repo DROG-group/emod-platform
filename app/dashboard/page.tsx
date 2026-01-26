@@ -40,6 +40,14 @@ export default function Dashboard() {
     }, {} as Record<string, Module[]>);
   }, [filteredModules]);
 
+  // Pre-compute audience counts to avoid recalculating on every render
+  const audienceCounts = useMemo(() => {
+    return AUDIENCES.reduce((acc, audience) => {
+      acc[audience.id] = modules.filter((m) => m.audiences?.includes(audience.id)).length;
+      return acc;
+    }, {} as Record<Audience, number>);
+  }, []);
+
   const totalModules = filteredModules.length;
   const learningPaths = Object.keys(groupedModules).length;
   const lastViewed = getLastViewed();
@@ -120,9 +128,6 @@ export default function Dashboard() {
             </div>
             <div className="flex flex-wrap gap-2">
               {AUDIENCES.map((audience) => {
-                const count = modules.filter((m) =>
-                  m.audiences?.includes(audience.id)
-                ).length;
                 const isSelected = selectedAudience === audience.id;
                 return (
                   <button
@@ -146,7 +151,7 @@ export default function Dashboard() {
                           : "bg-gray-200"
                       }`}
                     >
-                      {count}
+                      {audienceCounts[audience.id]}
                     </span>
                   </button>
                 );
