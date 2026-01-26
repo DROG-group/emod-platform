@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 450">
+  <!-- Background -->
+  <rect width="700" height="450" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="350" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">The Disinformation Economy</text>
+  <text x="350" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#64748b">How money flows in the misinformation ecosystem</text>
+
+  <!-- Money flow cycle -->
+  <ellipse cx="350" cy="230" rx="280" ry="150" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="10,5"/>
+
+  <!-- Creators/Producers -->
+  <rect x="30" y="100" width="150" height="80" rx="10" fill="#ef4444" opacity="0.9"/>
+  <text x="105" y="130" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="white">PRODUCERS</text>
+  <text x="105" y="150" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="white">Create false content</text>
+  <text x="105" y="165" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="white">Clickbait factories</text>
+
+  <!-- Platforms -->
+  <rect x="520" y="100" width="150" height="80" rx="10" fill="#3b82f6" opacity="0.9"/>
+  <text x="595" y="130" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="white">PLATFORMS</text>
+  <text x="595" y="150" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="white">Host &amp; distribute</text>
+  <text x="595" y="165" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="white">Algorithmic boost</text>
+
+  <!-- Advertisers -->
+  <rect x="30" y="280" width="150" height="80" rx="10" fill="#22c55e" opacity="0.9"/>
+  <text x="105" y="310" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="white">ADVERTISERS</text>
+  <text x="105" y="330" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="white">Pay for eyeballs</text>
+  <text x="105" y="345" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="white">Often unaware</text>
+
+  <!-- Audiences -->
+  <rect x="520" y="280" width="150" height="80" rx="10" fill="#8b5cf6" opacity="0.9"/>
+  <text x="595" y="310" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="white">AUDIENCES</text>
+  <text x="595" y="330" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="white">Consume, engage</text>
+  <text x="595" y="345" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="white">Share content</text>
+
+  <!-- Money flow center -->
+  <circle cx="350" cy="230" r="50" fill="#f59e0b" opacity="0.9"/>
+  <text x="350" y="225" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="white">AD</text>
+  <text x="350" y="243" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="white">REVENUE</text>
+
+  <!-- Arrows showing flow -->
+  <path d="M180,140 Q280,100 310,185" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M390,185 Q420,100 520,140" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M520,320 Q420,360 390,275" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M310,275 Q280,360 180,320" fill="none" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Labels on arrows -->
+  <text x="230" y="130" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Content</text>
+  <text x="450" y="130" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Distribution</text>
+  <text x="450" y="340" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Attention</text>
+  <text x="230" y="340" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Money</text>
+
+  <!-- Key insight -->
+  <rect x="200" y="400" width="300" height="40" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+  <text x="350" y="418" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#92400e">Engagement = Revenue</text>
+  <text x="350" y="433" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#92400e">Outrage drives clicks, clicks drive profits</text>
+</svg>

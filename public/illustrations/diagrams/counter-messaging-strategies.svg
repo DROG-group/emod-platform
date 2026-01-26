@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 450">
+  <!-- Background -->
+  <rect width="700" height="450" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="350" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">Counter-Messaging Strategies</text>
+  <text x="350" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#64748b">Three approaches to combat misinformation</text>
+
+  <!-- Debunking -->
+  <rect x="30" y="80" width="200" height="250" rx="12" fill="#ef4444" opacity="0.9"/>
+  <text x="130" y="110" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="white">DEBUNKING</text>
+  <text x="130" y="130" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="white">After the fact</text>
+
+  <circle cx="130" cy="175" r="30" fill="white" opacity="0.2"/>
+  <text x="130" y="182" text-anchor="middle" font-family="system-ui, sans-serif" font-size="24" fill="white">X</text>
+
+  <text x="130" y="225" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="white">Correct false claims</text>
+  <text x="130" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="white">with evidence</text>
+
+  <rect x="45" y="260" width="170" height="55" rx="5" fill="white" opacity="0.15"/>
+  <text x="130" y="278" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="white">Best practices:</text>
+  <text x="130" y="293" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="white">Lead with truth, not myth</text>
+  <text x="130" y="308" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="white">Explain why it's wrong</text>
+
+  <!-- Prebunking -->
+  <rect x="250" y="80" width="200" height="250" rx="12" fill="#22c55e" opacity="0.9"/>
+  <text x="350" y="110" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="white">PREBUNKING</text>
+  <text x="350" y="130" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="white">Before exposure</text>
+
+  <circle cx="350" cy="175" r="30" fill="white" opacity="0.2"/>
+  <path d="M335,175 L350,160 L365,175 L350,190 Z" fill="white" opacity="0.8"/>
+
+  <text x="350" y="225" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="white">Inoculate against</text>
+  <text x="350" y="240" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="white">manipulation tactics</text>
+
+  <rect x="265" y="260" width="170" height="55" rx="5" fill="white" opacity="0.15"/>
+  <text x="350" y="278" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="white">How it works:</text>
+  <text x="350" y="293" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="white">Warn about techniques</text>
+  <text x="350" y="308" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="white">Show weakened examples</text>
+
+  <!-- Alternative Narratives -->
+  <rect x="470" y="80" width="200" height="250" rx="12" fill="#3b82f6" opacity="0.9"/>
+  <text x="570" y="105" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="white">ALTERNATIVE</text>
+  <text x="570" y="125" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="white">NARRATIVES</text>
+
+  <circle cx="570" cy="170" r="30" fill="white" opacity="0.2"/>
+  <text x="570" y="177" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" fill="white">+</text>
+
+  <text x="570" y="220" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="white">Offer compelling</text>
+  <text x="570" y="235" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="white">true alternatives</text>
+
+  <rect x="485" y="255" width="170" height="60" rx="5" fill="white" opacity="0.15"/>
+  <text x="570" y="273" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="white">Key elements:</text>
+  <text x="570" y="288" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="white">Emotional resonance</text>
+  <text x="570" y="303" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="white">Address underlying needs</text>
+
+  <!-- Effectiveness comparison -->
+  <rect x="50" y="350" width="600" height="80" rx="10" fill="#e2e8f0"/>
+  <text x="350" y="375" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#334155">Effectiveness Timeline</text>
+
+  <!-- Timeline -->
+  <line x1="100" y1="405" x2="600" y2="405" stroke="#94a3b8" stroke-width="2"/>
+
+  <circle cx="150" cy="405" r="8" fill="#ef4444"/>
+  <text x="150" y="395" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Short-term</text>
+
+  <circle cx="350" cy="405" r="8" fill="#22c55e"/>
+  <text x="350" y="395" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Most effective</text>
+
+  <circle cx="550" cy="405" r="8" fill="#3b82f6"/>
+  <text x="550" y="395" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">Long-term</text>
+</svg>

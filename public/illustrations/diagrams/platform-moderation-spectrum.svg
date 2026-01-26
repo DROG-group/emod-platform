@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 400">
+  <!-- Background -->
+  <rect width="700" height="400" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="350" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">Platform Moderation Spectrum</text>
+  <text x="350" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#64748b">Content moderation approaches from least to most restrictive</text>
+
+  <!-- Spectrum bar -->
+  <defs>
+    <linearGradient id="spectrum" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#22c55e"/>
+      <stop offset="50%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#ef4444"/>
+    </linearGradient>
+  </defs>
+  <rect x="50" y="80" width="600" height="20" rx="10" fill="url(#spectrum)"/>
+
+  <!-- Labels under spectrum -->
+  <text x="50" y="115" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Light touch</text>
+  <text x="650" y="115" text-anchor="end" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Heavy moderation</text>
+
+  <!-- Approach 1: No moderation -->
+  <rect x="30" y="130" width="120" height="100" rx="8" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="90" y="155" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#166534">NO ACTION</text>
+  <text x="90" y="175" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#15803d">Free speech focus</text>
+  <text x="90" y="190" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#15803d">User responsibility</text>
+  <text x="90" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#15803d">Market of ideas</text>
+
+  <!-- Approach 2: Labels -->
+  <rect x="165" y="130" width="120" height="100" rx="8" fill="#fef9c3" stroke="#eab308" stroke-width="2"/>
+  <text x="225" y="155" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#854d0e">LABELS</text>
+  <text x="225" y="175" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#a16207">Add context</text>
+  <text x="225" y="190" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#a16207">Fact-check tags</text>
+  <text x="225" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#a16207">Source warnings</text>
+
+  <!-- Approach 3: Reduce reach -->
+  <rect x="300" y="130" width="120" height="100" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <text x="360" y="150" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#92400e">REDUCE</text>
+  <text x="360" y="165" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#92400e">REACH</text>
+  <text x="360" y="185" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#b45309">Limit algorithm</text>
+  <text x="360" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#b45309">Shadow restrictions</text>
+  <text x="360" y="215" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#b45309">Demonetization</text>
+
+  <!-- Approach 4: Suspend -->
+  <rect x="435" y="130" width="120" height="100" rx="8" fill="#fee2e2" stroke="#f87171" stroke-width="2"/>
+  <text x="495" y="155" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#b91c1c">SUSPEND</text>
+  <text x="495" y="175" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#dc2626">Temp account lock</text>
+  <text x="495" y="190" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#dc2626">Feature limits</text>
+  <text x="495" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#dc2626">Appeals process</text>
+
+  <!-- Approach 5: Remove -->
+  <rect x="570" y="130" width="110" height="100" rx="8" fill="#ef4444" opacity="0.9"/>
+  <text x="625" y="155" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">REMOVE</text>
+  <text x="625" y="175" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="white">Delete content</text>
+  <text x="625" y="190" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="white">Ban accounts</text>
+  <text x="625" y="210" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="white">Deplatform</text>
+
+  <!-- Tradeoffs section -->
+  <rect x="50" y="250" width="290" height="130" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="1"/>
+  <text x="195" y="275" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#166534">Light Touch Pros/Cons</text>
+  <text x="70" y="300" font-family="system-ui, sans-serif" font-size="10" fill="#15803d">+ Protects free expression</text>
+  <text x="70" y="318" font-family="system-ui, sans-serif" font-size="10" fill="#15803d">+ Less censorship concerns</text>
+  <text x="70" y="340" font-family="system-ui, sans-serif" font-size="10" fill="#dc2626">- Harmful content spreads</text>
+  <text x="70" y="358" font-family="system-ui, sans-serif" font-size="10" fill="#dc2626">- Platform liability issues</text>
+
+  <rect x="360" y="250" width="290" height="130" rx="10" fill="#fee2e2" stroke="#ef4444" stroke-width="1"/>
+  <text x="505" y="275" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#b91c1c">Heavy Moderation Pros/Cons</text>
+  <text x="380" y="300" font-family="system-ui, sans-serif" font-size="10" fill="#15803d">+ Reduces harmful content</text>
+  <text x="380" y="318" font-family="system-ui, sans-serif" font-size="10" fill="#15803d">+ Protects vulnerable users</text>
+  <text x="380" y="340" font-family="system-ui, sans-serif" font-size="10" fill="#dc2626">- Risk of overreach/bias</text>
+  <text x="380" y="358" font-family="system-ui, sans-serif" font-size="10" fill="#dc2626">- Expensive to implement</text>
+</svg>
