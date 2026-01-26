@@ -29,6 +29,20 @@ export interface Certificate {
   created_at: string
 }
 
+export interface QuizAttemptRecord {
+  id: string
+  user_id: string
+  module_id: string
+  section_title: string | null
+  responses: Record<string, unknown>
+  scores: Record<string, number>
+  total_score: number
+  max_possible_score: number
+  passed: boolean
+  completed_at: string
+  created_at: string
+}
+
 export interface Database {
   public: {
     Tables: {
