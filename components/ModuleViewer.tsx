@@ -15,6 +15,7 @@ interface ModuleViewerProps {
 interface Section {
   title: string;
   content: string;
+  parsedHtml: string;
   isSubsection?: boolean;
 }
 
@@ -53,6 +54,7 @@ export default function ModuleViewer({ content, title, moduleId, learningPath }:
   const { user } = useAuth();
   const { markViewed, markCompleted, isCompleted, getModuleProgress } = useProgress();
 
+  // Parse sections and pre-compute HTML to avoid re-parsing on every render
   const sections = useMemo(() => {
     const parts = content.split(/^## /gm).filter(Boolean);
     const result: Section[] = [];
@@ -72,6 +74,7 @@ export default function ModuleViewer({ content, title, moduleId, learningPath }:
       result.push({
         title: sectionTitle,
         content: sectionContent,
+        parsedHtml: parseMarkdown(sectionContent),
         isSubsection,
       });
     }
@@ -165,7 +168,7 @@ export default function ModuleViewer({ content, title, moduleId, learningPath }:
           <div className="p-6 lg:p-8">
             <div
               className="module-content prose prose-gray max-w-none"
-              dangerouslySetInnerHTML={{ __html: parseMarkdown(currentSection.content) }}
+              dangerouslySetInnerHTML={{ __html: currentSection.parsedHtml }}
             />
           </div>
 
