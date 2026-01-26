@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useMemo } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import { useAuth } from '@/contexts/AuthContext'
 import { ModuleProgress } from '@/types/database'
@@ -9,7 +9,8 @@ export function useProgress() {
   const { user } = useAuth()
   const [progress, setProgress] = useState<ModuleProgress[]>([])
   const [loading, setLoading] = useState(true)
-  const supabase = createClient()
+  const [error, setError] = useState<string | null>(null)
+  const supabase = useMemo(() => createClient(), [])
 
   // Fetch all progress on mount
   useEffect(() => {
@@ -18,83 +19,119 @@ export function useProgress() {
     } else {
       setProgress([])
       setLoading(false)
+      setError(null)
     }
   }, [user])
 
   async function fetchProgress() {
     if (!user) return
     setLoading(true)
-    const { data } = await supabase
-      .from('module_progress')
-      .select('*')
-      .eq('user_id', user.id)
-    setProgress(data || [])
-    setLoading(false)
+    setError(null)
+    try {
+      const { data, error: fetchError } = await supabase
+        .from('module_progress')
+        .select('*')
+        .eq('user_id', user.id)
+
+      if (fetchError) {
+        console.error('Failed to fetch progress:', fetchError)
+        setError('Failed to load progress')
+        setProgress([])
+      } else {
+        setProgress(data || [])
+      }
+    } catch (err) {
+      console.error('Unexpected error fetching progress:', err)
+      setError('Failed to load progress')
+      setProgress([])
+    } finally {
+      setLoading(false)
+    }
   }
 
   // Mark module as viewed (upsert)
   const markViewed = useCallback(async (moduleId: string, learningPath: string | null, sectionIndex: number = 0) => {
     if (!user) return { data: null, error: new Error('Not authenticated') }
 
-    const { data, error } = await supabase
-      .from('module_progress')
-      .upsert({
-        user_id: user.id,
-        module_id: moduleId,
-        learning_path: learningPath,
-        last_viewed_at: new Date().toISOString(),
-        last_section_index: sectionIndex,
-      }, {
-        onConflict: 'user_id,module_id',
-      })
-      .select()
-      .single()
+    try {
+      const { data, error: upsertError } = await supabase
+        .from('module_progress')
+        .upsert({
+          user_id: user.id,
+          module_id: moduleId,
+          learning_path: learningPath,
+          last_viewed_at: new Date().toISOString(),
+          last_section_index: sectionIndex,
+        }, {
+          onConflict: 'user_id,module_id',
+        })
+        .select()
+        .single()
 
-    if (!error && data) {
-      setProgress(prev => {
-        const existing = prev.findIndex(p => p.module_id === moduleId)
-        if (existing >= 0) {
-          const updated = [...prev]
-          updated[existing] = data
-          return updated
-        }
-        return [...prev, data]
-      })
+      if (upsertError) {
+        console.error('Failed to mark module as viewed:', upsertError)
+        return { data: null, error: upsertError }
+      }
+
+      if (data) {
+        setProgress(prev => {
+          const existing = prev.findIndex(p => p.module_id === moduleId)
+          if (existing >= 0) {
+            const updated = [...prev]
+            updated[existing] = data
+            return updated
+          }
+          return [...prev, data]
+        })
+      }
+      return { data, error: null }
+    } catch (err) {
+      console.error('Unexpected error marking module as viewed:', err)
+      return { data: null, error: err as Error }
     }
-    return { data, error }
   }, [user, supabase])
 
   // Mark module as completed
   const markCompleted = useCallback(async (moduleId: string, learningPath: string | null) => {
     if (!user) return { data: null, error: new Error('Not authenticated') }
 
-    const { data, error } = await supabase
-      .from('module_progress')
-      .upsert({
-        user_id: user.id,
-        module_id: moduleId,
-        learning_path: learningPath,
-        completed: true,
-        completed_at: new Date().toISOString(),
-        last_viewed_at: new Date().toISOString(),
-      }, {
-        onConflict: 'user_id,module_id',
-      })
-      .select()
-      .single()
+    try {
+      const { data, error: upsertError } = await supabase
+        .from('module_progress')
+        .upsert({
+          user_id: user.id,
+          module_id: moduleId,
+          learning_path: learningPath,
+          completed: true,
+          completed_at: new Date().toISOString(),
+          last_viewed_at: new Date().toISOString(),
+        }, {
+          onConflict: 'user_id,module_id',
+        })
+        .select()
+        .single()
 
-    if (!error && data) {
-      setProgress(prev => {
-        const existing = prev.findIndex(p => p.module_id === moduleId)
-        if (existing >= 0) {
-          const updated = [...prev]
-          updated[existing] = data
-          return updated
-        }
-        return [...prev, data]
-      })
+      if (upsertError) {
+        console.error('Failed to mark module as completed:', upsertError)
+        return { data: null, error: upsertError }
+      }
+
+      if (data) {
+        setProgress(prev => {
+          const existing = prev.findIndex(p => p.module_id === moduleId)
+          if (existing >= 0) {
+            const updated = [...prev]
+            updated[existing] = data
+            return updated
+          }
+          return [...prev, data]
+        })
+      }
+      return { data, error: null }
+    } catch (err) {
+      console.error('Unexpected error marking module as completed:', err)
+      return { data: null, error: err as Error }
     }
-    return { data, error }
   }, [user, supabase])
 
   // Helper: Check if module is completed
@@ -133,6 +170,7 @@ export function useProgress() {
   return {
     progress,
     loading,
+    error,
     markViewed,
     markCompleted,
     isCompleted,
