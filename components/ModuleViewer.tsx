@@ -137,6 +137,20 @@ export default function ModuleViewer({ content, title, moduleId, learningPath, h
 
   return (
     <div className="max-w-4xl mx-auto">
+      {/* Header Image */}
+      {headerImage && (
+        <div className="mb-6 rounded-xl overflow-hidden shadow-sm border border-gray-200">
+          <Image
+            src={headerImage}
+            alt={title}
+            width={800}
+            height={200}
+            className="w-full h-auto"
+            priority
+          />
+        </div>
+      )}
+
       {/* Progress bar */}
       <div className="mb-6">
         <div className="flex items-center justify-between text-sm text-gray-500 mb-2">
