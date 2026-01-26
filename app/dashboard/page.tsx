@@ -46,6 +46,16 @@ export default function Dashboard() {
   const lastViewedModule = lastViewed ? modules.find(m => m.id === lastViewed.module_id) : null;
   const completedCount = progress.filter(p => p.completed).length;
 
+  // Calculate total hours from actual module estimated times
+  const totalMinutes = useMemo(() => {
+    return filteredModules.reduce((total, module) => {
+      const timeStr = module.estimatedTime || '0';
+      const minutes = parseInt(timeStr.match(/\d+/)?.[0] || '0', 10);
+      return total + minutes;
+    }, 0);
+  }, [filteredModules]);
+  const totalHours = Math.round(totalMinutes / 60);
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Welcome Section for Logged In Users */}
@@ -161,7 +171,7 @@ export default function Dashboard() {
               <span className="text-gray-400 text-sm">Learning Paths</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-2xl font-bold text-purple-light">{Math.round(totalModules * 8 / 60)}+</span>
+              <span className="text-2xl font-bold text-purple-light">{totalHours}+</span>
               <span className="text-gray-400 text-sm">Hours</span>
             </div>
             {user && (

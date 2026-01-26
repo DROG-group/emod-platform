@@ -50,7 +50,7 @@ export default function Home() {
                 <div className="text-sm text-gray-500">Learning Paths</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-gray-900">8+</div>
+                <div className="text-3xl font-bold text-gray-900">19+</div>
                 <div className="text-sm text-gray-500">Hours of Content</div>
               </div>
               <div>
