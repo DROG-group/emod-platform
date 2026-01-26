@@ -1,32 +1,84 @@
 'use client'
 
-import { useState, useEffect, useCallback, useMemo } from 'react'
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import { useAuth } from '@/contexts/AuthContext'
 import { ModuleProgress } from '@/types/database'
 
+// Simple in-memory cache for progress data
+const progressCache: {
+  data: ModuleProgress[]
+  userId: string | null
+  timestamp: number
+} = {
+  data: [],
+  userId: null,
+  timestamp: 0,
+}
+
+// Cache duration: 5 minutes
+const CACHE_DURATION_MS = 5 * 60 * 1000
+
+function isCacheValid(userId: string): boolean {
+  return (
+    progressCache.userId === userId &&
+    progressCache.data.length > 0 &&
+    Date.now() - progressCache.timestamp < CACHE_DURATION_MS
+  )
+}
+
 export function useProgress() {
   const { user } = useAuth()
-  const [progress, setProgress] = useState<ModuleProgress[]>([])
+  const [progress, setProgress] = useState<ModuleProgress[]>(() => {
+    // Initialize from cache if valid
+    if (user && isCacheValid(user.id)) {
+      return progressCache.data
+    }
+    return []
+  })
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const supabase = useMemo(() => createClient(), [])
+  const fetchingRef = useRef(false)
 
   // Fetch all progress on mount
   useEffect(() => {
     if (user) {
+      // Use cache if valid
+      if (isCacheValid(user.id)) {
+        setProgress(progressCache.data)
+        setLoading(false)
+        return
+      }
       fetchProgress()
     } else {
       setProgress([])
       setLoading(false)
       setError(null)
+      // Clear cache on logout
+      progressCache.data = []
+      progressCache.userId = null
+      progressCache.timestamp = 0
     }
   }, [user])
 
-  async function fetchProgress() {
+  async function fetchProgress(forceRefresh = false) {
     if (!user) return
+
+    // Prevent duplicate fetches
+    if (fetchingRef.current) return
+
+    // Use cache if valid and not forcing refresh
+    if (!forceRefresh && isCacheValid(user.id)) {
+      setProgress(progressCache.data)
+      setLoading(false)
+      return
+    }
+
+    fetchingRef.current = true
     setLoading(true)
     setError(null)
+
     try {
       const { data, error: fetchError } = await supabase
         .from('module_progress')
@@ -38,7 +90,12 @@ export function useProgress() {
         setError('Failed to load progress')
         setProgress([])
       } else {
-        setProgress(data || [])
+        const progressData = data || []
+        // Update cache
+        progressCache.data = progressData
+        progressCache.userId = user.id
+        progressCache.timestamp = Date.now()
+        setProgress(progressData)
       }
     } catch (err) {
       console.error('Unexpected error fetching progress:', err)
@@ -46,6 +103,7 @@ export function useProgress() {
       setProgress([])
     } finally {
       setLoading(false)
+      fetchingRef.current = false
     }
   }
 
@@ -76,12 +134,17 @@ export function useProgress() {
       if (data) {
         setProgress(prev => {
           const existing = prev.findIndex(p => p.module_id === moduleId)
+          let updated: ModuleProgress[]
           if (existing >= 0) {
-            const updated = [...prev]
+            updated = [...prev]
             updated[existing] = data
-            return updated
+          } else {
+            updated = [...prev, data]
           }
-          return [...prev, data]
+          // Update cache
+          progressCache.data = updated
+          progressCache.timestamp = Date.now()
+          return updated
         })
       }
       return { data, error: null }
@@ -119,12 +182,17 @@ export function useProgress() {
       if (data) {
         setProgress(prev => {
           const existing = prev.findIndex(p => p.module_id === moduleId)
+          let updated: ModuleProgress[]
           if (existing >= 0) {
-            const updated = [...prev]
+            updated = [...prev]
             updated[existing] = data
-            return updated
+          } else {
+            updated = [...prev, data]
           }
-          return [...prev, data]
+          // Update cache
+          progressCache.data = updated
+          progressCache.timestamp = Date.now()
+          return updated
         })
       }
       return { data, error: null }

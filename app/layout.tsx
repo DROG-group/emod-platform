@@ -4,6 +4,8 @@ import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
 import { AuthProvider } from "@/contexts/AuthContext";
+import { ToastProvider } from "@/contexts/ToastContext";
+import { ErrorBoundary } from "@/components/ErrorBoundary";
 import NavBar from "@/components/NavBar";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -27,10 +29,13 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}>
         <AuthProvider>
-          <NavBar />
-          <main className="pt-16 lg:pt-20">
-            {children}
-          </main>
+          <ToastProvider>
+            <NavBar />
+            <main className="pt-16 lg:pt-20">
+              <ErrorBoundary>
+                {children}
+              </ErrorBoundary>
+            </main>
           <footer className="bg-gray-900 text-white">
             <div className="container mx-auto px-4 py-12">
               <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
@@ -132,6 +137,7 @@ export default function RootLayout({
               </div>
             </div>
           </footer>
+          </ToastProvider>
         </AuthProvider>
       </body>
     </html>
