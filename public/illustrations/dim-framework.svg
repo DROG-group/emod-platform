@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <defs>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1f2937">DIM Framework: 5 Generations of Intervention</text>
+
+  <!-- Generation boxes -->
+  <!-- Gen 1 -->
+  <g filter="url(#shadow)">
+    <rect x="20" y="60" width="140" height="180" rx="12" fill="#fef3c7"/>
+    <rect x="20" y="60" width="140" height="40" rx="12" fill="#f59e0b"/>
+    <rect x="20" y="88" width="140" height="12" fill="#f59e0b"/>
+    <text x="90" y="87" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="white">Gen 1</text>
+    <text x="90" y="120" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#92400e">Ignore</text>
+    <text x="90" y="145" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#78716c">No response</text>
+    <text x="90" y="160" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#78716c">to disinfo</text>
+    <text x="90" y="185" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#a8a29e">Low harm threshold</text>
+    <text x="90" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#a8a29e">or no capacity</text>
+  </g>
+
+  <!-- Gen 2 -->
+  <g filter="url(#shadow)">
+    <rect x="175" y="60" width="140" height="180" rx="12" fill="#dbeafe"/>
+    <rect x="175" y="60" width="140" height="40" rx="12" fill="#3b82f6"/>
+    <rect x="175" y="88" width="140" height="12" fill="#3b82f6"/>
+    <text x="245" y="87" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="white">Gen 2</text>
+    <text x="245" y="120" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1e40af">Debunk</text>
+    <text x="245" y="145" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#78716c">Reactive</text>
+    <text x="245" y="160" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#78716c">fact-checking</text>
+    <text x="245" y="185" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#a8a29e">After spread</text>
+    <text x="245" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#a8a29e">Limited reach</text>
+  </g>
+
+  <!-- Gen 3 -->
+  <g filter="url(#shadow)">
+    <rect x="330" y="60" width="140" height="180" rx="12" fill="#d1fae5"/>
+    <rect x="330" y="60" width="140" height="40" rx="12" fill="#10b981"/>
+    <rect x="330" y="88" width="140" height="12" fill="#10b981"/>
+    <text x="400" y="87" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="white">Gen 3</text>
+    <text x="400" y="120" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#065f46">Prebunk</text>
+    <text x="400" y="145" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#78716c">Inoculation</text>
+    <text x="400" y="160" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#78716c">before exposure</text>
+    <text x="400" y="185" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#a8a29e">Builds resistance</text>
+    <text x="400" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#a8a29e">Proactive</text>
+  </g>
+
+  <!-- Gen 4 -->
+  <g filter="url(#shadow)">
+    <rect x="485" y="60" width="140" height="180" rx="12" fill="#fce7f3"/>
+    <rect x="485" y="60" width="140" height="40" rx="12" fill="#ec4899"/>
+    <rect x="485" y="88" width="140" height="12" fill="#ec4899"/>
+    <text x="555" y="87" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="white">Gen 4</text>
+    <text x="555" y="120" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#9d174d">Moderate</text>
+    <text x="555" y="145" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#78716c">Content removal</text>
+    <text x="555" y="160" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#78716c">or labeling</text>
+    <text x="555" y="185" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#a8a29e">Platform action</text>
+    <text x="555" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#a8a29e">Speech concerns</text>
+  </g>
+
+  <!-- Gen 5 -->
+  <g filter="url(#shadow)">
+    <rect x="640" y="60" width="140" height="180" rx="12" fill="#ede9fe"/>
+    <rect x="640" y="60" width="140" height="40" rx="12" fill="url(#purpleGrad)"/>
+    <rect x="640" y="88" width="140" height="12" fill="url(#purpleGrad)"/>
+    <text x="710" y="87" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="white">Gen 5</text>
+    <text x="710" y="120" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#5b21b6">Interaction</text>
+    <text x="710" y="145" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#78716c">System design</text>
+    <text x="710" y="160" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#78716c">Algorithm changes</text>
+    <text x="710" y="185" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#a8a29e">Structural change</text>
+    <text x="710" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#a8a29e">Most effective</text>
+  </g>
+
+  <!-- Arrow -->
+  <line x1="50" y1="270" x2="750" y2="270" stroke="#d1d5db" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#9ca3af"/>
+    </marker>
+  </defs>
+  <text x="400" y="290" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#6b7280">Increasing effectiveness → but also increasing complexity and resources required</text>
+</svg>

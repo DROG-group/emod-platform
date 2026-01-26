@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:0.05"/>
+    </linearGradient>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" fill="url(#bgGrad)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="700" cy="50" r="80" fill="#7c3aed" opacity="0.05"/>
+  <circle cx="100" cy="150" r="60" fill="#a78bfa" opacity="0.05"/>
+  <circle cx="650" cy="170" r="40" fill="#7c3aed" opacity="0.08"/>
+
+  <!-- Globe icon -->
+  <g transform="translate(100, 60)">
+    <circle cx="40" cy="40" r="35" fill="none" stroke="url(#iconGrad)" stroke-width="3"/>
+    <ellipse cx="40" cy="40" rx="35" ry="15" fill="none" stroke="url(#iconGrad)" stroke-width="2"/>
+    <line x1="40" y1="5" x2="40" y2="75" stroke="url(#iconGrad)" stroke-width="2"/>
+    <path d="M10,25 Q40,35 70,25" fill="none" stroke="url(#iconGrad)" stroke-width="1.5" opacity="0.7"/>
+    <path d="M10,55 Q40,45 70,55" fill="none" stroke="url(#iconGrad)" stroke-width="1.5" opacity="0.7"/>
+  </g>
+
+  <!-- Network nodes -->
+  <g transform="translate(220, 50)">
+    <circle cx="30" cy="30" r="8" fill="#7c3aed" opacity="0.3"/>
+    <circle cx="70" cy="20" r="6" fill="#7c3aed" opacity="0.4"/>
+    <circle cx="90" cy="50" r="7" fill="#7c3aed" opacity="0.35"/>
+    <circle cx="50" cy="70" r="5" fill="#7c3aed" opacity="0.25"/>
+    <circle cx="20" cy="60" r="6" fill="#7c3aed" opacity="0.3"/>
+    <line x1="30" y1="30" x2="70" y2="20" stroke="#7c3aed" stroke-width="1" opacity="0.2"/>
+    <line x1="70" y1="20" x2="90" y2="50" stroke="#7c3aed" stroke-width="1" opacity="0.2"/>
+    <line x1="90" y1="50" x2="50" y2="70" stroke="#7c3aed" stroke-width="1" opacity="0.2"/>
+    <line x1="50" y1="70" x2="20" y2="60" stroke="#7c3aed" stroke-width="1" opacity="0.2"/>
+    <line x1="20" y1="60" x2="30" y2="30" stroke="#7c3aed" stroke-width="1" opacity="0.2"/>
+  </g>
+
+  <!-- Shield icon -->
+  <g transform="translate(600, 55)">
+    <path d="M40,10 L70,25 L70,55 Q70,80 40,90 Q10,80 10,55 L10,25 Z" fill="none" stroke="url(#iconGrad)" stroke-width="3"/>
+    <path d="M30,50 L38,58 L55,38" fill="none" stroke="url(#iconGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Text -->
+  <text x="400" y="170" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#6b7280">
+    Understanding Foreign Information Manipulation and Interference
+  </text>
+</svg>

@@ -87,6 +87,7 @@ export default async function ModulePage({ params }: { params: Promise<{ slug: s
               title={module.title}
               moduleId={module.id}
               learningPath={module.learningPath || null}
+              headerImage={module.headerImage}
             />
           ) : (
             <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-center">

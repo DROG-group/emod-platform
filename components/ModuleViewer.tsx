@@ -4,12 +4,14 @@ import { useState, useMemo, useCallback, useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
 import { useProgress } from "@/hooks/useProgress";
 import Link from "next/link";
+import Image from "next/image";
 
 interface ModuleViewerProps {
   content: string;
   title: string;
   moduleId: string;
   learningPath: string | null;
+  headerImage?: string;
 }
 
 interface Section {
@@ -20,13 +22,15 @@ interface Section {
 
 function parseMarkdown(text: string): string {
   return text
+    // Handle inline images/diagrams: ![alt text](/path/to/image.svg)
+    .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<div class="my-6 flex justify-center"><img src="$2" alt="$1" class="max-w-full h-auto rounded-lg shadow-sm border border-gray-200" /></div>')
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
     .replace(/\*(.+?)\*/g, "<em>$1</em>")
     .replace(/^### (.+)$/gm, '<h3 class="text-lg font-semibold text-gray-800 mb-3 mt-4">$1</h3>')
     .replace(/^- (.+)$/gm, '<li class="ml-4">$1</li>')
     .replace(/(<li.*<\/li>\n?)+/g, '<ul class="list-disc pl-4 space-y-2 my-4 text-gray-700">$&</ul>')
     .replace(/\n\n/g, '</p><p class="mb-4 text-gray-700 leading-relaxed">')
-    .replace(/^(?!<[huol]|<li|<p|<strong)(.+)$/gm, '<p class="mb-4 text-gray-700 leading-relaxed">$1</p>')
+    .replace(/^(?!<[huol]|<li|<p|<strong|<div)(.+)$/gm, '<p class="mb-4 text-gray-700 leading-relaxed">$1</p>')
     .replace(/<p class="mb-4 text-gray-700 leading-relaxed"><\/p>/g, '');
 }
 
@@ -47,7 +51,7 @@ function getSectionIcon(title: string): string {
   return '📄';
 }
 
-export default function ModuleViewer({ content, title, moduleId, learningPath }: ModuleViewerProps) {
+export default function ModuleViewer({ content, title, moduleId, learningPath, headerImage }: ModuleViewerProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [hasRestored, setHasRestored] = useState(false);
   const { user } = useAuth();

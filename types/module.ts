@@ -19,6 +19,7 @@ export interface Module {
   estimatedTime: string;
   content?: string;
   audiences?: Audience[];
+  headerImage?: string;
 }
 
 export interface LearningPath {
