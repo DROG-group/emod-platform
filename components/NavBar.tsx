@@ -100,6 +100,13 @@ export default function NavBar() {
                       >
                         My Progress
                       </Link>
+                      <Link
+                        href="/certificates"
+                        onClick={() => setShowDropdown(false)}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
+                      >
+                        My Certificates
+                      </Link>
                       <button
                         onClick={handleSignOut}
                         className="w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50"

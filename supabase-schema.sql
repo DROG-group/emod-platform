@@ -69,4 +69,32 @@ CREATE TRIGGER on_auth_user_created
   AFTER INSERT ON auth.users
   FOR EACH ROW EXECUTE FUNCTION public.handle_new_user();
 
+-- 8. Create certificates table
+CREATE TABLE public.certificates (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  user_id UUID REFERENCES public.profiles(id) ON DELETE CASCADE NOT NULL,
+  certificate_code VARCHAR(12) UNIQUE NOT NULL,
+  learning_path TEXT NOT NULL,
+  recipient_name TEXT NOT NULL,
+  issued_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- 9. Create indexes for certificates
+CREATE INDEX idx_certificates_user_id ON public.certificates(user_id);
+CREATE INDEX idx_certificates_code ON public.certificates(certificate_code);
+
+-- 10. Enable RLS for certificates
+ALTER TABLE public.certificates ENABLE ROW LEVEL SECURITY;
+
+-- 11. RLS Policies for certificates
+CREATE POLICY "Users can view own certificates" ON public.certificates
+  FOR SELECT USING (auth.uid() = user_id);
+
+CREATE POLICY "Users can insert own certificates" ON public.certificates
+  FOR INSERT WITH CHECK (auth.uid() = user_id);
+
+CREATE POLICY "Anyone can verify certificates by code" ON public.certificates
+  FOR SELECT USING (true);
+
 -- Done! Your database is ready for the EMOD platform.
