@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 580">
+  <defs>
+    <linearGradient id="euGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1d4ed8"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="memberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="civilGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#16a34a"/>
+      <stop offset="100%" style="stop-color:#22c55e"/>
+    </linearGradient>
+    <filter id="euShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="580" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">EU FIMI Response Architecture</text>
+  <text x="400" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#64748b">Multi-level coordination against foreign information manipulation</text>
+
+  <!-- EU Level -->
+  <g filter="url(#euShadow)" transform="translate(150, 75)">
+    <rect width="500" height="155" rx="16" fill="white" stroke="#bfdbfe" stroke-width="2"/>
+    <rect width="500" height="40" rx="16" fill="url(#euGrad)"/>
+    <rect width="500" height="20" y="20" fill="url(#euGrad)"/>
+
+    <!-- EU Flag icon -->
+    <circle cx="35" cy="20" r="15" fill="#fbbf24"/>
+    <g transform="translate(28, 13)">
+      <polygon points="7,0 8,4 12,4 9,7 10,11 7,9 4,11 5,7 2,4 6,4" fill="#1e40af" transform="scale(0.6)"/>
+    </g>
+
+    <text x="250" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="white">EU Level Institutions</text>
+
+    <!-- EEAS -->
+    <g transform="translate(20, 55)">
+      <rect width="145" height="85" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="72" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">EEAS StratCom</text>
+      <text x="72" y="40" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">EUvsDisinfo</text>
+      <text x="72" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">FIMI reporting</text>
+      <text x="72" y="64" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">Rapid Alert System</text>
+      <text x="72" y="76" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">Strategic comms</text>
+    </g>
+
+    <!-- Commission -->
+    <g transform="translate(177, 55)">
+      <rect width="145" height="85" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="72" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">Commission</text>
+      <text x="72" y="40" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">DSA enforcement</text>
+      <text x="72" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">Code of Practice</text>
+      <text x="72" y="64" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">Election integrity</text>
+      <text x="72" y="76" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">Platform oversight</text>
+    </g>
+
+    <!-- Parliament -->
+    <g transform="translate(334, 55)">
+      <rect width="145" height="85" rx="10" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+      <text x="72" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#1e40af">Parliament</text>
+      <text x="72" y="40" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">INGE Committee</text>
+      <text x="72" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">Policy oversight</text>
+      <text x="72" y="64" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">Investigations</text>
+      <text x="72" y="76" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">Legislation</text>
+    </g>
+  </g>
+
+  <!-- Connection arrows -->
+  <line x1="400" y1="235" x2="400" y2="265" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,4"/>
+  <line x1="400" y1="265" x2="200" y2="290" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,4"/>
+  <line x1="400" y1="265" x2="600" y2="290" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- Member State Level -->
+  <g filter="url(#euShadow)" transform="translate(30, 300)">
+    <rect width="350" height="130" rx="16" fill="white" stroke="#c4b5fd" stroke-width="2"/>
+    <rect width="350" height="35" rx="16" fill="url(#memberGrad)"/>
+    <rect width="350" height="15" y="20" fill="url(#memberGrad)"/>
+    <text x="175" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="white">Member State Level</text>
+
+    <g transform="translate(15, 50)">
+      <rect width="155" height="65" rx="8" fill="#f3e8ff" stroke="#d8b4fe" stroke-width="1"/>
+      <text x="77" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#6d28d9">Security Services</text>
+      <text x="77" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">Counter-intel</text>
+      <text x="77" y="47" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">Attribution</text>
+      <text x="77" y="59" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">National alerts</text>
+    </g>
+    <g transform="translate(180, 50)">
+      <rect width="155" height="65" rx="8" fill="#f3e8ff" stroke="#d8b4fe" stroke-width="1"/>
+      <text x="77" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#6d28d9">Gov Agencies</text>
+      <text x="77" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">Election authorities</text>
+      <text x="77" y="47" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">Media regulators</text>
+      <text x="77" y="59" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">Crisis response</text>
+    </g>
+  </g>
+
+  <!-- Civil Society Level -->
+  <g filter="url(#euShadow)" transform="translate(420, 300)">
+    <rect width="350" height="130" rx="16" fill="white" stroke="#86efac" stroke-width="2"/>
+    <rect width="350" height="35" rx="16" fill="url(#civilGrad)"/>
+    <rect width="350" height="15" y="20" fill="url(#civilGrad)"/>
+    <text x="175" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="13" font-weight="bold" fill="white">Civil Society &amp; Media</text>
+
+    <g transform="translate(15, 50)">
+      <rect width="155" height="65" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+      <text x="77" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#166534">Fact-Checkers</text>
+      <text x="77" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">Verification</text>
+      <text x="77" y="47" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">Debunking</text>
+      <text x="77" y="59" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">EDMO network</text>
+    </g>
+    <g transform="translate(180, 50)">
+      <rect width="155" height="65" rx="8" fill="#f0fdf4" stroke="#86efac" stroke-width="1"/>
+      <text x="77" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#166534">Research &amp; NGOs</text>
+      <text x="77" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">Academic analysis</text>
+      <text x="77" y="47" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">Media literacy</text>
+      <text x="77" y="59" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">Public awareness</text>
+    </g>
+  </g>
+
+  <!-- Key Mechanisms -->
+  <g filter="url(#euShadow)" transform="translate(30, 450)">
+    <rect width="740" height="110" rx="12" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="370" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#1e293b">Key Coordination Mechanisms</text>
+
+    <g transform="translate(20, 40)">
+      <rect width="170" height="55" rx="8" fill="#dbeafe"/>
+      <text x="85" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#1e40af">Rapid Alert System</text>
+      <text x="85" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">24/7 info sharing</text>
+      <text x="85" y="47" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">between member states</text>
+    </g>
+    <g transform="translate(205, 40)">
+      <rect width="170" height="55" rx="8" fill="#dcfce7"/>
+      <text x="85" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#166534">DSA + Code of Practice</text>
+      <text x="85" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">Platform obligations</text>
+      <text x="85" y="47" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">Transparency reports</text>
+    </g>
+    <g transform="translate(390, 40)">
+      <rect width="170" height="55" rx="8" fill="#fef3c7"/>
+      <text x="85" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#92400e">Election Networks</text>
+      <text x="85" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">Pre-election coordination</text>
+      <text x="85" y="47" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">Incident response</text>
+    </g>
+    <g transform="translate(575, 40)">
+      <rect width="145" height="55" rx="8" fill="#f3e8ff"/>
+      <text x="72" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#6d28d9">EDMO</text>
+      <text x="72" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">Fact-checker network</text>
+      <text x="72" y="47" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">Research coordination</text>
+    </g>
+  </g>
+</svg>

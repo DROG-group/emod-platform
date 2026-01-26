@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="tacticGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#6d28d9"/>
+    </linearGradient>
+    <filter id="tacticShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">FIMI Tactics &amp; Techniques</text>
+  <text x="400" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#64748b">Common manipulation methods and their indicators</text>
+
+  <!-- Row 1: Content Creation Tactics -->
+  <text x="30" y="85" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#5b21b6">Content Creation</text>
+
+  <!-- Fabrication -->
+  <g filter="url(#tacticShadow)" transform="translate(30, 100)">
+    <rect width="175" height="130" rx="12" fill="white" stroke="#c4b5fd" stroke-width="2"/>
+    <rect width="175" height="8" rx="4" fill="#8b5cf6" y="0"/>
+    <text x="87" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#5b21b6">Fabrication</text>
+
+    <text x="15" y="55" font-family="system-ui, sans-serif" font-size="9" fill="#6b7280">Creating false content:</text>
+    <text x="15" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">• Fake documents</text>
+    <text x="15" y="82" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">• Fabricated quotes</text>
+    <text x="15" y="94" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">• Synthetic media</text>
+
+    <rect x="10" y="105" width="155" height="18" rx="4" fill="#f3e8ff"/>
+    <text x="87" y="117" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#7c3aed">Check: Verify source, metadata</text>
+  </g>
+
+  <!-- Manipulation -->
+  <g filter="url(#tacticShadow)" transform="translate(220, 100)">
+    <rect width="175" height="130" rx="12" fill="white" stroke="#c4b5fd" stroke-width="2"/>
+    <rect width="175" height="8" rx="4" fill="#8b5cf6" y="0"/>
+    <text x="87" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#5b21b6">Manipulation</text>
+
+    <text x="15" y="55" font-family="system-ui, sans-serif" font-size="9" fill="#6b7280">Altering real content:</text>
+    <text x="15" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">• Edited images/video</text>
+    <text x="15" y="82" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">• Out-of-context quotes</text>
+    <text x="15" y="94" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">• Misleading crops</text>
+
+    <rect x="10" y="105" width="155" height="18" rx="4" fill="#f3e8ff"/>
+    <text x="87" y="117" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#7c3aed">Check: Find original source</text>
+  </g>
+
+  <!-- Impersonation -->
+  <g filter="url(#tacticShadow)" transform="translate(410, 100)">
+    <rect width="175" height="130" rx="12" fill="white" stroke="#c4b5fd" stroke-width="2"/>
+    <rect width="175" height="8" rx="4" fill="#8b5cf6" y="0"/>
+    <text x="87" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#5b21b6">Impersonation</text>
+
+    <text x="15" y="55" font-family="system-ui, sans-serif" font-size="9" fill="#6b7280">Fake identities:</text>
+    <text x="15" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">• Fake personas</text>
+    <text x="15" y="82" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">• Spoofed organizations</text>
+    <text x="15" y="94" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">• Typosquatting domains</text>
+
+    <rect x="10" y="105" width="155" height="18" rx="4" fill="#f3e8ff"/>
+    <text x="87" y="117" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#7c3aed">Check: Reverse image search</text>
+  </g>
+
+  <!-- Narrative Laundering -->
+  <g filter="url(#tacticShadow)" transform="translate(600, 100)">
+    <rect width="175" height="130" rx="12" fill="white" stroke="#c4b5fd" stroke-width="2"/>
+    <rect width="175" height="8" rx="4" fill="#8b5cf6" y="0"/>
+    <text x="87" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#5b21b6">Laundering</text>
+
+    <text x="15" y="55" font-family="system-ui, sans-serif" font-size="9" fill="#6b7280">Obscuring origin:</text>
+    <text x="15" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">• Fringe → mainstream</text>
+    <text x="15" y="82" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">• Proxy websites</text>
+    <text x="15" y="94" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">• Citation laundering</text>
+
+    <rect x="10" y="105" width="155" height="18" rx="4" fill="#f3e8ff"/>
+    <text x="87" y="117" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#7c3aed">Check: Trace first appearance</text>
+  </g>
+
+  <!-- Row 2: Distribution Tactics -->
+  <text x="30" y="260" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#0369a1">Distribution &amp; Amplification</text>
+
+  <!-- Coordinated Inauthentic Behavior -->
+  <g filter="url(#tacticShadow)" transform="translate(30, 275)">
+    <rect width="175" height="130" rx="12" fill="white" stroke="#7dd3fc" stroke-width="2"/>
+    <rect width="175" height="8" rx="4" fill="#0ea5e9" y="0"/>
+    <text x="87" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0369a1">Coord. Inauthentic</text>
+
+    <text x="15" y="55" font-family="system-ui, sans-serif" font-size="9" fill="#6b7280">Fake engagement:</text>
+    <text x="15" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#0369a1">• Bot networks</text>
+    <text x="15" y="82" font-family="system-ui, sans-serif" font-size="8" fill="#0369a1">• Fake followers</text>
+    <text x="15" y="94" font-family="system-ui, sans-serif" font-size="8" fill="#0369a1">• Astroturfing</text>
+
+    <rect x="10" y="105" width="155" height="18" rx="4" fill="#e0f2fe"/>
+    <text x="87" y="117" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#0369a1">Check: Account age, patterns</text>
+  </g>
+
+  <!-- Brigading -->
+  <g filter="url(#tacticShadow)" transform="translate(220, 275)">
+    <rect width="175" height="130" rx="12" fill="white" stroke="#7dd3fc" stroke-width="2"/>
+    <rect width="175" height="8" rx="4" fill="#0ea5e9" y="0"/>
+    <text x="87" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0369a1">Brigading</text>
+
+    <text x="15" y="55" font-family="system-ui, sans-serif" font-size="9" fill="#6b7280">Coordinated attacks:</text>
+    <text x="15" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#0369a1">• Mass reporting</text>
+    <text x="15" y="82" font-family="system-ui, sans-serif" font-size="8" fill="#0369a1">• Pile-on harassment</text>
+    <text x="15" y="94" font-family="system-ui, sans-serif" font-size="8" fill="#0369a1">• Review bombing</text>
+
+    <rect x="10" y="105" width="155" height="18" rx="4" fill="#e0f2fe"/>
+    <text x="87" y="117" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#0369a1">Check: Timing of engagement</text>
+  </g>
+
+  <!-- Platform Manipulation -->
+  <g filter="url(#tacticShadow)" transform="translate(410, 275)">
+    <rect width="175" height="130" rx="12" fill="white" stroke="#7dd3fc" stroke-width="2"/>
+    <rect width="175" height="8" rx="4" fill="#0ea5e9" y="0"/>
+    <text x="87" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0369a1">Platform Gaming</text>
+
+    <text x="15" y="55" font-family="system-ui, sans-serif" font-size="9" fill="#6b7280">Algorithm exploitation:</text>
+    <text x="15" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#0369a1">• Hashtag hijacking</text>
+    <text x="15" y="82" font-family="system-ui, sans-serif" font-size="8" fill="#0369a1">• Trend manipulation</text>
+    <text x="15" y="94" font-family="system-ui, sans-serif" font-size="8" fill="#0369a1">• SEO manipulation</text>
+
+    <rect x="10" y="105" width="155" height="18" rx="4" fill="#e0f2fe"/>
+    <text x="87" y="117" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#0369a1">Check: Organic vs artificial spike</text>
+  </g>
+
+  <!-- Cross-Platform -->
+  <g filter="url(#tacticShadow)" transform="translate(600, 275)">
+    <rect width="175" height="130" rx="12" fill="white" stroke="#7dd3fc" stroke-width="2"/>
+    <rect width="175" height="8" rx="4" fill="#0ea5e9" y="0"/>
+    <text x="87" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#0369a1">Cross-Platform</text>
+
+    <text x="15" y="55" font-family="system-ui, sans-serif" font-size="9" fill="#6b7280">Multi-channel spread:</text>
+    <text x="15" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#0369a1">• Simultaneous posting</text>
+    <text x="15" y="82" font-family="system-ui, sans-serif" font-size="8" fill="#0369a1">• Platform hopping</text>
+    <text x="15" y="94" font-family="system-ui, sans-serif" font-size="8" fill="#0369a1">• Content adaptation</text>
+
+    <rect x="10" y="105" width="155" height="18" rx="4" fill="#e0f2fe"/>
+    <text x="87" y="117" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#0369a1">Check: Same content, timing</text>
+  </g>
+
+  <!-- Row 3: Targeting Tactics -->
+  <text x="30" y="435" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#b45309">Targeting &amp; Exploitation</text>
+
+  <!-- Wedge Issues -->
+  <g filter="url(#tacticShadow)" transform="translate(30, 450)">
+    <rect width="175" height="130" rx="12" fill="white" stroke="#fed7aa" stroke-width="2"/>
+    <rect width="175" height="8" rx="4" fill="#f97316" y="0"/>
+    <text x="87" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#b45309">Wedge Issues</text>
+
+    <text x="15" y="55" font-family="system-ui, sans-serif" font-size="9" fill="#6b7280">Exploiting divisions:</text>
+    <text x="15" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">• Amplify both sides</text>
+    <text x="15" y="82" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">• Inflame existing debates</text>
+    <text x="15" y="94" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">• Target identity groups</text>
+
+    <rect x="10" y="105" width="155" height="18" rx="4" fill="#fff7ed"/>
+    <text x="87" y="117" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#b45309">Check: Who benefits from conflict?</text>
+  </g>
+
+  <!-- Event Exploitation -->
+  <g filter="url(#tacticShadow)" transform="translate(220, 450)">
+    <rect width="175" height="130" rx="12" fill="white" stroke="#fed7aa" stroke-width="2"/>
+    <rect width="175" height="8" rx="4" fill="#f97316" y="0"/>
+    <text x="87" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#b45309">Event Exploitation</text>
+
+    <text x="15" y="55" font-family="system-ui, sans-serif" font-size="9" fill="#6b7280">Hijacking moments:</text>
+    <text x="15" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">• Breaking news seeding</text>
+    <text x="15" y="82" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">• Crisis amplification</text>
+    <text x="15" y="94" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">• Electoral timing</text>
+
+    <rect x="10" y="105" width="155" height="18" rx="4" fill="#fff7ed"/>
+    <text x="87" y="117" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#b45309">Check: Pre-positioned content?</text>
+  </g>
+
+  <!-- Emotional Manipulation -->
+  <g filter="url(#tacticShadow)" transform="translate(410, 450)">
+    <rect width="175" height="130" rx="12" fill="white" stroke="#fed7aa" stroke-width="2"/>
+    <rect width="175" height="8" rx="4" fill="#f97316" y="0"/>
+    <text x="87" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#b45309">Emotional Triggers</text>
+
+    <text x="15" y="55" font-family="system-ui, sans-serif" font-size="9" fill="#6b7280">Bypassing reason:</text>
+    <text x="15" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">• Fear/outrage content</text>
+    <text x="15" y="82" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">• Moral framing</text>
+    <text x="15" y="94" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">• In-group/out-group</text>
+
+    <rect x="10" y="105" width="155" height="18" rx="4" fill="#fff7ed"/>
+    <text x="87" y="117" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#b45309">Check: Emotional vs factual ratio</text>
+  </g>
+
+  <!-- Trust Exploitation -->
+  <g filter="url(#tacticShadow)" transform="translate(600, 450)">
+    <rect width="175" height="130" rx="12" fill="white" stroke="#fed7aa" stroke-width="2"/>
+    <rect width="175" height="8" rx="4" fill="#f97316" y="0"/>
+    <text x="87" y="35" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#b45309">Trust Exploitation</text>
+
+    <text x="15" y="55" font-family="system-ui, sans-serif" font-size="9" fill="#6b7280">Hijacking credibility:</text>
+    <text x="15" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">• Influencer co-optation</text>
+    <text x="15" y="82" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">• Expert impersonation</text>
+    <text x="15" y="94" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">• Institution spoofing</text>
+
+    <rect x="10" y="105" width="155" height="18" rx="4" fill="#fff7ed"/>
+    <text x="87" y="117" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#b45309">Check: Verify credentials</text>
+  </g>
+</svg>

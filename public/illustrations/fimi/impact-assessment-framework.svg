@@ -1,0 +1,154 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <defs>
+    <linearGradient id="impactGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#a78bfa"/>
+    </linearGradient>
+    <filter id="impactShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+    <marker id="impactArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 L2,4 Z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="bold" fill="#1e293b">Impact Assessment Framework</text>
+  <text x="400" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#64748b">What you can measure vs what actually matters</text>
+
+  <!-- Measurable Metrics (Left Side) -->
+  <g filter="url(#impactShadow)" transform="translate(30, 75)">
+    <rect width="320" height="200" rx="16" fill="white" stroke="#c4b5fd" stroke-width="2"/>
+    <rect width="320" height="40" rx="16" fill="url(#impactGrad)"/>
+    <rect width="320" height="20" y="20" fill="url(#impactGrad)"/>
+    <text x="160" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="white">Measurable Metrics</text>
+
+    <text x="20" y="65" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#5b21b6">REACH</text>
+    <g transform="translate(20, 75)">
+      <rect width="130" height="35" rx="6" fill="#f3e8ff"/>
+      <text x="65" y="15" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#6d28d9">Views/Impressions</text>
+      <text x="65" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">How many saw it?</text>
+    </g>
+    <g transform="translate(165, 75)">
+      <rect width="130" height="35" rx="6" fill="#f3e8ff"/>
+      <text x="65" y="15" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#6d28d9">Unique Accounts</text>
+      <text x="65" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">Who was exposed?</text>
+    </g>
+
+    <text x="20" y="130" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#5b21b6">ENGAGEMENT</text>
+    <g transform="translate(20, 140)">
+      <rect width="130" height="35" rx="6" fill="#f3e8ff"/>
+      <text x="65" y="15" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#6d28d9">Likes/Shares</text>
+      <text x="65" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">Who interacted?</text>
+    </g>
+    <g transform="translate(165, 140)">
+      <rect width="130" height="35" rx="6" fill="#f3e8ff"/>
+      <text x="65" y="15" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#6d28d9">Comments</text>
+      <text x="65" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">What did they say?</text>
+    </g>
+  </g>
+
+  <!-- Arrow -->
+  <g transform="translate(355, 165)">
+    <line x1="0" y1="0" x2="60" y2="0" stroke="#94a3b8" stroke-width="2" marker-end="url(#impactArrow)"/>
+    <text x="30" y="-8" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#64748b">≠</text>
+  </g>
+
+  <!-- What Actually Matters (Right Side) -->
+  <g filter="url(#impactShadow)" transform="translate(450, 75)">
+    <rect width="320" height="200" rx="16" fill="white" stroke="#fde68a" stroke-width="2"/>
+    <rect width="320" height="40" rx="16" fill="#f59e0b"/>
+    <rect width="320" height="20" y="20" fill="#f59e0b"/>
+    <text x="160" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="white">What Actually Matters</text>
+
+    <text x="20" y="65" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#b45309">BELIEF CHANGE</text>
+    <g transform="translate(20, 75)">
+      <rect width="280" height="35" rx="6" fill="#fffbeb"/>
+      <text x="140" y="15" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#92400e">Did anyone actually change their mind?</text>
+      <text x="140" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">Very hard to measure - requires surveys</text>
+    </g>
+
+    <text x="20" y="130" font-family="system-ui, sans-serif" font-size="10" font-weight="600" fill="#b45309">BEHAVIOR CHANGE</text>
+    <g transform="translate(20, 140)">
+      <rect width="280" height="35" rx="6" fill="#fffbeb"/>
+      <text x="140" y="15" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#92400e">Did anyone act differently because of it?</text>
+      <text x="140" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">Nearly impossible to prove causation</text>
+    </g>
+  </g>
+
+  <!-- The Gap Problem -->
+  <g filter="url(#impactShadow)" transform="translate(30, 295)">
+    <rect width="740" height="90" rx="12" fill="#fef2f2" stroke="#fecaca" stroke-width="2"/>
+    <text x="370" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#991b1b">The Measurement Gap</text>
+
+    <g transform="translate(30, 45)">
+      <circle cx="8" cy="8" r="5" fill="#dc2626"/>
+      <text x="22" y="12" font-family="system-ui, sans-serif" font-size="10" fill="#7f1d1d">High reach ≠ high impact (most people scroll past)</text>
+    </g>
+    <g transform="translate(30, 68)">
+      <circle cx="8" cy="8" r="5" fill="#dc2626"/>
+      <text x="22" y="12" font-family="system-ui, sans-serif" font-size="10" fill="#7f1d1d">Engagement may come from people who already agreed (confirmation, not persuasion)</text>
+    </g>
+    <g transform="translate(400, 45)">
+      <circle cx="8" cy="8" r="5" fill="#dc2626"/>
+      <text x="22" y="12" font-family="system-ui, sans-serif" font-size="10" fill="#7f1d1d">Correlation ≠ causation for social outcomes</text>
+    </g>
+    <g transform="translate(400, 68)">
+      <circle cx="8" cy="8" r="5" fill="#dc2626"/>
+      <text x="22" y="12" font-family="system-ui, sans-serif" font-size="10" fill="#7f1d1d">Attribution to specific campaign nearly impossible</text>
+    </g>
+  </g>
+
+  <!-- What You Can Say -->
+  <g filter="url(#impactShadow)" transform="translate(30, 400)">
+    <rect width="355" height="100" rx="12" fill="#f0fdf4" stroke="#86efac" stroke-width="2"/>
+    <text x="177" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#166534">What You CAN Say</text>
+
+    <g transform="translate(15, 40)">
+      <circle cx="6" cy="6" r="4" fill="#22c55e"/>
+      <text x="18" y="10" font-family="system-ui, sans-serif" font-size="9" fill="#15803d">"Campaign reached X people"</text>
+    </g>
+    <g transform="translate(15, 58)">
+      <circle cx="6" cy="6" r="4" fill="#22c55e"/>
+      <text x="18" y="10" font-family="system-ui, sans-serif" font-size="9" fill="#15803d">"Generated X interactions"</text>
+    </g>
+    <g transform="translate(15, 76)">
+      <circle cx="6" cy="6" r="4" fill="#22c55e"/>
+      <text x="18" y="10" font-family="system-ui, sans-serif" font-size="9" fill="#15803d">"Targeted narratives about Y"</text>
+    </g>
+    <g transform="translate(175, 40)">
+      <circle cx="6" cy="6" r="4" fill="#22c55e"/>
+      <text x="18" y="10" font-family="system-ui, sans-serif" font-size="9" fill="#15803d">"Operated for X duration"</text>
+    </g>
+    <g transform="translate(175, 58)">
+      <circle cx="6" cy="6" r="4" fill="#22c55e"/>
+      <text x="18" y="10" font-family="system-ui, sans-serif" font-size="9" fill="#15803d">"Used X accounts/platforms"</text>
+    </g>
+  </g>
+
+  <!-- What You Should NOT Say -->
+  <g filter="url(#impactShadow)" transform="translate(415, 400)">
+    <rect width="355" height="100" rx="12" fill="#fef2f2" stroke="#fecaca" stroke-width="2"/>
+    <text x="177" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#991b1b">What You Should NOT Say</text>
+
+    <g transform="translate(15, 40)">
+      <text x="0" y="10" font-family="system-ui, sans-serif" font-size="10" fill="#dc2626">✗</text>
+      <text x="18" y="10" font-family="system-ui, sans-serif" font-size="9" fill="#7f1d1d">"Campaign changed election outcome"</text>
+    </g>
+    <g transform="translate(15, 58)">
+      <text x="0" y="10" font-family="system-ui, sans-serif" font-size="10" fill="#dc2626">✗</text>
+      <text x="18" y="10" font-family="system-ui, sans-serif" font-size="9" fill="#7f1d1d">"Caused X% shift in public opinion"</text>
+    </g>
+    <g transform="translate(15, 76)">
+      <text x="0" y="10" font-family="system-ui, sans-serif" font-size="10" fill="#dc2626">✗</text>
+      <text x="18" y="10" font-family="system-ui, sans-serif" font-size="9" fill="#7f1d1d">"Definitively influenced behavior"</text>
+    </g>
+    <g transform="translate(195, 58)">
+      <text x="0" y="10" font-family="system-ui, sans-serif" font-size="10" fill="#dc2626">✗</text>
+      <text x="18" y="10" font-family="system-ui, sans-serif" font-size="9" fill="#7f1d1d">"Was the cause of social unrest"</text>
+    </g>
+  </g>
+</svg>
