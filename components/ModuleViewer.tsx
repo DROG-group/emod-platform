@@ -82,7 +82,6 @@ function getSectionIcon(title: string): string {
 export default function ModuleViewer({ content, title, moduleId, learningPath, headerImage }: ModuleViewerProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [hasRestored, setHasRestored] = useState(false);
-  const [showQuiz, setShowQuiz] = useState(false);
   const { user } = useAuth();
   const { markViewed, markCompleted, isCompleted, getModuleProgress } = useProgress();
   const { saveAttempt, getBestScore, hasPassed } = useQuizProgress(moduleId);
@@ -179,20 +178,17 @@ export default function ModuleViewer({ content, title, moduleId, learningPath, h
   const goToNext = useCallback(() => {
     if (currentIndex < sections.length - 1) {
       setCurrentIndex(currentIndex + 1);
-      setShowQuiz(false);
     }
   }, [currentIndex, sections.length]);
 
   const goToPrev = useCallback(() => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
-      setShowQuiz(false);
     }
   }, [currentIndex]);
 
   const goToSection = useCallback((index: number) => {
     setCurrentIndex(index);
-    setShowQuiz(false);
   }, []);
 
   const handleComplete = useCallback(async () => {
@@ -264,48 +260,24 @@ export default function ModuleViewer({ content, title, moduleId, learningPath, h
               dangerouslySetInnerHTML={{ __html: currentSection.parsedHtml }}
             />
 
-            {/* Debug Quiz Info - TEMPORARY */}
-            <div className="mt-4 p-3 bg-yellow-100 text-xs rounded border border-yellow-300">
-              <p><strong>DEBUG:</strong> Module: {moduleId}</p>
-              <p>Section: {currentSection.title}</p>
-              <p>Has moduleQuiz: {moduleQuiz ? 'YES' : 'NO'}</p>
-              <p>currentSectionQuiz: {currentSectionQuiz ? currentSectionQuiz.length + ' questions' : 'null'}</p>
-              <p>hasQuiz flag: {currentSection.hasQuiz ? 'YES' : 'NO'}</p>
-            </div>
-
-            {/* Section Quiz */}
+            {/* Section Quiz - Show directly without button */}
             {currentSectionQuiz && currentSectionQuiz.length > 0 && (
               <div className="mt-8 pt-6 border-t border-gray-200">
-                {!showQuiz ? (
-                  <div className="text-center">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple/10 rounded-full text-purple mb-4">
-                      <span>📝</span>
-                      <span className="font-medium">Interactive Quiz Available</span>
-                    </div>
-                    {getBestScore(currentSection.title) ? (
-                      <div className="mb-4">
-                        <p className="text-sm text-gray-600">
-                          Your best score: <span className={`font-semibold ${hasPassed(currentSection.title) ? 'text-green-600' : 'text-amber-600'}`}>
-                            {getBestScore(currentSection.title)?.percentage}%
-                          </span>
-                        </p>
-                      </div>
-                    ) : null}
-                    <button
-                      onClick={() => setShowQuiz(true)}
-                      className="px-6 py-3 bg-purple text-white rounded-xl font-medium hover:bg-purple-dark transition-all"
-                    >
-                      {getBestScore(currentSection.title) ? 'Retake Quiz' : 'Start Quiz'}
-                    </button>
+                {getBestScore(currentSection.title) && (
+                  <div className="mb-4 text-center">
+                    <p className="text-sm text-gray-600">
+                      Your best score: <span className={`font-semibold ${hasPassed(currentSection.title) ? 'text-green-600' : 'text-amber-600'}`}>
+                        {getBestScore(currentSection.title)?.percentage}%
+                      </span>
+                    </p>
                   </div>
-                ) : (
-                  <QuizContainer
-                    questions={currentSectionQuiz}
-                    moduleId={moduleId}
-                    sectionTitle={currentSection.title}
-                    onComplete={handleQuizComplete}
-                  />
                 )}
+                <QuizContainer
+                  questions={currentSectionQuiz}
+                  moduleId={moduleId}
+                  sectionTitle={currentSection.title}
+                  onComplete={handleQuizComplete}
+                />
               </div>
             )}
           </div>
