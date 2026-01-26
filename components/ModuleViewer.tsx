@@ -264,6 +264,15 @@ export default function ModuleViewer({ content, title, moduleId, learningPath, h
               dangerouslySetInnerHTML={{ __html: currentSection.parsedHtml }}
             />
 
+            {/* Debug Quiz Info - TEMPORARY */}
+            <div className="mt-4 p-3 bg-yellow-100 text-xs rounded border border-yellow-300">
+              <p><strong>DEBUG:</strong> Module: {moduleId}</p>
+              <p>Section: {currentSection.title}</p>
+              <p>Has moduleQuiz: {moduleQuiz ? 'YES' : 'NO'}</p>
+              <p>currentSectionQuiz: {currentSectionQuiz ? currentSectionQuiz.length + ' questions' : 'null'}</p>
+              <p>hasQuiz flag: {currentSection.hasQuiz ? 'YES' : 'NO'}</p>
+            </div>
+
             {/* Section Quiz */}
             {currentSectionQuiz && currentSectionQuiz.length > 0 && (
               <div className="mt-8 pt-6 border-t border-gray-200">
