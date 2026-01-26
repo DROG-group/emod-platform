@@ -108,19 +108,47 @@ export default function RootLayout({
                   </ul>
                 </div>
               </div>
-              <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-                <p>
-                  &copy; {new Date().getFullYear()} SAUFEX Consortium. All rights reserved.
-                  <span className="mx-2">|</span>
-                  <a
-                    href="https://saufex.eu"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-purple-light hover:text-white transition-colors"
-                  >
-                    saufex.eu
-                  </a>
-                </p>
+              <div className="border-t border-gray-800 pt-8">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                  <div className="flex items-center gap-4">
+                    <img
+                      src="https://new.saufex.eu/images/eu-funded.svg"
+                      alt="Funded by the European Union"
+                      className="h-12 w-auto"
+                    />
+                    <p className="text-gray-400 text-xs max-w-xs">
+                      Funded by the European Union. Views expressed are those of the authors only.
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-6">
+                    <a
+                      href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="opacity-80 hover:opacity-100 transition-opacity"
+                    >
+                      <img
+                        src="https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png"
+                        alt="CC BY-NC-SA 4.0"
+                        className="h-6 w-auto"
+                      />
+                    </a>
+                    <div className="text-gray-500 text-sm">
+                      <p>
+                        &copy; {new Date().getFullYear()} SAUFEX Consortium
+                        <span className="mx-2">|</span>
+                        <a
+                          href="https://saufex.eu"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-purple-light hover:text-white transition-colors"
+                        >
+                          saufex.eu
+                        </a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
               {/* EU Funding Disclaimer */}
               <div className="border-t border-gray-800 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
