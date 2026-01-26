@@ -97,4 +97,35 @@ CREATE POLICY "Users can insert own certificates" ON public.certificates
 CREATE POLICY "Anyone can verify certificates by code" ON public.certificates
   FOR SELECT USING (true);
 
+-- 12. Create quiz_attempts table
+CREATE TABLE public.quiz_attempts (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  user_id UUID REFERENCES public.profiles(id) ON DELETE CASCADE NOT NULL,
+  learning_path TEXT NOT NULL,
+  score INTEGER NOT NULL,
+  total_questions INTEGER NOT NULL,
+  passed BOOLEAN NOT NULL,
+  answers JSONB,
+  completed_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  UNIQUE(user_id, learning_path)
+);
+
+-- 13. Create indexes for quiz_attempts
+CREATE INDEX idx_quiz_attempts_user_id ON public.quiz_attempts(user_id);
+CREATE INDEX idx_quiz_attempts_learning_path ON public.quiz_attempts(user_id, learning_path);
+
+-- 14. Enable RLS for quiz_attempts
+ALTER TABLE public.quiz_attempts ENABLE ROW LEVEL SECURITY;
+
+-- 15. RLS Policies for quiz_attempts
+CREATE POLICY "Users can view own quiz attempts" ON public.quiz_attempts
+  FOR SELECT USING (auth.uid() = user_id);
+
+CREATE POLICY "Users can insert own quiz attempts" ON public.quiz_attempts
+  FOR INSERT WITH CHECK (auth.uid() = user_id);
+
+CREATE POLICY "Users can update own quiz attempts" ON public.quiz_attempts
+  FOR UPDATE USING (auth.uid() = user_id);
+
 -- Done! Your database is ready for the EMOD platform.

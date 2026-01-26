@@ -5,12 +5,13 @@ import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import { createClient } from '@/lib/supabase/client'
-import { Certificate } from '@/types/database'
+import { Certificate, QuizAttempt } from '@/types/database'
 
 export default function CertificateViewPage() {
   const params = useParams()
   const code = params.code as string
   const [certificate, setCertificate] = useState<Certificate | null>(null)
+  const [quizAttempt, setQuizAttempt] = useState<QuizAttempt | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
 
@@ -20,22 +21,39 @@ export default function CertificateViewPage() {
       const normalizedCode = code.toUpperCase().replace(/[^A-Z0-9]/g, '')
       const formattedCode = `${normalizedCode.slice(0, 4)}-${normalizedCode.slice(4, 8)}-${normalizedCode.slice(8, 12)}`
 
-      const { data, error } = await supabase
+      const { data: certData, error: certError } = await supabase
         .from('certificates')
         .select('*')
         .eq('certificate_code', formattedCode)
         .single()
 
-      if (error || !data) {
+      if (certError || !certData) {
         setError(true)
-      } else {
-        setCertificate(data)
+        setLoading(false)
+        return
       }
+
+      setCertificate(certData)
+
+      // Check for quiz attempt
+      const { data: quizData } = await supabase
+        .from('quiz_attempts')
+        .select('*')
+        .eq('user_id', certData.user_id)
+        .eq('learning_path', certData.learning_path)
+        .single()
+
+      if (quizData) {
+        setQuizAttempt(quizData)
+      }
+
       setLoading(false)
     }
 
     fetchCertificate()
   }, [code])
+
+  const isVerified = quizAttempt?.passed || false
 
   if (loading) {
     return (
@@ -119,6 +137,14 @@ export default function CertificateViewPage() {
                 <h1 className="text-4xl md:text-5xl font-display font-bold text-gray-900">
                   Certificate of Completion
                 </h1>
+                {isVerified && (
+                  <div className="mt-4 inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-bold">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    Verified by Quiz Assessment
+                  </div>
+                )}
               </div>
 
               {/* Recipient */}

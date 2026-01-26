@@ -1,0 +1,67 @@
+{
+  "Understanding Disinformation Basics": {
+    "passingScore": 70,
+    "questions": [
+      {
+        "id": "udb-1",
+        "question": "What is the key difference between disinformation and misinformation?",
+        "options": [
+          "Disinformation spreads faster than misinformation",
+          "Disinformation is intentionally false, misinformation is unintentionally false",
+          "Misinformation is more harmful than disinformation",
+          "There is no meaningful difference between them"
+        ],
+        "correctIndex": 1,
+        "explanation": "Disinformation is deliberately created to deceive, while misinformation is false information shared without intent to harm. This distinction matters because it affects which intervention strategy is appropriate."
+      },
+      {
+        "id": "udb-2",
+        "question": "What is malinformation?",
+        "options": [
+          "Information that is completely fabricated",
+          "True information shared with malicious intent to cause harm",
+          "Information from unreliable sources",
+          "Automated spam messages"
+        ],
+        "correctIndex": 1,
+        "explanation": "Malinformation is factually accurate information that is shared with the intent to cause harm, often by taking content out of context or exposing private information. Unlike disinformation, the content itself is true."
+      },
+      {
+        "id": "udb-3",
+        "question": "What primarily determines whether content goes viral on social media?",
+        "options": [
+          "The accuracy of the information",
+          "The length of the post",
+          "Emotional engagement and algorithmic amplification",
+          "The number of hashtags used"
+        ],
+        "correctIndex": 2,
+        "explanation": "Content virality is primarily driven by emotional engagement (likes, shares, comments) and algorithmic amplification. Accuracy is not a factor in most platform algorithms, which is why false content often spreads faster than corrections."
+      },
+      {
+        "id": "udb-4",
+        "question": "What is an 'echo chamber' in the context of online information?",
+        "options": [
+          "A website that repeats the same news story multiple times",
+          "An environment where users primarily encounter information that reinforces existing beliefs",
+          "A type of audio manipulation technique",
+          "A government censorship program"
+        ],
+        "correctIndex": 1,
+        "explanation": "Echo chambers are information environments where users mainly see content that confirms their existing beliefs, created by algorithmic filtering and social network homophily. This makes users more susceptible to disinformation that aligns with their views."
+      },
+      {
+        "id": "udb-5",
+        "question": "Which cognitive bias makes people more likely to believe information that confirms their existing beliefs?",
+        "options": [
+          "Anchoring bias",
+          "Confirmation bias",
+          "Availability heuristic",
+          "Dunning-Kruger effect"
+        ],
+        "correctIndex": 1,
+        "explanation": "Confirmation bias is the tendency to search for, interpret, and recall information in a way that confirms existing beliefs. This is one of the most exploited psychological vulnerabilities in disinformation campaigns."
+      }
+    ]
+  }
+}

@@ -29,6 +29,18 @@ export interface Certificate {
   created_at: string
 }
 
+export interface QuizAttempt {
+  id: string
+  user_id: string
+  learning_path: string
+  score: number
+  total_questions: number
+  passed: boolean
+  answers: Record<string, number> | null
+  completed_at: string
+  created_at: string
+}
+
 export interface Database {
   public: {
     Tables: {
@@ -46,6 +58,11 @@ export interface Database {
         Row: Certificate
         Insert: Omit<Certificate, 'id' | 'created_at' | 'issued_at'>
         Update: Partial<Omit<Certificate, 'id' | 'user_id' | 'created_at'>>
+      }
+      quiz_attempts: {
+        Row: QuizAttempt
+        Insert: Omit<QuizAttempt, 'id' | 'created_at' | 'completed_at'>
+        Update: Partial<Omit<QuizAttempt, 'id' | 'user_id' | 'created_at'>>
       }
     }
   }

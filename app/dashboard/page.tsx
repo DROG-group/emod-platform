@@ -7,6 +7,11 @@ import { Module, Audience } from "@/types/module";
 import { useAuth } from "@/contexts/AuthContext";
 import { useProgress } from "@/hooks/useProgress";
 import { useCertificates } from "@/hooks/useCertificates";
+import { useQuizProgress } from "@/hooks/useQuizProgress";
+import quizData from "@/lib/quiz-data.json";
+import { QuizData } from "@/types/quiz";
+
+const quizzes = quizData as QuizData;
 
 const modules = modulesData as Module[];
 
@@ -26,6 +31,15 @@ export default function Dashboard() {
   const { user, profile } = useAuth();
   const { isCompleted, getPathProgress, getLastViewed, progress } = useProgress();
   const { hasCertificateForPath, getCertificateForPath, claimCertificate } = useCertificates();
+  const { hasPassedQuiz } = useQuizProgress();
+
+  function hasQuizAvailable(pathName: string): boolean {
+    return pathName in quizzes;
+  }
+
+  function pathNameToSlug(name: string): string {
+    return encodeURIComponent(name.replace(/\s+/g, '-'));
+  }
 
   async function handleClaimCertificate(pathName: string) {
     setClaimingPath(pathName);
@@ -251,40 +265,66 @@ export default function Dashboard() {
                               </div>
                             </div>
                             {isPathComplete && (
-                              existingCertificate ? (
-                                <Link
-                                  href={`/certificates/${existingCertificate.certificate_code}`}
-                                  className="flex items-center gap-2 bg-white/20 hover:bg-white/30 px-3 py-2 rounded-lg text-sm font-medium transition-colors"
-                                >
-                                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                                  </svg>
-                                  View Certificate
-                                </Link>
-                              ) : (
-                                <button
-                                  onClick={() => handleClaimCertificate(pathName)}
-                                  disabled={claimingPath === pathName}
-                                  className="flex items-center gap-2 bg-gold hover:bg-gold/90 text-gray-900 px-3 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
-                                >
-                                  {claimingPath === pathName ? (
-                                    <>
-                                      <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
-                                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                                      </svg>
-                                      Claiming...
-                                    </>
-                                  ) : (
-                                    <>
+                              <>
+                                {/* Verified Badge */}
+                                {hasPassedQuiz(pathName) && (
+                                  <span className="flex items-center gap-1 bg-green-400 text-green-900 px-2 py-1 rounded text-xs font-bold">
+                                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                    </svg>
+                                    Verified
+                                  </span>
+                                )}
+
+                                {/* Certificate Actions */}
+                                {existingCertificate ? (
+                                  <div className="flex items-center gap-2">
+                                    <Link
+                                      href={`/certificates/${existingCertificate.certificate_code}`}
+                                      className="flex items-center gap-2 bg-white/20 hover:bg-white/30 px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+                                    >
                                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
                                       </svg>
-                                      Claim Certificate
-                                    </>
-                                  )}
-                                </button>
-                              )
+                                      Certificate
+                                    </Link>
+                                    {hasQuizAvailable(pathName) && !hasPassedQuiz(pathName) && (
+                                      <Link
+                                        href={`/quiz/${pathNameToSlug(pathName)}`}
+                                        className="flex items-center gap-2 bg-gold hover:bg-gold/90 text-gray-900 px-3 py-2 rounded-lg text-sm font-medium transition-colors"
+                                      >
+                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                                        </svg>
+                                        Take Quiz
+                                      </Link>
+                                    )}
+                                  </div>
+                                ) : (
+                                  <button
+                                    onClick={() => handleClaimCertificate(pathName)}
+                                    disabled={claimingPath === pathName}
+                                    className="flex items-center gap-2 bg-gold hover:bg-gold/90 text-gray-900 px-3 py-2 rounded-lg text-sm font-medium transition-colors disabled:opacity-50"
+                                  >
+                                    {claimingPath === pathName ? (
+                                      <>
+                                        <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                        </svg>
+                                        Claiming...
+                                      </>
+                                    ) : (
+                                      <>
+                                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                                        </svg>
+                                        Claim Certificate
+                                      </>
+                                    )}
+                                  </button>
+                                )}
+                              </>
                             )}
                           </div>
                         )}
