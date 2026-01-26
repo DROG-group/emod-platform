@@ -117,6 +117,19 @@ export default function RootLayout({
                   </a>
                 </p>
               </div>
+              {/* EU Funding Disclaimer */}
+              <div className="border-t border-gray-800 mt-8 pt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <Image
+                  src="/images/eu-funded.svg"
+                  alt="Funded by the European Union"
+                  width={160}
+                  height={48}
+                  className="h-12 w-auto"
+                />
+                <p className="text-gray-400 text-xs text-center sm:text-left max-w-md">
+                  Funded by the European Union. Views and opinions expressed are those of the author(s) only and do not necessarily reflect those of the European Union or the European Commission. Neither the European Union nor the granting authority can be held responsible for them.
+                </p>
+              </div>
             </div>
           </footer>
         </AuthProvider>
