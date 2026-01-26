@@ -4,8 +4,12 @@ import { useState, useMemo, useCallback, useEffect } from "react";
 import DOMPurify from "isomorphic-dompurify";
 import { useAuth } from "@/contexts/AuthContext";
 import { useProgress } from "@/hooks/useProgress";
+import { useQuizProgress } from "@/hooks/useQuizProgress";
 import Link from "next/link";
 import Image from "next/image";
+import { QuizContainer } from "@/components/quiz";
+import quizData from "@/lib/quiz-data.json";
+import { QuizQuestion, QuizAttempt, ModuleQuiz } from "@/types/quiz";
 
 interface ModuleViewerProps {
   content: string;
@@ -20,7 +24,11 @@ interface Section {
   content: string;
   parsedHtml: string;
   isSubsection?: boolean;
+  hasQuiz?: boolean;
 }
+
+// Type assertion for quiz data
+const typedQuizData = quizData as Record<string, ModuleQuiz>;
 
 function escapeHtml(text: string): string {
   return text
@@ -74,8 +82,13 @@ function getSectionIcon(title: string): string {
 export default function ModuleViewer({ content, title, moduleId, learningPath, headerImage }: ModuleViewerProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [hasRestored, setHasRestored] = useState(false);
+  const [showQuiz, setShowQuiz] = useState(false);
   const { user } = useAuth();
   const { markViewed, markCompleted, isCompleted, getModuleProgress } = useProgress();
+  const { saveAttempt, getBestScore, hasPassed } = useQuizProgress(moduleId);
+
+  // Get quiz data for this module
+  const moduleQuiz = typedQuizData[moduleId];
 
   // Parse sections and pre-compute HTML to avoid re-parsing on every render
   const sections = useMemo(() => {
@@ -94,16 +107,56 @@ export default function ModuleViewer({ content, title, moduleId, learningPath, h
       const isSubsection = sectionTitle.toLowerCase().startsWith('step') ||
                           sectionTitle.toLowerCase().startsWith('start here');
 
+      // Check if this section has a quiz (flexible matching)
+      const hasQuiz = moduleQuiz?.sectionQuizzes?.some(
+        sq => sq.sectionTitle === sectionTitle ||
+              sectionTitle.toLowerCase().startsWith(sq.sectionTitle.toLowerCase().replace(/s$/, '')) ||
+              sectionTitle.toLowerCase().includes('test your')
+      ) || false;
+
       result.push({
         title: sectionTitle,
         content: sectionContent,
         parsedHtml: parseMarkdown(sectionContent),
         isSubsection,
+        hasQuiz,
       });
     }
 
     return result;
-  }, [content]);
+  }, [content, moduleQuiz]);
+
+  // Get quiz questions for current section (flexible matching)
+  const currentSectionQuiz = useMemo(() => {
+    if (!moduleQuiz || !sections[currentIndex]) return null;
+    const sectionTitle = sections[currentIndex].title.toLowerCase();
+
+    // Try exact match first
+    let sectionQuiz = moduleQuiz.sectionQuizzes?.find(
+      sq => sq.sectionTitle === sections[currentIndex].title
+    );
+
+    // Try flexible matching: "Practice Exercise 1" matches "Practice Exercises"
+    if (!sectionQuiz) {
+      sectionQuiz = moduleQuiz.sectionQuizzes?.find(sq => {
+        const quizTitle = sq.sectionTitle.toLowerCase().replace(/s$/, ''); // Remove trailing 's'
+        return sectionTitle.startsWith(quizTitle);
+      });
+    }
+
+    // Check for "Test Your Understanding" sections -> use comprehensiveQuiz
+    if (!sectionQuiz && sectionTitle.includes('test your')) {
+      return moduleQuiz.comprehensiveQuiz || null;
+    }
+
+    return sectionQuiz?.questions || null;
+  }, [moduleQuiz, sections, currentIndex]);
+
+  // Handle quiz completion
+  const handleQuizComplete = useCallback(async (attempt: QuizAttempt) => {
+    await saveAttempt(attempt);
+    // Optionally auto-advance after completing quiz
+  }, [saveAttempt]);
 
   // Restore last section position on mount
   useEffect(() => {
@@ -126,17 +179,20 @@ export default function ModuleViewer({ content, title, moduleId, learningPath, h
   const goToNext = useCallback(() => {
     if (currentIndex < sections.length - 1) {
       setCurrentIndex(currentIndex + 1);
+      setShowQuiz(false);
     }
   }, [currentIndex, sections.length]);
 
   const goToPrev = useCallback(() => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
+      setShowQuiz(false);
     }
   }, [currentIndex]);
 
   const goToSection = useCallback((index: number) => {
     setCurrentIndex(index);
+    setShowQuiz(false);
   }, []);
 
   const handleComplete = useCallback(async () => {
@@ -207,6 +263,42 @@ export default function ModuleViewer({ content, title, moduleId, learningPath, h
               className="module-content prose prose-gray max-w-none"
               dangerouslySetInnerHTML={{ __html: currentSection.parsedHtml }}
             />
+
+            {/* Section Quiz */}
+            {currentSectionQuiz && currentSectionQuiz.length > 0 && (
+              <div className="mt-8 pt-6 border-t border-gray-200">
+                {!showQuiz ? (
+                  <div className="text-center">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple/10 rounded-full text-purple mb-4">
+                      <span>📝</span>
+                      <span className="font-medium">Interactive Quiz Available</span>
+                    </div>
+                    {getBestScore(currentSection.title) ? (
+                      <div className="mb-4">
+                        <p className="text-sm text-gray-600">
+                          Your best score: <span className={`font-semibold ${hasPassed(currentSection.title) ? 'text-green-600' : 'text-amber-600'}`}>
+                            {getBestScore(currentSection.title)?.percentage}%
+                          </span>
+                        </p>
+                      </div>
+                    ) : null}
+                    <button
+                      onClick={() => setShowQuiz(true)}
+                      className="px-6 py-3 bg-purple text-white rounded-xl font-medium hover:bg-purple-dark transition-all"
+                    >
+                      {getBestScore(currentSection.title) ? 'Retake Quiz' : 'Start Quiz'}
+                    </button>
+                  </div>
+                ) : (
+                  <QuizContainer
+                    questions={currentSectionQuiz}
+                    moduleId={moduleId}
+                    sectionTitle={currentSection.title}
+                    onComplete={handleQuizComplete}
+                  />
+                )}
+              </div>
+            )}
           </div>
 
           {/* Card Footer Navigation */}
@@ -291,6 +383,9 @@ export default function ModuleViewer({ content, title, moduleId, learningPath, h
                 </svg>
               )}
               {index + 1}
+              {section.hasQuiz && (
+                <span className="ml-0.5">📝</span>
+              )}
             </span>
           </button>
         ))}
