@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <defs>
+    <filter id="dfShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">Deepfake Detection Signals</text>
+  <text x="400" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">What to look for when verifying synthetic media</text>
+
+  <!-- Visual Artifacts -->
+  <g filter="url(#dfShadow)" transform="translate(30, 65)">
+    <rect width="235" height="155" rx="12" fill="white" stroke="#fda4af" stroke-width="2"/>
+    <rect width="235" height="30" rx="12" fill="#f43f5e"/>
+    <rect width="235" height="10" y="20" fill="#f43f5e"/>
+    <text x="117" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">Visual Artifacts</text>
+
+    <text x="15" y="50" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#be123c">Check for:</text>
+    <text x="20" y="67" font-family="system-ui, sans-serif" font-size="8" fill="#e11d48">• Unnatural blinking patterns</text>
+    <text x="20" y="80" font-family="system-ui, sans-serif" font-size="8" fill="#e11d48">• Blurry face edges/boundaries</text>
+    <text x="20" y="93" font-family="system-ui, sans-serif" font-size="8" fill="#e11d48">• Inconsistent lighting on face vs bg</text>
+    <text x="20" y="106" font-family="system-ui, sans-serif" font-size="8" fill="#e11d48">• Teeth/hair rendering issues</text>
+    <text x="20" y="119" font-family="system-ui, sans-serif" font-size="8" fill="#e11d48">• Skin texture inconsistencies</text>
+
+    <rect x="10" y="130" width="215" height="18" rx="4" fill="#fef2f2"/>
+    <text x="117" y="142" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#be123c">Note: High-quality deepfakes may lack visible artifacts</text>
+  </g>
+
+  <!-- Audio Signals -->
+  <g filter="url(#dfShadow)" transform="translate(282, 65)">
+    <rect width="235" height="155" rx="12" fill="white" stroke="#c4b5fd" stroke-width="2"/>
+    <rect width="235" height="30" rx="12" fill="#8b5cf6"/>
+    <rect width="235" height="10" y="20" fill="#8b5cf6"/>
+    <text x="117" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">Audio Signals</text>
+
+    <text x="15" y="50" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#5b21b6">Check for:</text>
+    <text x="20" y="67" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">• Lip sync mismatches</text>
+    <text x="20" y="80" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">• Unnatural speech cadence</text>
+    <text x="20" y="93" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">• Missing breath sounds</text>
+    <text x="20" y="106" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">• Inconsistent background noise</text>
+    <text x="20" y="119" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">• Robotic tone in voice</text>
+
+    <rect x="10" y="130" width="215" height="18" rx="4" fill="#f3e8ff"/>
+    <text x="117" y="142" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#5b21b6">Audio clones improving rapidly</text>
+  </g>
+
+  <!-- Contextual Signals -->
+  <g filter="url(#dfShadow)" transform="translate(534, 65)">
+    <rect width="235" height="155" rx="12" fill="white" stroke="#86efac" stroke-width="2"/>
+    <rect width="235" height="30" rx="12" fill="#10b981"/>
+    <rect width="235" height="10" y="20" fill="#10b981"/>
+    <text x="117" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="white">Contextual Signals</text>
+
+    <text x="15" y="50" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#166534">Check for:</text>
+    <text x="20" y="67" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">• Does this match other sources?</text>
+    <text x="20" y="80" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">• Would this person say this?</text>
+    <text x="20" y="93" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">• Is the setting plausible?</text>
+    <text x="20" y="106" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">• Who benefits if this is believed?</text>
+    <text x="20" y="119" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">• Original source traceable?</text>
+
+    <rect x="10" y="130" width="215" height="18" rx="4" fill="#f0fdf4"/>
+    <text x="117" y="142" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#166534">Often more reliable than technical detection</text>
+  </g>
+
+  <!-- Detection Tools -->
+  <g filter="url(#dfShadow)" transform="translate(30, 240)">
+    <rect width="740" height="140" rx="12" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="370" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#1e293b">Detection Approach</text>
+
+    <g transform="translate(20, 40)">
+      <rect width="220" height="85" rx="8" fill="#eff6ff"/>
+      <text x="110" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#1e40af">Technical Tools</text>
+      <text x="15" y="40" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">• AI detection tools (limited reliability)</text>
+      <text x="15" y="55" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">• Forensic analysis software</text>
+      <text x="15" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">• Metadata examination</text>
+    </g>
+
+    <g transform="translate(260, 40)">
+      <rect width="220" height="85" rx="8" fill="#f0fdf4"/>
+      <text x="110" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#166534">Human Verification</text>
+      <text x="15" y="40" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">• Cross-reference other sources</text>
+      <text x="15" y="55" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">• Contact subject/witnesses</text>
+      <text x="15" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">• Verify chain of custody</text>
+    </g>
+
+    <g transform="translate(500, 40)">
+      <rect width="220" height="85" rx="8" fill="#fef3c7"/>
+      <text x="110" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#92400e">Critical Mindset</text>
+      <text x="15" y="40" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">• Assume verification is needed</text>
+      <text x="15" y="55" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">• Never rely on single method</text>
+      <text x="15" y="70" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">• Context often reveals fakes</text>
+    </g>
+  </g>
+</svg>

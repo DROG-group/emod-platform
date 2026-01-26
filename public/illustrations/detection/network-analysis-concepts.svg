@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <filter id="netShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">Network Analysis Patterns</text>
+  <text x="400" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">What network structures reveal about coordination</text>
+
+  <!-- Organic Network -->
+  <g filter="url(#netShadow)" transform="translate(30, 65)">
+    <rect width="235" height="230" rx="12" fill="white" stroke="#86efac" stroke-width="2"/>
+    <text x="117" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#166534">Organic Network</text>
+
+    <!-- Network visualization -->
+    <g transform="translate(117, 110)">
+      <!-- Multiple clusters connected -->
+      <circle cx="0" cy="0" r="8" fill="#22c55e"/>
+      <circle cx="-40" cy="-25" r="6" fill="#86efac"/>
+      <circle cx="-50" cy="15" r="5" fill="#86efac"/>
+      <circle cx="45" cy="-20" r="7" fill="#86efac"/>
+      <circle cx="40" cy="25" r="5" fill="#86efac"/>
+      <circle cx="-20" cy="40" r="6" fill="#86efac"/>
+      <circle cx="20" cy="-45" r="5" fill="#86efac"/>
+      <circle cx="-60" cy="-50" r="4" fill="#bbf7d0"/>
+      <circle cx="65" cy="10" r="4" fill="#bbf7d0"/>
+      <circle cx="-30" cy="55" r="4" fill="#bbf7d0"/>
+
+      <!-- Connections (messy, organic) -->
+      <line x1="0" y1="0" x2="-40" y2="-25" stroke="#86efac" stroke-width="1"/>
+      <line x1="0" y1="0" x2="-50" y2="15" stroke="#86efac" stroke-width="1"/>
+      <line x1="0" y1="0" x2="45" y2="-20" stroke="#86efac" stroke-width="1"/>
+      <line x1="0" y1="0" x2="40" y2="25" stroke="#86efac" stroke-width="1"/>
+      <line x1="-40" y1="-25" x2="-60" y2="-50" stroke="#bbf7d0" stroke-width="1"/>
+      <line x1="-40" y1="-25" x2="20" y2="-45" stroke="#bbf7d0" stroke-width="1"/>
+      <line x1="45" y1="-20" x2="65" y2="10" stroke="#bbf7d0" stroke-width="1"/>
+      <line x1="-50" y1="15" x2="-20" y2="40" stroke="#bbf7d0" stroke-width="1"/>
+      <line x1="-20" y1="40" x2="-30" y2="55" stroke="#bbf7d0" stroke-width="1"/>
+    </g>
+
+    <text x="117" y="185" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#15803d">Multiple clusters</text>
+    <text x="117" y="198" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#15803d">Varied connection strengths</text>
+    <text x="117" y="211" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#15803d">Natural influence hubs</text>
+  </g>
+
+  <!-- Coordinated Network -->
+  <g filter="url(#netShadow)" transform="translate(282, 65)">
+    <rect width="235" height="230" rx="12" fill="white" stroke="#fecaca" stroke-width="2"/>
+    <text x="117" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#991b1b">Coordinated Network</text>
+
+    <!-- Network visualization - star pattern -->
+    <g transform="translate(117, 110)">
+      <!-- Central hub with many uniform spokes -->
+      <circle cx="0" cy="0" r="10" fill="#ef4444"/>
+      <circle cx="-50" cy="-30" r="5" fill="#fca5a5"/>
+      <circle cx="-55" cy="10" r="5" fill="#fca5a5"/>
+      <circle cx="-40" cy="40" r="5" fill="#fca5a5"/>
+      <circle cx="0" cy="50" r="5" fill="#fca5a5"/>
+      <circle cx="40" cy="40" r="5" fill="#fca5a5"/>
+      <circle cx="55" cy="10" r="5" fill="#fca5a5"/>
+      <circle cx="50" cy="-30" r="5" fill="#fca5a5"/>
+      <circle cx="0" cy="-50" r="5" fill="#fca5a5"/>
+
+      <!-- Uniform connections -->
+      <line x1="0" y1="0" x2="-50" y2="-30" stroke="#fca5a5" stroke-width="1.5"/>
+      <line x1="0" y1="0" x2="-55" y2="10" stroke="#fca5a5" stroke-width="1.5"/>
+      <line x1="0" y1="0" x2="-40" y2="40" stroke="#fca5a5" stroke-width="1.5"/>
+      <line x1="0" y1="0" x2="0" y2="50" stroke="#fca5a5" stroke-width="1.5"/>
+      <line x1="0" y1="0" x2="40" y2="40" stroke="#fca5a5" stroke-width="1.5"/>
+      <line x1="0" y1="0" x2="55" y2="10" stroke="#fca5a5" stroke-width="1.5"/>
+      <line x1="0" y1="0" x2="50" y2="-30" stroke="#fca5a5" stroke-width="1.5"/>
+      <line x1="0" y1="0" x2="0" y2="-50" stroke="#fca5a5" stroke-width="1.5"/>
+    </g>
+
+    <text x="117" y="185" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#991b1b">Single hub dominates</text>
+    <text x="117" y="198" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#991b1b">Uniform connection patterns</text>
+    <text x="117" y="211" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#991b1b">Isolated from broader community</text>
+  </g>
+
+  <!-- Amplification Chain -->
+  <g filter="url(#netShadow)" transform="translate(534, 65)">
+    <rect width="235" height="230" rx="12" fill="white" stroke="#fde68a" stroke-width="2"/>
+    <text x="117" y="25" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#92400e">Amplification Chain</text>
+
+    <!-- Chain visualization -->
+    <g transform="translate(117, 110)">
+      <!-- Seed account -->
+      <circle cx="-70" cy="0" r="8" fill="#f59e0b"/>
+      <text x="-70" y="3" text-anchor="middle" font-family="system-ui, sans-serif" font-size="6" fill="white">1</text>
+
+      <!-- First tier -->
+      <circle cx="-30" cy="-25" r="6" fill="#fbbf24"/>
+      <circle cx="-30" cy="25" r="6" fill="#fbbf24"/>
+
+      <!-- Second tier -->
+      <circle cx="10" cy="-35" r="5" fill="#fcd34d"/>
+      <circle cx="10" cy="0" r="5" fill="#fcd34d"/>
+      <circle cx="10" cy="35" r="5" fill="#fcd34d"/>
+
+      <!-- Third tier (mainstream) -->
+      <circle cx="50" cy="-20" r="7" fill="#86efac"/>
+      <circle cx="50" cy="20" r="7" fill="#86efac"/>
+
+      <!-- Arrows showing flow -->
+      <line x1="-62" y1="-5" x2="-36" y2="-20" stroke="#fbbf24" stroke-width="1.5"/>
+      <line x1="-62" y1="5" x2="-36" y2="20" stroke="#fbbf24" stroke-width="1.5"/>
+
+      <line x1="-24" y1="-25" x2="4" y2="-30" stroke="#fcd34d" stroke-width="1"/>
+      <line x1="-24" y1="-20" x2="4" y2="0" stroke="#fcd34d" stroke-width="1"/>
+      <line x1="-24" y1="20" x2="4" y2="0" stroke="#fcd34d" stroke-width="1"/>
+      <line x1="-24" y1="25" x2="4" y2="30" stroke="#fcd34d" stroke-width="1"/>
+
+      <line x1="16" y1="-30" x2="42" y2="-20" stroke="#86efac" stroke-width="1"/>
+      <line x1="16" y1="30" x2="42" y2="20" stroke="#86efac" stroke-width="1"/>
+    </g>
+
+    <text x="30" y="180" font-family="system-ui, sans-serif" font-size="8" fill="#f59e0b">Seed</text>
+    <text x="80" y="180" font-family="system-ui, sans-serif" font-size="8" fill="#fbbf24">Tier 1</text>
+    <text x="130" y="180" font-family="system-ui, sans-serif" font-size="8" fill="#fcd34d">Tier 2</text>
+    <text x="175" y="180" font-family="system-ui, sans-serif" font-size="8" fill="#86efac">Mainstream</text>
+
+    <text x="117" y="200" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#92400e">Narrative laundering:</text>
+    <text x="117" y="213" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#92400e">fringe → mainstream</text>
+  </g>
+
+  <!-- Key Metrics -->
+  <g filter="url(#netShadow)" transform="translate(30, 310)">
+    <rect width="740" height="120" rx="12" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="370" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#1e293b">Key Network Metrics to Examine</text>
+
+    <g transform="translate(20, 40)">
+      <rect width="170" height="65" rx="8" fill="#f0fdf4"/>
+      <text x="85" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#166534">Density</text>
+      <text x="85" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">How connected is the</text>
+      <text x="85" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#15803d">network to itself vs others?</text>
+    </g>
+    <g transform="translate(205, 40)">
+      <rect width="170" height="65" rx="8" fill="#eff6ff"/>
+      <text x="85" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#1e40af">Centrality</text>
+      <text x="85" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">Who are the key hubs?</text>
+      <text x="85" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#3b82f6">Is control distributed?</text>
+    </g>
+    <g transform="translate(390, 40)">
+      <rect width="170" height="65" rx="8" fill="#fef3c7"/>
+      <text x="85" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#92400e">Timing</text>
+      <text x="85" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">How synchronized are</text>
+      <text x="85" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#b45309">interactions across the network?</text>
+    </g>
+    <g transform="translate(575, 40)">
+      <rect width="150" height="65" rx="8" fill="#f3e8ff"/>
+      <text x="75" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="600" fill="#5b21b6">Isolation</text>
+      <text x="75" y="38" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">Does the network only</text>
+      <text x="75" y="50" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#7c3aed">talk to itself?</text>
+    </g>
+  </g>
+</svg>

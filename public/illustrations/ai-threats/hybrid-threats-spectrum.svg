@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380">
+  <defs>
+    <linearGradient id="hybridGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3b82f6"/>
+      <stop offset="50%" style="stop-color:#8b5cf6"/>
+      <stop offset="100%" style="stop-color:#ef4444"/>
+    </linearGradient>
+    <filter id="hybShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="380" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">Hybrid Threats Spectrum</text>
+  <text x="400" y="46" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">Information operations often combine with other threat types</text>
+
+  <!-- Spectrum bar -->
+  <g transform="translate(50, 70)">
+    <rect width="700" height="30" rx="15" fill="url(#hybridGrad)"/>
+    <text x="80" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="white">INFORMATION</text>
+    <text x="350" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="white">HYBRID</text>
+    <text x="620" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="white">KINETIC</text>
+  </g>
+
+  <!-- Examples along spectrum -->
+  <g transform="translate(30, 120)">
+    <!-- Pure Information -->
+    <g filter="url(#hybShadow)">
+      <rect width="145" height="120" rx="10" fill="white" stroke="#93c5fd" stroke-width="2"/>
+      <text x="72" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#1e40af">Pure Information</text>
+      <text x="15" y="40" font-family="system-ui, sans-serif" font-size="7" fill="#3b82f6">• Disinformation campaigns</text>
+      <text x="15" y="52" font-family="system-ui, sans-serif" font-size="7" fill="#3b82f6">• Propaganda</text>
+      <text x="15" y="64" font-family="system-ui, sans-serif" font-size="7" fill="#3b82f6">• Influence operations</text>
+      <text x="15" y="76" font-family="system-ui, sans-serif" font-size="7" fill="#3b82f6">• Narrative warfare</text>
+      <rect x="10" y="90" width="125" height="22" rx="4" fill="#eff6ff"/>
+      <text x="72" y="104" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#1e40af">Primary: Shape perception</text>
+    </g>
+
+    <!-- Info + Cyber -->
+    <g filter="url(#hybShadow)" transform="translate(160, 0)">
+      <rect width="145" height="120" rx="10" fill="white" stroke="#a5b4fc" stroke-width="2"/>
+      <text x="72" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#4f46e5">Info + Cyber</text>
+      <text x="15" y="40" font-family="system-ui, sans-serif" font-size="7" fill="#6366f1">• Hack and leak ops</text>
+      <text x="15" y="52" font-family="system-ui, sans-serif" font-size="7" fill="#6366f1">• Website defacement</text>
+      <text x="15" y="64" font-family="system-ui, sans-serif" font-size="7" fill="#6366f1">• DDoS + messaging</text>
+      <text x="15" y="76" font-family="system-ui, sans-serif" font-size="7" fill="#6366f1">• Data theft for disinfo</text>
+      <rect x="10" y="90" width="125" height="22" rx="4" fill="#eef2ff"/>
+      <text x="72" y="104" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#4f46e5">Cyber enables messaging</text>
+    </g>
+
+    <!-- Info + Economic -->
+    <g filter="url(#hybShadow)" transform="translate(320, 0)">
+      <rect width="145" height="120" rx="10" fill="white" stroke="#c4b5fd" stroke-width="2"/>
+      <text x="72" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#7c3aed">Info + Economic</text>
+      <text x="15" y="40" font-family="system-ui, sans-serif" font-size="7" fill="#8b5cf6">• Market manipulation</text>
+      <text x="15" y="52" font-family="system-ui, sans-serif" font-size="7" fill="#8b5cf6">• Sanction evasion comms</text>
+      <text x="15" y="64" font-family="system-ui, sans-serif" font-size="7" fill="#8b5cf6">• Trade weaponization</text>
+      <text x="15" y="76" font-family="system-ui, sans-serif" font-size="7" fill="#8b5cf6">• Coercive diplomacy</text>
+      <rect x="10" y="90" width="125" height="22" rx="4" fill="#f3e8ff"/>
+      <text x="72" y="104" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#7c3aed">Economic + narrative</text>
+    </g>
+
+    <!-- Info + Political -->
+    <g filter="url(#hybShadow)" transform="translate(480, 0)">
+      <rect width="145" height="120" rx="10" fill="white" stroke="#fda4af" stroke-width="2"/>
+      <text x="72" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#e11d48">Info + Political</text>
+      <text x="15" y="40" font-family="system-ui, sans-serif" font-size="7" fill="#f43f5e">• Election interference</text>
+      <text x="15" y="52" font-family="system-ui, sans-serif" font-size="7" fill="#f43f5e">• Political party funding</text>
+      <text x="15" y="64" font-family="system-ui, sans-serif" font-size="7" fill="#f43f5e">• Agent of influence</text>
+      <text x="15" y="76" font-family="system-ui, sans-serif" font-size="7" fill="#f43f5e">• Diplomatic pressure</text>
+      <rect x="10" y="90" width="125" height="22" rx="4" fill="#fff1f2"/>
+      <text x="72" y="104" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#e11d48">Political + messaging</text>
+    </g>
+
+    <!-- Info + Military -->
+    <g filter="url(#hybShadow)" transform="translate(640, 0)">
+      <rect width="130" height="120" rx="10" fill="white" stroke="#fecaca" stroke-width="2"/>
+      <text x="65" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#dc2626">Info + Military</text>
+      <text x="10" y="40" font-family="system-ui, sans-serif" font-size="7" fill="#ef4444">• PSYOP + operations</text>
+      <text x="10" y="52" font-family="system-ui, sans-serif" font-size="7" fill="#ef4444">• False flag narratives</text>
+      <text x="10" y="64" font-family="system-ui, sans-serif" font-size="7" fill="#ef4444">• Invasion justification</text>
+      <text x="10" y="76" font-family="system-ui, sans-serif" font-size="7" fill="#ef4444">• Troop demoralization</text>
+      <rect x="8" y="90" width="114" height="22" rx="4" fill="#fef2f2"/>
+      <text x="65" y="104" text-anchor="middle" font-family="system-ui, sans-serif" font-size="7" fill="#dc2626">Kinetic + narrative</text>
+    </g>
+  </g>
+
+  <!-- Key insight -->
+  <g filter="url(#hybShadow)" transform="translate(30, 260)">
+    <rect width="740" height="100" rx="12" fill="white" stroke="#e2e8f0" stroke-width="2"/>
+    <text x="370" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#1e293b">Why Hybrid Threats Matter for FIMI Analysis</text>
+
+    <g transform="translate(20, 40)">
+      <circle cx="8" cy="8" r="5" fill="#8b5cf6"/>
+      <text x="22" y="12" font-family="system-ui, sans-serif" font-size="9" fill="#5b21b6">Information operations rarely happen in isolation - look for accompanying activities</text>
+    </g>
+    <g transform="translate(20, 60)">
+      <circle cx="8" cy="8" r="5" fill="#8b5cf6"/>
+      <text x="22" y="12" font-family="system-ui, sans-serif" font-size="9" fill="#5b21b6">Understanding the full hybrid picture helps assess intent and capability</text>
+    </g>
+    <g transform="translate(20, 80)">
+      <circle cx="8" cy="8" r="5" fill="#8b5cf6"/>
+      <text x="22" y="12" font-family="system-ui, sans-serif" font-size="9" fill="#5b21b6">Response may require coordination across security domains, not just counter-messaging</text>
+    </g>
+  </g>
+</svg>
