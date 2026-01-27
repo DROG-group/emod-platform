@@ -6,6 +6,8 @@ import Image from "next/image";
 
 const SECTIONS = [
   { id: "overview", title: "Overview" },
+  { id: "approach", title: "Our Approach" },
+  { id: "dim-framework", title: "DIM Framework" },
   { id: "self-study", title: "Self-Study Guidelines" },
   { id: "course-delivery", title: "Course Delivery" },
   { id: "grading", title: "Grading Guidelines" },
@@ -32,8 +34,8 @@ export default function HandbookPage() {
               Teachers Handbook
             </h1>
             <p className="text-xl text-gray-600">
-              A comprehensive guide for educators integrating EMOD into university curricula,
-              professional training programs, or self-directed learning paths.
+              Practical guidance for integrating EMOD into university courses, professional training,
+              or self-directed learning. No fluff, no buzzwords—concrete methods you can use.
             </p>
           </div>
         </div>
@@ -85,8 +87,9 @@ export default function HandbookPage() {
                     to foreign information manipulation and interference (FIMI).
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    This handbook provides guidance for educators who want to integrate EMOD into their teaching,
-                    whether as a standalone course, supplementary material, or professional development resource.
+                    This handbook gives you what you need to integrate EMOD into your teaching—whether
+                    as a standalone course, supplementary material, or professional workshop.
+                    We&apos;ve included delivery models, grading rubrics, and discussion prompts ready to adapt.
                   </p>
 
                   <div className="bg-purple-50 rounded-xl p-6 mt-6">
@@ -117,6 +120,258 @@ export default function HandbookPage() {
                         <span><strong>Free access:</strong> No registration required, completely open</span>
                       </li>
                     </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Our Approach */}
+            <div id="approach" className="scroll-mt-32">
+              <div className="bg-white rounded-2xl border border-gray-200 p-8 lg:p-10 shadow-sm">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  <span className="w-10 h-10 bg-purple/10 rounded-lg flex items-center justify-center text-purple">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                  </span>
+                  Our Approach
+                </h2>
+                <div className="prose prose-gray max-w-none">
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    EMOD takes a practical, evidence-based approach to counter-disinformation training.
+                    We focus on building analytical skills rather than teaching shortcuts that break under real-world complexity.
+                  </p>
+
+                  <div className="bg-purple-50 rounded-xl p-6 mb-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-3">Core Principles</h3>
+                    <div className="space-y-4">
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-purple/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <span className="text-sm font-bold text-purple">1</span>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900">Low drama, high signal</h4>
+                          <p className="text-sm text-gray-600 mt-1">
+                            We avoid sensationalism. No &quot;crack the code&quot; narratives or breathless warnings.
+                            Clear analysis, not Netflix drama.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-purple/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <span className="text-sm font-bold text-purple">2</span>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900">Anti-overclaim</h4>
+                          <p className="text-sm text-gray-600 mt-1">
+                            We teach confidence levels: low, medium, high. We say &quot;signals suggest X&quot; rather than
+                            &quot;this is definitely Y.&quot; Certainty is earned, not assumed.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-purple/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <span className="text-sm font-bold text-purple">3</span>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900">Focus on harm and impact</h4>
+                          <p className="text-sm text-gray-600 mt-1">
+                            &quot;Foreign&quot; is a possible attribute, not the goal. We teach harm assessment, intent analysis,
+                            coordination detection, and impact evaluation.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <div className="w-8 h-8 bg-purple/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <span className="text-sm font-bold text-purple">4</span>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-900">Detection is not intervention</h4>
+                          <p className="text-sm text-gray-600 mt-1">
+                            Identifying a problem is step one. Choosing the right response is the real skill.
+                            We train both analysis and intervention selection.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h3 className="text-lg font-semibold text-gray-900 mt-6 mb-3">Evidence Ladder</h3>
+                  <p className="text-gray-700 mb-4">
+                    Every module teaches students to classify evidence by strength, not just presence:
+                  </p>
+                  <div className="grid sm:grid-cols-3 gap-4">
+                    <div className="p-4 bg-green-50 border border-green-200 rounded-xl">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                        <h4 className="font-semibold text-green-900">Strong Signals</h4>
+                      </div>
+                      <ul className="text-sm text-green-800 space-y-1">
+                        <li>Coordinated timing + shared infrastructure</li>
+                        <li>Account creation patterns</li>
+                        <li>Cross-platform content reuse</li>
+                        <li>Documented attribution</li>
+                      </ul>
+                    </div>
+                    <div className="p-4 bg-yellow-50 border border-yellow-200 rounded-xl">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                        <h4 className="font-semibold text-yellow-900">Medium Signals</h4>
+                      </div>
+                      <ul className="text-sm text-yellow-800 space-y-1">
+                        <li>Repeated coordination behaviours</li>
+                        <li>Partial attribution links</li>
+                        <li>Unusual engagement patterns</li>
+                        <li>Content amplification anomalies</li>
+                      </ul>
+                    </div>
+                    <div className="p-4 bg-red-50 border border-red-200 rounded-xl">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                        <h4 className="font-semibold text-red-900">Weak Signals</h4>
+                      </div>
+                      <ul className="text-sm text-red-800 space-y-1">
+                        <li>Grammar or language patterns</li>
+                        <li>&quot;It feels choreographed&quot;</li>
+                        <li>&quot;It spread fast&quot;</li>
+                        <li>Vibes and intuition alone</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <p className="text-sm text-gray-500 mt-3 italic">
+                    Weak signals are reasons to investigate, not conclusions to report.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* DIM Framework */}
+            <div id="dim-framework" className="scroll-mt-32">
+              <div className="bg-white rounded-2xl border border-gray-200 p-8 lg:p-10 shadow-sm">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                  <span className="w-10 h-10 bg-purple/10 rounded-lg flex items-center justify-center text-purple">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                    </svg>
+                  </span>
+                  DIM Framework
+                </h2>
+                <div className="prose prose-gray max-w-none">
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    The DROG Intervention Menu (DIM) is the methodological backbone of EMOD. It provides a structured
+                    approach to selecting interventions based on context, not reflex. DIM is not a timeline—it&apos;s a menu.
+                    Your training teaches people to pick the right tool for the context.
+                  </p>
+
+                  <div className="bg-gray-50 rounded-xl p-6 mb-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">The Five Generations</h3>
+                    <div className="space-y-4">
+                      <div className="bg-white rounded-lg p-4 border border-gray-200">
+                        <div className="flex items-center gap-3 mb-2">
+                          <span className="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-sm font-bold text-gray-600">G1</span>
+                          <h4 className="font-semibold text-gray-900">Generation 1: Awareness</h4>
+                        </div>
+                        <p className="text-sm text-gray-600 ml-11">
+                          Basic media literacy campaigns. &quot;Be aware disinformation exists.&quot; Necessary foundation, but limited
+                          effectiveness alone. Often where interventions stop prematurely.
+                        </p>
+                      </div>
+                      <div className="bg-white rounded-lg p-4 border border-purple-200 ring-1 ring-purple-100">
+                        <div className="flex items-center gap-3 mb-2">
+                          <span className="w-8 h-8 bg-purple text-white rounded-full flex items-center justify-center text-sm font-bold">G2</span>
+                          <h4 className="font-semibold text-gray-900">Generation 2: Debunking</h4>
+                          <span className="text-xs bg-purple/10 text-purple px-2 py-0.5 rounded-full">Reactive</span>
+                        </div>
+                        <p className="text-sm text-gray-600 ml-11">
+                          Fact-checking and correction after false content spreads. Works best for misinformation
+                          (honest errors). Less effective for disinformation (deliberate deception) or committed believers.
+                          Correcting someone who knows they&apos;re lying rarely changes their behaviour.
+                        </p>
+                      </div>
+                      <div className="bg-white rounded-lg p-4 border border-purple-200 ring-1 ring-purple-100">
+                        <div className="flex items-center gap-3 mb-2">
+                          <span className="w-8 h-8 bg-purple text-white rounded-full flex items-center justify-center text-sm font-bold">G3</span>
+                          <h4 className="font-semibold text-gray-900">Generation 3: Prebunking</h4>
+                          <span className="text-xs bg-purple/10 text-purple px-2 py-0.5 rounded-full">Proactive</span>
+                        </div>
+                        <p className="text-sm text-gray-600 ml-11">
+                          Inoculation against manipulation techniques before exposure. Teaches recognition of tactics
+                          rather than specific claims. More durable than debunking because it builds resistance to
+                          future encounters with similar techniques.
+                        </p>
+                      </div>
+                      <div className="bg-white rounded-lg p-4 border border-purple-200 ring-1 ring-purple-100">
+                        <div className="flex items-center gap-3 mb-2">
+                          <span className="w-8 h-8 bg-purple text-white rounded-full flex items-center justify-center text-sm font-bold">G4</span>
+                          <h4 className="font-semibold text-gray-900">Generation 4: Moderation</h4>
+                          <span className="text-xs bg-purple/10 text-purple px-2 py-0.5 rounded-full">Structural</span>
+                        </div>
+                        <p className="text-sm text-gray-600 ml-11">
+                          Platform-level interventions: content removal, labelling, reduced distribution, account
+                          suspension. Necessary for coordinated inauthentic behaviour. Raises free expression
+                          concerns that must be weighed against harm reduction.
+                        </p>
+                      </div>
+                      <div className="bg-white rounded-lg p-4 border border-purple-200 ring-1 ring-purple-100">
+                        <div className="flex items-center gap-3 mb-2">
+                          <span className="w-8 h-8 bg-purple text-white rounded-full flex items-center justify-center text-sm font-bold">G5</span>
+                          <h4 className="font-semibold text-gray-900">Generation 5: Interaction Design</h4>
+                          <span className="text-xs bg-purple/10 text-purple px-2 py-0.5 rounded-full">Systemic</span>
+                        </div>
+                        <p className="text-sm text-gray-600 ml-11">
+                          Redesigning how platforms and information systems work. Friction before sharing,
+                          algorithmic changes, transparency requirements, interoperability. Addresses root
+                          causes rather than symptoms. The frontier of counter-disinformation work.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <h3 className="text-lg font-semibold text-gray-900 mt-6 mb-3">Matching Response to Context</h3>
+                  <p className="text-gray-700 mb-4">
+                    The key skill EMOD develops is matching the right intervention to the situation:
+                  </p>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="border-b border-gray-200">
+                          <th className="text-left py-3 px-4 font-semibold text-gray-900">Situation</th>
+                          <th className="text-left py-3 px-4 font-semibold text-gray-900">Recommended DIM</th>
+                          <th className="text-left py-3 px-4 font-semibold text-gray-900">Rationale</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-gray-100">
+                        <tr>
+                          <td className="py-3 px-4 text-gray-700">Person shared false claim they believe is true</td>
+                          <td className="py-3 px-4"><span className="bg-purple/10 text-purple px-2 py-0.5 rounded text-xs font-medium">G2 Debunk</span></td>
+                          <td className="py-3 px-4 text-gray-600">Correction works when intent wasn&apos;t to deceive</td>
+                        </tr>
+                        <tr>
+                          <td className="py-3 px-4 text-gray-700">Predictable manipulation campaign approaching (e.g., election)</td>
+                          <td className="py-3 px-4"><span className="bg-purple/10 text-purple px-2 py-0.5 rounded text-xs font-medium">G3 Prebunk</span></td>
+                          <td className="py-3 px-4 text-gray-600">Build resistance before exposure</td>
+                        </tr>
+                        <tr>
+                          <td className="py-3 px-4 text-gray-700">Coordinated inauthentic accounts spreading content</td>
+                          <td className="py-3 px-4"><span className="bg-purple/10 text-purple px-2 py-0.5 rounded text-xs font-medium">G4 Moderate</span></td>
+                          <td className="py-3 px-4 text-gray-600">Debunking won&apos;t stop bad-faith actors</td>
+                        </tr>
+                        <tr>
+                          <td className="py-3 px-4 text-gray-700">Platform design amplifies harmful content systematically</td>
+                          <td className="py-3 px-4"><span className="bg-purple/10 text-purple px-2 py-0.5 rounded text-xs font-medium">G5 Redesign</span></td>
+                          <td className="py-3 px-4 text-gray-600">Address the system, not individual content</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <div className="bg-gray-900 text-white rounded-xl p-6 mt-6">
+                    <h4 className="font-semibold mb-2">The DROG Principle</h4>
+                    <p className="text-gray-300 text-sm">
+                      Stop treating detection as the hero. Stop assuming stable patterns. Stop defaulting to
+                      &quot;educate/fact-check.&quot; Start teaching context selection, intervention choice, and
+                      interaction conditions. Detection is input into choosing an intervention—not the intervention itself.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -433,8 +688,9 @@ export default function HandbookPage() {
                 </h2>
                 <div className="prose prose-gray max-w-none">
                   <p className="text-gray-700 leading-relaxed mb-6">
-                    Since EMOD modules don&apos;t include built-in assessments, here are recommended approaches
-                    for evaluating student learning:
+                    EMOD modules include quizzes but no formal grading. For academic credit, you&apos;ll
+                    need your own assessment framework. Here&apos;s what we recommend—tested approaches
+                    that reward good judgement over rote recall:
                   </p>
 
                   <h3 className="text-lg font-semibold text-gray-900 mt-6 mb-4">Assessment Components</h3>
@@ -503,27 +759,27 @@ export default function HandbookPage() {
                       <tbody className="divide-y divide-gray-100">
                         <tr>
                           <td className="py-3 px-4 text-gray-700 font-medium">Identification</td>
-                          <td className="py-3 px-4 text-gray-600">Correctly identifies manipulation type, actors, techniques</td>
-                          <td className="py-3 px-4 text-gray-600">Identifies most elements with minor errors</td>
-                          <td className="py-3 px-4 text-gray-600">Significant misidentification or missing elements</td>
+                          <td className="py-3 px-4 text-gray-600">Correctly identifies type, actors, techniques with appropriate confidence levels</td>
+                          <td className="py-3 px-4 text-gray-600">Identifies most elements; confidence levels unclear</td>
+                          <td className="py-3 px-4 text-gray-600">Significant misidentification or overclaims certainty</td>
                         </tr>
                         <tr>
                           <td className="py-3 px-4 text-gray-700 font-medium">Framework Application</td>
-                          <td className="py-3 px-4 text-gray-600">Correctly applies DIM framework with clear rationale</td>
+                          <td className="py-3 px-4 text-gray-600">Selects appropriate DIM intervention with clear rationale for context</td>
                           <td className="py-3 px-4 text-gray-600">Applies framework but with incomplete reasoning</td>
-                          <td className="py-3 px-4 text-gray-600">Misapplies or fails to use framework</td>
+                          <td className="py-3 px-4 text-gray-600">Defaults to debunking without considering alternatives</td>
                         </tr>
                         <tr>
-                          <td className="py-3 px-4 text-gray-700 font-medium">Evidence Quality</td>
-                          <td className="py-3 px-4 text-gray-600">Uses multiple credible sources, proper verification</td>
-                          <td className="py-3 px-4 text-gray-600">Adequate sourcing with some gaps</td>
-                          <td className="py-3 px-4 text-gray-600">Poor sourcing or unverified claims</td>
+                          <td className="py-3 px-4 text-gray-700 font-medium">Evidence Strength</td>
+                          <td className="py-3 px-4 text-gray-600">Classifies signals as weak/medium/strong; uses multiple credible sources</td>
+                          <td className="py-3 px-4 text-gray-600">Adequate sourcing; signal strength not clearly distinguished</td>
+                          <td className="py-3 px-4 text-gray-600">Treats all signals as equal weight; unverified claims</td>
                         </tr>
                         <tr>
                           <td className="py-3 px-4 text-gray-700 font-medium">Intervention Design</td>
-                          <td className="py-3 px-4 text-gray-600">Practical, evidence-based recommendations</td>
-                          <td className="py-3 px-4 text-gray-600">Reasonable suggestions lacking detail</td>
-                          <td className="py-3 px-4 text-gray-600">Unrealistic or unsupported proposals</td>
+                          <td className="py-3 px-4 text-gray-600">Practical recommendations; acknowledges limitations and trade-offs</td>
+                          <td className="py-3 px-4 text-gray-600">Reasonable suggestions lacking nuance</td>
+                          <td className="py-3 px-4 text-gray-600">Unrealistic proposals; no consideration of constraints</td>
                         </tr>
                       </tbody>
                     </table>
