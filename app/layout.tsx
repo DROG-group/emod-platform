@@ -149,6 +149,12 @@ export default function RootLayout({
                         >
                           saufex.eu
                         </a>
+                        {process.env.NEXT_PUBLIC_BUILD_ID && (
+                          <>
+                            <span className="mx-2">|</span>
+                            <span className="text-gray-600 text-xs">build {process.env.NEXT_PUBLIC_BUILD_ID}</span>
+                          </>
+                        )}
                       </p>
                     </div>
                   </div>
