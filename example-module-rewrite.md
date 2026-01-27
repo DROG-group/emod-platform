@@ -6,7 +6,7 @@
 
 ## Purpose
 
-You'll learn how AI changes information operations—not by making them "easier," but by shifting what's detectable and what scales.
+You'll learn how AI changes information operations, not by making them "easier," but by shifting what's detectable and what scales.
 
 ---
 

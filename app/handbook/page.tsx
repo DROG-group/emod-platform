@@ -35,7 +35,7 @@ export default function HandbookPage() {
             </h1>
             <p className="text-xl text-gray-600">
               Practical guidance for integrating EMOD into university courses, professional training,
-              or self-directed learning. No fluff, no buzzwords—concrete methods you can use.
+              or self-directed learning. No fluff, no buzzwords. Just concrete methods you can use.
             </p>
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function HandbookPage() {
                     to foreign information manipulation and interference (FIMI).
                   </p>
                   <p className="text-gray-700 leading-relaxed mb-4">
-                    This handbook gives you what you need to integrate EMOD into your teaching—whether
+                    This handbook gives you what you need to integrate EMOD into your teaching, whether
                     as a standalone course, supplementary material, or professional workshop.
                     We&apos;ve included delivery models, grading rubrics, and discussion prompts ready to adapt.
                   </p>
@@ -259,7 +259,7 @@ export default function HandbookPage() {
                 <div className="prose prose-gray max-w-none">
                   <p className="text-gray-700 leading-relaxed mb-6">
                     The DROG Intervention Menu (DIM) is the methodological backbone of EMOD. It provides a structured
-                    approach to selecting interventions based on context, not reflex. DIM is not a timeline—it&apos;s a menu.
+                    approach to selecting interventions based on context, not reflex. DIM is not a timeline. It&apos;s a menu.
                     Your training teaches people to pick the right tool for the context.
                   </p>
 
@@ -370,7 +370,7 @@ export default function HandbookPage() {
                     <p className="text-gray-300 text-sm">
                       Stop treating detection as the hero. Stop assuming stable patterns. Stop defaulting to
                       &quot;educate/fact-check.&quot; Start teaching context selection, intervention choice, and
-                      interaction conditions. Detection is input into choosing an intervention—not the intervention itself.
+                      interaction conditions. Detection is input into choosing an intervention, not the intervention itself.
                     </p>
                   </div>
                 </div>
@@ -689,7 +689,7 @@ export default function HandbookPage() {
                 <div className="prose prose-gray max-w-none">
                   <p className="text-gray-700 leading-relaxed mb-6">
                     EMOD modules include quizzes but no formal grading. For academic credit, you&apos;ll
-                    need your own assessment framework. Here&apos;s what we recommend—tested approaches
+                    need your own assessment framework. Here&apos;s what we recommend: tested approaches
                     that reward good judgement over rote recall:
                   </p>
 

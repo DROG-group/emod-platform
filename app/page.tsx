@@ -80,7 +80,7 @@ export default function Home() {
               </p>
               <p>
                 This isn&apos;t about being paranoid or distrusting everything. It&apos;s about knowing how to tell the difference.
-                False and misleading information spreads because it&apos;s designed to trigger emotions—outrage, fear, or
+                False and misleading information spreads because it&apos;s designed to trigger emotions like outrage, fear, or
                 the satisfaction of &quot;knowing something others don&apos;t.&quot; Once you understand how this works, you become
                 much harder to fool.
               </p>
@@ -96,7 +96,7 @@ export default function Home() {
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
                       </svg>
                     </span>
-                    <span>False stories spread faster than true ones—they&apos;re more emotionally engaging</span>
+                    <span>False stories spread faster than true ones because they&apos;re more emotionally engaging</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-red-500 mt-1">
@@ -120,7 +120,7 @@ export default function Home() {
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
                       </svg>
                     </span>
-                    <span>Even smart, educated people get fooled—because this content is engineered to work</span>
+                    <span>Even smart, educated people get fooled because this content is engineered to work</span>
                   </li>
                 </ul>
               </div>
@@ -142,7 +142,7 @@ export default function Home() {
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                     </span>
-                    <span>The tactics manipulators use—so you can spot them</span>
+                    <span>The tactics manipulators use, so you can spot them</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-purple mt-1">
@@ -158,7 +158,7 @@ export default function Home() {
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
                     </span>
-                    <span>How to talk to friends and family who&apos;ve been misled—without starting a fight</span>
+                    <span>How to talk to friends and family who&apos;ve been misled without starting a fight</span>
                   </li>
                 </ul>
               </div>
@@ -170,7 +170,7 @@ export default function Home() {
                   <h3 className="text-xl font-bold mb-2">This isn&apos;t about telling you what to think.</h3>
                   <p className="text-gray-300">
                     It&apos;s about giving you the tools to think clearly. We don&apos;t push a political agenda.
-                    We teach you how manipulation works—so you can make up your own mind based on reality, not on
+                    We teach you how manipulation works, so you can make up your own mind based on reality, not on
                     what someone wants you to believe.
                   </p>
                 </div>
