@@ -3063,5 +3063,22 @@
       {"id": "c", "text": "When debunking uses bad arguments", "isCorrect": false, "explanation": "Argument quality isn't the main issue."},
       {"id": "d", "text": "When debunking comes from non-experts", "isCorrect": false, "explanation": "Expertise matters but isn't the core issue."}
     ], "explanation": "Reactive debunking can feed campaigns by increasing distribution and providing desired engagement. Know when you're helping the campaign's objectives.", "points": 10}]
+  },
+  "General-Module-Two-perceptions-of-honesty": {
+    "moduleId": "General-Module-Two-perceptions-of-honesty",
+    "sectionQuizzes": [{"sectionTitle": "Practice Exercise", "questions": [
+      {"id": "honesty-mc-1", "type": "multiple-choice", "question": "Why might supporters call a politician 'honest' despite factual inaccuracies?", "options": [
+        {"id": "a", "text": "They don't know the facts", "isCorrect": false, "explanation": "Information availability isn't the main issue here."},
+        {"id": "b", "text": "They're using authenticity-based honesty (belief-speaking) where sincerity matters more than factual accuracy", "isCorrect": true, "explanation": "Correct. Under belief-speaking, honesty means 'truly believes what they say' not 'says things that are true.' Both conceptions exist in democratic discourse."},
+        {"id": "c", "text": "They're being deliberately dishonest themselves", "isCorrect": false, "explanation": "Assuming bad faith prevents understanding."},
+        {"id": "d", "text": "The facts are actually disputed", "isCorrect": false, "explanation": "This scenario involves demonstrably false claims."}
+      ], "explanation": "Two conceptions of honesty exist: fact-speaking (accuracy) and belief-speaking (authenticity). Understanding which frame your audience uses is essential for effective intervention.", "points": 10}
+    ]}],
+    "comprehensiveQuiz": [{"id": "honesty-comp-1", "type": "multiple-choice", "question": "How should understanding of 'belief-speaking' change your counter-disinformation approach?", "options": [
+      {"id": "a", "text": "It shouldn't - facts are facts", "isCorrect": false, "explanation": "Ignoring how audiences process claims leads to ineffective interventions."},
+      {"id": "b", "text": "For belief-speaking audiences, fact-checks may be irrelevant or counterproductive; focus on prebunking, trusted messengers, and interaction design instead", "isCorrect": true, "explanation": "Correct. Gen 2 (debunking) assumes fact-speaking. For belief-speaking contexts, Gen 3 (prebunking focused on techniques) and Gen 5 (interaction design) may be more effective."},
+      {"id": "c", "text": "Give up on reaching belief-speakers", "isCorrect": false, "explanation": "Different approaches can work - not the same approaches."},
+      {"id": "d", "text": "Use more aggressive fact-checking", "isCorrect": false, "explanation": "More of what doesn't work won't start working."}
+    ], "explanation": "Match intervention to audience frame. Fact-checks work for fact-speakers. For belief-speakers, use prebunking, trusted messengers, and design interventions.", "points": 10}]
   }
 }
