@@ -14,6 +14,10 @@ const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space
 export const metadata: Metadata = {
   title: "EMOD - European Master of Countering Disinformation",
   description: "EMOD is the European Master of (countering) Disinformation, a product of SAUFEX. Learn to identify, understand, and counter foreign information manipulation.",
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
