@@ -243,3 +243,51 @@ html {
 .animate-slideIn {
   animation: slideIn 0.3s ease-out;
 }
+
+/* ===========================================
+   Scroll Progress Indicator
+   Uses CSS Scroll-Driven Animations (Chrome 115+)
+   Falls back to hidden on unsupported browsers
+   =========================================== */
+
+.scroll-progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 9999;
+  background: transparent;
+  pointer-events: none;
+}
+
+.scroll-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-purple), var(--color-purple-light));
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+/* Scroll-driven animation (progressive enhancement) */
+@supports (animation-timeline: scroll()) {
+  .scroll-progress-bar {
+    animation: scroll-progress linear;
+    animation-timeline: scroll();
+  }
+
+  @keyframes scroll-progress {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+}
+
+/* Hide on unsupported browsers */
+@supports not (animation-timeline: scroll()) {
+  .scroll-progress-container {
+    display: none;
+  }
+}

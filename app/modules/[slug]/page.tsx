@@ -3,6 +3,7 @@ import Link from "next/link";
 import modulesData from "@/lib/modules-data.json";
 import { Module } from "@/types/module";
 import ModuleViewer from "@/components/ModuleViewer";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const modules = modulesData as Module[];
 
@@ -31,6 +32,8 @@ export default async function ModulePage({ params }: { params: Promise<{ slug: s
 
   return (
     <div className="min-h-screen bg-gray-100">
+      <ScrollProgress />
+
       {/* Module Header */}
       <section className="bg-white border-b border-gray-200">
         <div className="container py-6">
