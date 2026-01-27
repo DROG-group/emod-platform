@@ -62,6 +62,129 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why This Matters - For Everyone */}
+      <section className="py-16 lg:py-20 bg-white border-b border-gray-200">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-4">Why Should You Care?</h2>
+              <p className="text-lg text-gray-600">
+                Because the information you see every day shapes what you believe, how you vote, and what you do.
+              </p>
+            </div>
+
+            <div className="prose prose-lg max-w-none text-gray-700 mb-12">
+              <p className="lead text-xl text-gray-800 font-medium mb-6">
+                Every day, you scroll through news, social media posts, and messages from friends. Some of it is true.
+                Some of it isn&apos;t. And some of it is designed to manipulate you without you realising it.
+              </p>
+              <p>
+                This isn&apos;t about being paranoid or distrusting everything. It&apos;s about knowing how to tell the difference.
+                False and misleading information spreads because it&apos;s designed to trigger emotions—outrage, fear, or
+                the satisfaction of &quot;knowing something others don&apos;t.&quot; Once you understand how this works, you become
+                much harder to fool.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-gray-50 rounded-2xl p-6 lg:p-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">The Problem</h3>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-500 mt-1">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                      </svg>
+                    </span>
+                    <span>False stories spread faster than true ones—they&apos;re more emotionally engaging</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-500 mt-1">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                      </svg>
+                    </span>
+                    <span>AI can now create fake images, videos, and text that look completely real</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-500 mt-1">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                      </svg>
+                    </span>
+                    <span>Some campaigns are deliberately designed to divide communities and erode trust</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-red-500 mt-1">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                      </svg>
+                    </span>
+                    <span>Even smart, educated people get fooled—because this content is engineered to work</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-purple-50 rounded-2xl p-6 lg:p-8">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">What You&apos;ll Learn</h3>
+                <ul className="space-y-3 text-gray-700">
+                  <li className="flex items-start gap-3">
+                    <span className="text-purple mt-1">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </span>
+                    <span>How to verify if something is true before you share it</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-purple mt-1">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </span>
+                    <span>The tactics manipulators use—so you can spot them</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-purple mt-1">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </span>
+                    <span>Why certain content &quot;feels&quot; true even when it isn&apos;t</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-purple mt-1">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                    </span>
+                    <span>How to talk to friends and family who&apos;ve been misled—without starting a fight</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-gray-900 text-white rounded-2xl p-6 lg:p-8">
+              <div className="flex flex-col lg:flex-row lg:items-center gap-6">
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold mb-2">This isn&apos;t about telling you what to think.</h3>
+                  <p className="text-gray-300">
+                    It&apos;s about giving you the tools to think clearly. We don&apos;t push a political agenda.
+                    We teach you how manipulation works—so you can make up your own mind based on reality, not on
+                    what someone wants you to believe.
+                  </p>
+                </div>
+                <div className="flex-shrink-0">
+                  <Link href="/dashboard" className="btn bg-white text-gray-900 hover:bg-gray-100 whitespace-nowrap">
+                    Start Learning Free
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Audience Section */}
       <section className="py-16 lg:py-20 bg-gray-50 border-y border-gray-200">
         <div className="container">
