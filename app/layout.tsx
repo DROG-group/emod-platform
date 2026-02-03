@@ -7,6 +7,7 @@ import { AuthProvider } from "@/contexts/AuthContext";
 import { ToastProvider } from "@/contexts/ToastContext";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import NavBar from "@/components/NavBar";
+import MatomoAnalytics from "@/components/MatomoAnalytics";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space" });
@@ -30,8 +31,12 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <noscript>
+          <img referrerPolicy="no-referrer-when-downgrade" src="//analytics.saufex.eu/matomo.php?idsite=4&rec=1" style={{border: 0}} alt="" />
+        </noscript>
       </head>
       <body className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}>
+        <MatomoAnalytics />
         <AuthProvider>
           <ToastProvider>
             <NavBar />
