@@ -52,3 +52,11 @@ coverage/
 
 # Word documents
 *.docx
+
+# Deployment
+.dockerignore
+.env.example
+Caddyfile
+Dockerfile
+deploy.sh
+docker-compose.yml
