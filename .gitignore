@@ -57,6 +57,5 @@ coverage/
 .dockerignore
 .env.example
 Caddyfile
-Dockerfile
 deploy.sh
 docker-compose.yml
