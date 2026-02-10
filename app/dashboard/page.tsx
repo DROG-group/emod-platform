@@ -7,6 +7,7 @@ import { Module, Audience } from "@/types/module";
 import { useAuth } from "@/contexts/AuthContext";
 import { useProgress } from "@/hooks/useProgress";
 import { useCertificates } from "@/hooks/useCertificates";
+import { DSA_LEARNING_PATH, getDSAModuleAccess, hasQuiz } from "@/lib/anti-breeze";
 
 const modules = modulesData as Module[];
 
@@ -56,6 +57,11 @@ export default function Dashboard() {
       return acc;
     }, {} as Record<Audience, number>);
   }, []);
+
+  // Completed module IDs for DSA access checks
+  const completedIds = useMemo(() => {
+    return new Set(progress.filter(p => p.completed).map(p => p.module_id));
+  }, [progress]);
 
   const totalModules = filteredModules.length;
   const learningPaths = Object.keys(groupedModules).length;
@@ -302,22 +308,30 @@ export default function Dashboard() {
                         .sort((a, b) => (a.moduleNumber || 0) - (b.moduleNumber || 0))
                         .map((module) => {
                           const completed = user && isCompleted(module.id);
+                          const isDSA = pathName === DSA_LEARNING_PATH;
+                          const dsaAccess = isDSA && user && module.moduleNumber
+                            ? getDSAModuleAccess(module.moduleNumber, completedIds, completedIds)
+                            : { unlocked: true };
+                          const isLocked = isDSA && user && !dsaAccess.unlocked;
+                          const moduleHasQuiz = hasQuiz(module.id);
 
-                          return (
-                            <Link
-                              key={module.id}
-                              href={`/modules/${module.slug}`}
-                              className="group flex items-start gap-4 p-4 lg:p-5 hover:bg-gray-50 transition-colors"
-                            >
-                              {/* Module Number / Completion Status */}
+                          const CardContent = (
+                            <>
+                              {/* Module Number / Completion / Lock Status */}
                               <div className={`flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold transition-colors ${
                                 completed
                                   ? 'bg-green-100 text-green-600'
+                                  : isLocked
+                                  ? 'bg-gray-100 text-gray-400'
                                   : 'bg-purple/10 text-purple group-hover:bg-purple group-hover:text-white'
                               }`}>
                                 {completed ? (
                                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                  </svg>
+                                ) : isLocked ? (
+                                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                                   </svg>
                                 ) : (
                                   module.moduleNumber || "•"
@@ -329,12 +343,14 @@ export default function Dashboard() {
                                 <h3 className={`font-semibold transition-colors ${
                                   completed
                                     ? 'text-gray-500'
+                                    : isLocked
+                                    ? 'text-gray-400'
                                     : 'text-gray-900 group-hover:text-purple'
                                 }`}>
                                   {module.title}
                                 </h3>
-                                <p className="text-sm text-gray-500 mt-1 line-clamp-1">
-                                  {module.description}
+                                <p className={`text-sm mt-1 line-clamp-1 ${isLocked ? 'text-gray-400' : 'text-gray-500'}`}>
+                                  {isLocked ? dsaAccess.reason : module.description}
                                 </p>
                                 <div className="flex items-center gap-3 mt-2">
                                   <span className="text-xs text-gray-400 flex items-center gap-1">
@@ -349,7 +365,12 @@ export default function Dashboard() {
                                       Completed
                                     </span>
                                   )}
-                                  {module.audiences && module.audiences.length > 0 && !completed && (
+                                  {isDSA && moduleHasQuiz && !completed && (
+                                    <span className="text-xs bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded font-medium">
+                                      Quiz
+                                    </span>
+                                  )}
+                                  {!isDSA && module.audiences && module.audiences.length > 0 && !completed && (
                                     <div className="flex gap-1">
                                       {module.audiences.slice(0, 2).map((aud) => (
                                         <span
@@ -370,12 +391,33 @@ export default function Dashboard() {
                                 </div>
                               </div>
 
-                              {/* Arrow */}
-                              <div className="flex-shrink-0 text-gray-300 group-hover:text-purple transition-colors">
+                              {/* Arrow or Lock */}
+                              <div className={`flex-shrink-0 transition-colors ${isLocked ? 'text-gray-300' : 'text-gray-300 group-hover:text-purple'}`}>
                                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
                               </div>
+                            </>
+                          );
+
+                          if (isLocked) {
+                            return (
+                              <div
+                                key={module.id}
+                                className="flex items-start gap-4 p-4 lg:p-5 opacity-60 cursor-not-allowed"
+                              >
+                                {CardContent}
+                              </div>
+                            );
+                          }
+
+                          return (
+                            <Link
+                              key={module.id}
+                              href={`/modules/${module.slug}`}
+                              className="group flex items-start gap-4 p-4 lg:p-5 hover:bg-gray-50 transition-colors"
+                            >
+                              {CardContent}
                             </Link>
                           );
                         })}

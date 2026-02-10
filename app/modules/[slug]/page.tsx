@@ -3,7 +3,9 @@ import Link from "next/link";
 import modulesData from "@/lib/modules-data.json";
 import { Module } from "@/types/module";
 import ModuleViewer from "@/components/ModuleViewer";
+import DSAAccessGate from "@/components/DSAAccessGate";
 import ScrollProgress from "@/components/ScrollProgress";
+import { isDSAModule, getMinReadingTime, hasQuiz, DSA_PASSING_SCORE } from "@/lib/anti-breeze";
 
 const modules = modulesData as Module[];
 
@@ -29,6 +31,10 @@ export default async function ModulePage({ params }: { params: Promise<{ slug: s
   const currentIndex = pathModules.findIndex((m) => m.slug === module.slug);
   const prevModule = currentIndex > 0 ? pathModules[currentIndex - 1] : null;
   const nextModule = currentIndex < pathModules.length - 1 ? pathModules[currentIndex + 1] : null;
+
+  const isDSA = isDSAModule(module);
+  const minReadingTime = isDSA ? getMinReadingTime(module) : 0;
+  const requiresQuizPass = isDSA && hasQuiz(module.id);
 
   return (
     <div className="min-h-screen bg-gray-100">
@@ -85,13 +91,28 @@ export default async function ModulePage({ params }: { params: Promise<{ slug: s
       <section className="py-8 lg:py-12">
         <div className="container">
           {module.content ? (
-            <ModuleViewer
-              content={module.content}
-              title={module.title}
-              moduleId={module.id}
-              learningPath={module.learningPath || null}
-              headerImage={module.headerImage}
-            />
+            isDSA ? (
+              <DSAAccessGate module={module}>
+                <ModuleViewer
+                  content={module.content}
+                  title={module.title}
+                  moduleId={module.id}
+                  learningPath={module.learningPath || null}
+                  headerImage={module.headerImage}
+                  minReadingTime={minReadingTime}
+                  requiresQuizPass={requiresQuizPass}
+                  quizPassingScore={DSA_PASSING_SCORE}
+                />
+              </DSAAccessGate>
+            ) : (
+              <ModuleViewer
+                content={module.content}
+                title={module.title}
+                moduleId={module.id}
+                learningPath={module.learningPath || null}
+                headerImage={module.headerImage}
+              />
+            )
           ) : (
             <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-200 p-8 text-center">
               <p className="text-gray-500">Module content is being prepared. Please check back soon.</p>

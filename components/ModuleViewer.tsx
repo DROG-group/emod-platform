@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useCallback, useEffect } from "react";
+import { useState, useMemo, useCallback, useEffect, useRef } from "react";
 import DOMPurify from "isomorphic-dompurify";
 import { useAuth } from "@/contexts/AuthContext";
 import { useProgress } from "@/hooks/useProgress";
@@ -17,6 +17,9 @@ interface ModuleViewerProps {
   moduleId: string;
   learningPath: string | null;
   headerImage?: string;
+  minReadingTime?: number; // seconds - DSA anti-breeze
+  requiresQuizPass?: boolean; // DSA anti-breeze
+  quizPassingScore?: number; // DSA anti-breeze
 }
 
 interface Section {
@@ -79,15 +82,57 @@ function getSectionIcon(title: string): string {
   return '📄';
 }
 
-export default function ModuleViewer({ content, title, moduleId, learningPath, headerImage }: ModuleViewerProps) {
+export default function ModuleViewer({ content, title, moduleId, learningPath, headerImage, minReadingTime = 0, requiresQuizPass = false, quizPassingScore = 80 }: ModuleViewerProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [hasRestored, setHasRestored] = useState(false);
+  const [readingTimeSpent, setReadingTimeSpent] = useState(0);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const { user } = useAuth();
   const { markViewed, markCompleted, isCompleted, getModuleProgress } = useProgress();
   const { saveAttempt, getBestScore, hasPassed } = useQuizProgress(moduleId);
 
   // Get quiz data for this module
   const moduleQuiz = typedQuizData[moduleId];
+
+  // Reading time tracker (ticks every second when page is visible)
+  useEffect(() => {
+    if (minReadingTime <= 0) return;
+
+    timerRef.current = setInterval(() => {
+      if (!document.hidden) {
+        setReadingTimeSpent(prev => prev + 1);
+      }
+    }, 1000);
+
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [minReadingTime]);
+
+  // Check if all quizzes for this module are passed
+  const allQuizzesPassed = useMemo(() => {
+    if (!requiresQuizPass || !moduleQuiz) return true;
+    // Check if any section quiz has been passed
+    const sectionTitles = moduleQuiz.sectionQuizzes?.map(sq => sq.sectionTitle) || [];
+    return sectionTitles.every(title => hasPassed(title));
+  }, [requiresQuizPass, moduleQuiz, hasPassed]);
+
+  // Determine if "Mark as Complete" should be enabled
+  const canComplete = useMemo(() => {
+    const timeOk = minReadingTime <= 0 || readingTimeSpent >= minReadingTime;
+    const quizOk = !requiresQuizPass || allQuizzesPassed;
+    return timeOk && quizOk;
+  }, [minReadingTime, readingTimeSpent, requiresQuizPass, allQuizzesPassed]);
+
+  // Human-readable remaining time
+  const remainingTime = useMemo(() => {
+    if (minReadingTime <= 0) return null;
+    const remaining = Math.max(0, minReadingTime - readingTimeSpent);
+    if (remaining === 0) return null;
+    const mins = Math.floor(remaining / 60);
+    const secs = remaining % 60;
+    return mins > 0 ? `${mins}m ${secs}s` : `${secs}s`;
+  }, [minReadingTime, readingTimeSpent]);
 
   // Parse sections and pre-compute HTML to avoid re-parsing on every render
   const sections = useMemo(() => {
@@ -229,7 +274,18 @@ export default function ModuleViewer({ content, title, moduleId, learningPath, h
       <div className="mb-6">
         <div className="flex items-center justify-between text-sm text-gray-500 mb-2">
           <span>Section {currentIndex + 1} of {sections.length}</span>
-          <span>{Math.round(progress)}% complete</span>
+          <div className="flex items-center gap-3">
+            {minReadingTime > 0 && (
+              <span className={`flex items-center gap-1 ${readingTimeSpent >= minReadingTime ? 'text-green-600' : 'text-amber-600'}`}>
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                {Math.floor(readingTimeSpent / 60)}m/{Math.floor(minReadingTime / 60)}m
+              </span>
+            )}
+            <span>{Math.round(progress)}% complete</span>
+          </div>
         </div>
         <div className="h-1.5 bg-gray-200 rounded-full overflow-hidden">
           <div
@@ -300,7 +356,7 @@ export default function ModuleViewer({ content, title, moduleId, learningPath, h
             </button>
 
             {currentIndex === sections.length - 1 ? (
-              <div className="flex items-center gap-3">
+              <div className="flex flex-col items-end gap-2">
                 {moduleCompleted ? (
                   <span className="text-green-600 font-medium flex items-center gap-2">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -309,15 +365,30 @@ export default function ModuleViewer({ content, title, moduleId, learningPath, h
                     Module Complete!
                   </span>
                 ) : user ? (
-                  <button
-                    onClick={handleComplete}
-                    className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-all"
-                  >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Mark as Complete
-                  </button>
+                  <>
+                    <button
+                      onClick={handleComplete}
+                      disabled={!canComplete}
+                      className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
+                        canComplete
+                          ? 'bg-green-600 text-white hover:bg-green-700'
+                          : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                      }`}
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      Mark as Complete
+                    </button>
+                    {!canComplete && (
+                      <div className="text-xs text-gray-500 text-right">
+                        {remainingTime && <span>Reading time: {remainingTime} remaining</span>}
+                        {requiresQuizPass && !allQuizzesPassed && (
+                          <span className="block">Pass the quiz with {quizPassingScore}% to complete</span>
+                        )}
+                      </div>
+                    )}
+                  </>
                 ) : (
                   <Link
                     href="/login"
