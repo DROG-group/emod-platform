@@ -7555,5 +7555,916 @@
       }
     ],
     "passingScore": 80
+  },
+  "Module-DSA-Beyond-Fake-News": {
+    "moduleId": "Module-DSA-Beyond-Fake-News",
+    "sectionQuizzes": [
+      {
+        "sectionTitle": "Test Your Understanding",
+        "questions": [
+          {
+            "id": "dsa-m1-q0",
+            "type": "multiple-choice",
+            "question": "Why did the EU adopt the term 'Foreign Information Manipulation and Interference' (FIMI) instead of 'fake news'?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Because 'fake news' only covers text-based content, not video",
+                "isCorrect": false,
+                "explanation": "The problem with 'fake news' is not about media formats."
+              },
+              {
+                "id": "b",
+                "text": "Because 'fake news' has been co-opted and lost its analytical value, while FIMI captures the coordinated, intentional nature of the threat",
+                "isCorrect": true,
+                "explanation": "Correct. 'Fake news' is used to dismiss journalism, describe satire, and label state propaganda interchangeably. FIMI focuses on the behaviour: deliberate, coordinated manipulation with foreign backing."
+              },
+              {
+                "id": "c",
+                "text": "Because FIMI sounds more official in EU policy documents",
+                "isCorrect": false,
+                "explanation": "The change was not cosmetic. FIMI describes a specific threat model that 'fake news' does not."
+              },
+              {
+                "id": "d",
+                "text": "Because 'fake news' was trademarked by a US media company",
+                "isCorrect": false,
+                "explanation": "This is not the reason. The issue is analytical, not legal."
+              }
+            ],
+            "explanation": "FIMI focuses on the behaviour (manipulation and interference) and its origin (foreign), which makes it useful for regulation and response. 'Fake news' conflates too many different phenomena to be actionable.",
+            "points": 1
+          },
+          {
+            "id": "dsa-m1-q1",
+            "type": "multiple-choice",
+            "question": "What is the key difference between misinformation and FIMI?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Misinformation is always harmless; FIMI is always harmful",
+                "isCorrect": false,
+                "explanation": "Misinformation can cause real harm. The distinction is not about impact."
+              },
+              {
+                "id": "b",
+                "text": "Misinformation involves false content shared without intent to deceive; FIMI involves coordinated, deliberate manipulation",
+                "isCorrect": true,
+                "explanation": "Correct. The crucial distinction is intent and coordination. Misinformation spreads through genuine belief; FIMI is planned and executed as a campaign."
+              },
+              {
+                "id": "c",
+                "text": "Misinformation comes from individuals; FIMI only comes from governments",
+                "isCorrect": false,
+                "explanation": "FIMI can involve non-state actors working on behalf of foreign interests, not just governments directly."
+              },
+              {
+                "id": "d",
+                "text": "There is no meaningful difference; they describe the same phenomenon",
+                "isCorrect": false,
+                "explanation": "The distinction matters because different problems require different responses."
+              }
+            ],
+            "explanation": "Intent and coordination are what separate FIMI from misinformation. Someone who genuinely believes a false claim and shares it is spreading misinformation. A network of accounts pushing false narratives as part of a planned campaign is conducting FIMI.",
+            "points": 1
+          },
+          {
+            "id": "dsa-m1-q2",
+            "type": "multiple-choice",
+            "question": "Why is public awareness of disinformation, by itself, not enough to stop FIMI operations?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Because the public does not care about disinformation",
+                "isCorrect": false,
+                "explanation": "Awareness is actually quite high in many countries. That is precisely the point: high awareness has not translated into reduced impact."
+              },
+              {
+                "id": "b",
+                "text": "Because awareness creates knowledge but not the capacity to act on it, and FIMI operations are designed to work even on aware audiences",
+                "isCorrect": true,
+                "explanation": "Correct. Knowing that manipulation exists does not give you tools to report it effectively, preserve evidence, or create accountability for platforms."
+              },
+              {
+                "id": "c",
+                "text": "Because awareness campaigns are blocked by social media platforms",
+                "isCorrect": false,
+                "explanation": "Platforms generally do not block awareness campaigns. The gap is between knowing and doing, not between speaking and being heard."
+              },
+              {
+                "id": "d",
+                "text": "Because only intelligence agencies can deal with FIMI",
+                "isCorrect": false,
+                "explanation": "The DSA was created precisely because citizen and civil society action is both possible and necessary."
+              }
+            ],
+            "explanation": "The awareness-to-action gap is the core problem this learning path addresses. Surveys consistently show high awareness of disinformation across Europe, but FIMI operations continue to be effective because awareness alone does not create structured reporting, evidence preservation, or regulatory pressure.",
+            "points": 1
+          },
+          {
+            "id": "dsa-m1-q3",
+            "type": "open-ended",
+            "question": "A colleague says: 'Everyone already knows about fake news, so the problem is basically solved.' Explain why this view is wrong, using the concepts from this module.",
+            "evaluationCriteria": [
+              "Identifies that 'fake news' is an imprecise term that conflates different problems",
+              "Explains the awareness-to-action gap: knowing about the problem does not equal being able to respond to it",
+              "References the distinction between misinformation and FIMI",
+              "Mentions that structured reporting and legal tools (like the DSA) are needed beyond awareness"
+            ],
+            "sampleResponse": "The claim confuses awareness with capacity. First, 'fake news' lumps together very different problems: someone sharing a false health tip is not the same as a state-backed campaign pushing divisive narratives across multiple platforms. The EU uses FIMI to describe the coordinated, deliberate kind. Second, knowing manipulation exists does not give you tools to do anything about it. You still need to know how to document evidence, which laws apply, and how to file reports that platforms cannot ignore. That is what the DSA and structures like Resilience Councils provide.",
+            "maxPoints": 4,
+            "minimumWordCount": 60
+          }
+        ]
+      }
+    ],
+    "passingScore": 80
+  },
+  "Module-DSA-How-FIMI-Operations-Work": {
+    "moduleId": "Module-DSA-How-FIMI-Operations-Work",
+    "sectionQuizzes": [
+      {
+        "sectionTitle": "Test Your Understanding",
+        "questions": [
+          {
+            "id": "dsa-m2-q0",
+            "type": "multiple-choice",
+            "question": "What are the four stages of a FIMI supply chain, in order?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Research, publication, amplification, regulation",
+                "isCorrect": false,
+                "explanation": "This does not match the FIMI supply chain model."
+              },
+              {
+                "id": "b",
+                "text": "Content creation, amplification, laundering, impact",
+                "isCorrect": true,
+                "explanation": "Correct. Content is created (troll farms, state media), amplified (fake accounts, bots), laundered (picked up by real media or influencers), then achieves impact (public opinion shift, policy disruption)."
+              },
+              {
+                "id": "c",
+                "text": "Planning, hacking, leaking, media coverage",
+                "isCorrect": false,
+                "explanation": "This describes a hack-and-leak operation, which is only one type of FIMI tactic, not the general supply chain."
+              },
+              {
+                "id": "d",
+                "text": "Recruitment, training, deployment, evaluation",
+                "isCorrect": false,
+                "explanation": "This describes an organisational process, not the information supply chain."
+              }
+            ],
+            "explanation": "The FIMI supply chain has four stages: creation (producing the content), amplification (pushing it through coordinated accounts), laundering (getting real people or media to pick it up), and impact (the actual effect on public opinion or institutions).",
+            "points": 1
+          },
+          {
+            "id": "dsa-m2-q1",
+            "type": "multiple-choice",
+            "question": "You find a well-known journalist sharing a story that originated from a state-backed media outlet, but the journalist appears to believe the story is genuine. Which stage of the FIMI supply chain is this?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Content creation",
+                "isCorrect": false,
+                "explanation": "The content was created earlier. The journalist is not creating it."
+              },
+              {
+                "id": "b",
+                "text": "Amplification",
+                "isCorrect": false,
+                "explanation": "Amplification involves coordinated, inauthentic pushing. The journalist is acting in good faith."
+              },
+              {
+                "id": "c",
+                "text": "Laundering",
+                "isCorrect": true,
+                "explanation": "Correct. When a credible source unknowingly picks up and shares FIMI content, the content gains legitimacy. This is laundering: the content's origin is obscured by passing through a trusted intermediary."
+              },
+              {
+                "id": "d",
+                "text": "Impact",
+                "isCorrect": false,
+                "explanation": "Impact is the downstream effect on opinions or policy. The journalist sharing it is the mechanism, not the impact itself."
+              }
+            ],
+            "explanation": "Laundering is the stage where FIMI content crosses from inauthentic channels into legitimate ones. A journalist sharing the story in good faith makes the content appear credible and strips away indicators of its origin.",
+            "points": 1
+          },
+          {
+            "id": "dsa-m2-q2",
+            "type": "multiple-choice",
+            "question": "Why do individual responses typically fail against FIMI operations?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Because individuals lack internet access",
+                "isCorrect": false,
+                "explanation": "Access is not the issue."
+              },
+              {
+                "id": "b",
+                "text": "Because FIMI operations are coordinated campaigns, and a single person debunking or reporting cannot match the scale or persistence of the operation",
+                "isCorrect": true,
+                "explanation": "Correct. A coordinated campaign produces content faster than any individual can counter it, and platforms process individual reports through automated systems designed for scale, not quality."
+              },
+              {
+                "id": "c",
+                "text": "Because individuals are not allowed to report content under the DSA",
+                "isCorrect": false,
+                "explanation": "Individuals can report content. The problem is effectiveness, not permission."
+              },
+              {
+                "id": "d",
+                "text": "Because platforms automatically detect and remove all FIMI content",
+                "isCorrect": false,
+                "explanation": "If platforms automatically removed all FIMI content, this learning path would not exist."
+              }
+            ],
+            "explanation": "FIMI is coordinated by design. Responding individually to a coordinated campaign is like trying to bail out a flooding room with a cup. Resilience Councils exist to coordinate the response to match the coordination of the threat.",
+            "points": 1
+          },
+          {
+            "id": "dsa-m2-q3",
+            "type": "open-ended",
+            "question": "You discover a network of 30 social media accounts posting similar anti-EU content. The accounts were created within the same month and use stock profile photos. Identify which stage of the FIMI supply chain you are observing, explain what likely happened at earlier stages, and describe what you would look for to confirm your assessment.",
+            "evaluationCriteria": [
+              "Correctly identifies this as the amplification stage",
+              "Describes likely content creation stage (source of the narratives)",
+              "Identifies indicators: account age, profile photos, posting patterns, content similarity",
+              "Mentions what to look for: timing patterns, whether real accounts are picking it up (laundering), the original source",
+              "Does not overclaim - notes that coordination signals are not proof of foreign origin without further investigation"
+            ],
+            "sampleResponse": "This is the amplification stage. The coordinated accounts are pushing content that was likely created elsewhere, possibly by a state media outlet or troll farm. To confirm, I would check: posting timestamps (do they post within minutes of each other?), whether the content appears word-for-word identical or slightly varied, and whether any legitimate accounts or media outlets have started sharing it (which would indicate laundering). I would document the account creation dates and profile similarities as evidence. I would not claim this is definitely foreign-backed without tracing the content origin, but the coordination pattern is a strong signal worth investigating.",
+            "maxPoints": 5,
+            "minimumWordCount": 80
+          }
+        ]
+      }
+    ],
+    "passingScore": 80
+  },
+  "Module-DSA-What-the-DSA-Actually-Says": {
+    "moduleId": "Module-DSA-What-the-DSA-Actually-Says",
+    "sectionQuizzes": [
+      {
+        "sectionTitle": "Test Your Understanding",
+        "questions": [
+          {
+            "id": "dsa-m4-q0",
+            "type": "multiple-choice",
+            "question": "Which DSA article requires platforms to accept reports from any user about content they consider illegal?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Article 16 (Notice and action mechanisms)",
+                "isCorrect": true,
+                "explanation": "Correct. Article 16 requires all platforms to provide accessible mechanisms for users to notify them about content they consider illegal."
+              },
+              {
+                "id": "b",
+                "text": "Article 17 (Statement of reasons)",
+                "isCorrect": false,
+                "explanation": "Article 17 covers what platforms must tell you after they make a decision, not the reporting mechanism itself."
+              },
+              {
+                "id": "c",
+                "text": "Article 22 (Trusted Flaggers)",
+                "isCorrect": false,
+                "explanation": "Article 22 creates a priority channel for recognised organisations, but Article 16 is the general reporting mechanism for all users."
+              },
+              {
+                "id": "d",
+                "text": "Article 34 (Systemic risk assessment)",
+                "isCorrect": false,
+                "explanation": "Article 34 covers risk assessments by very large platforms, not content reporting."
+              }
+            ],
+            "explanation": "Article 16 is the foundation. It requires platforms to have a notice-and-action mechanism that lets anyone flag content they believe is illegal. Without it, there would be no structured way for citizens to report.",
+            "points": 1
+          },
+          {
+            "id": "dsa-m4-q1",
+            "type": "multiple-choice",
+            "question": "A platform removes your post and sends you a message that says only: 'Your content has been removed for violating our policies.' Which DSA article does this violate?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Article 16, because the removal was not based on a valid notice",
+                "isCorrect": false,
+                "explanation": "Article 16 covers the notice mechanism, not the explanation requirement."
+              },
+              {
+                "id": "b",
+                "text": "Article 17, because the statement of reasons must specify which policy or legal provision was violated",
+                "isCorrect": true,
+                "explanation": "Correct. Article 17 requires platforms to provide clear, specific statements of reasons that reference the exact terms of service provision or legal basis for the decision."
+              },
+              {
+                "id": "c",
+                "text": "Article 20, because you were not offered an appeal",
+                "isCorrect": false,
+                "explanation": "Article 20 covers complaints, but the issue described is about the lack of specificity in the reason given, which falls under Article 17."
+              },
+              {
+                "id": "d",
+                "text": "Article 40, because the platform failed to provide data access",
+                "isCorrect": false,
+                "explanation": "Article 40 covers data access for researchers, not content moderation explanations."
+              }
+            ],
+            "explanation": "Article 17 requires specific statements of reasons. A vague 'violating our policies' without identifying which policy, which part of your content, and which legal basis is exactly the kind of template response that Article 17 was designed to prevent.",
+            "points": 1
+          },
+          {
+            "id": "dsa-m4-q2",
+            "type": "multiple-choice",
+            "question": "Which obligation applies ONLY to Very Large Online Platforms (VLOPs), not to all platforms?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Having a notice-and-action mechanism for content reports",
+                "isCorrect": false,
+                "explanation": "This applies to all platforms under Article 16."
+              },
+              {
+                "id": "b",
+                "text": "Providing statements of reasons for content moderation decisions",
+                "isCorrect": false,
+                "explanation": "This applies to all platforms under Article 17."
+              },
+              {
+                "id": "c",
+                "text": "Conducting annual systemic risk assessments",
+                "isCorrect": true,
+                "explanation": "Correct. Article 34 requires VLOPs (platforms with 45 million or more monthly EU users) to assess systemic risks including FIMI. This is a VLOP-only obligation."
+              },
+              {
+                "id": "d",
+                "text": "Allowing users to appeal content moderation decisions",
+                "isCorrect": false,
+                "explanation": "Internal complaint mechanisms under Article 20 apply to all platforms."
+              }
+            ],
+            "explanation": "The DSA creates a layered system. Baseline obligations (Articles 16, 17, 20) apply to all platforms. Heavier obligations like systemic risk assessment (Article 34) and data access for researchers (Article 40) apply only to VLOPs, which are platforms with 45 million or more monthly active users in the EU.",
+            "points": 1
+          },
+          {
+            "id": "dsa-m4-q3",
+            "type": "multiple-choice",
+            "question": "Why is citing a specific DSA article in your report important, rather than just describing the problem?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Because platforms cannot read reports that do not contain article numbers",
+                "isCorrect": false,
+                "explanation": "Platforms can read any report. The issue is about creating legal weight."
+              },
+              {
+                "id": "b",
+                "text": "Because citing a specific article transforms your report from a complaint into a reference to a legal obligation the platform must address",
+                "isCorrect": true,
+                "explanation": "Correct. When you cite Article 17, for example, you are pointing to a specific legal duty. The platform's response must address that duty, not just your complaint."
+              },
+              {
+                "id": "c",
+                "text": "Because the DSA requires all reports to include article numbers or they are automatically rejected",
+                "isCorrect": false,
+                "explanation": "The DSA does not automatically reject reports without article numbers, but citing them strengthens your report significantly."
+              },
+              {
+                "id": "d",
+                "text": "Because it makes the report look more professional",
+                "isCorrect": false,
+                "explanation": "The benefit is legal, not aesthetic."
+              }
+            ],
+            "explanation": "Citing specific DSA articles turns a general complaint into a legally grounded notice. The platform is now on record as having been notified about a potential violation of a specific legal obligation, which has consequences for liability and regulatory oversight.",
+            "points": 1
+          },
+          {
+            "id": "dsa-m4-q4",
+            "type": "open-ended",
+            "question": "You are helping a new council member prepare their first report. They ask: 'Which DSA articles do I actually need to know?' Explain the key articles and when each one applies.",
+            "evaluationCriteria": [
+              "Explains Article 16 (notice and action - the reporting mechanism)",
+              "Explains Article 17 (statement of reasons - what platforms must tell you after a decision)",
+              "Explains Article 20 (complaints - your right to appeal)",
+              "Explains Article 22 (Trusted Flaggers - priority processing for qualified organisations)",
+              "Explains Article 34 (systemic risk - VLOP-only obligation)",
+              "Distinguishes between obligations on all platforms vs VLOPs only"
+            ],
+            "sampleResponse": "There are five articles you need. Article 16 is the starting point: it requires platforms to have a mechanism for you to report illegal content. Article 17 means they have to explain their decisions specifically, not with template responses. Article 20 gives you the right to complain if you disagree with their decision. Article 22 is the long-term goal: Trusted Flagger status, which means your council's reports get priority processing. Article 34 is for the big platforms only (45M+ users in the EU) and requires them to assess systemic risks like FIMI. When writing a report, you will mostly cite Articles 16 and 34.",
+            "maxPoints": 6,
+            "minimumWordCount": 80
+          }
+        ]
+      }
+    ],
+    "passingScore": 80
+  },
+  "Module-DSA-What-Counts-as-Evidence": {
+    "moduleId": "Module-DSA-What-Counts-as-Evidence",
+    "sectionQuizzes": [
+      {
+        "sectionTitle": "Test Your Understanding",
+        "questions": [
+          {
+            "id": "dsa-m6-q0",
+            "type": "multiple-choice",
+            "question": "Which of the following counts as strong evidence in a DSA report?",
+            "options": [
+              {
+                "id": "a",
+                "text": "A screenshot of a post without a visible URL or timestamp",
+                "isCorrect": false,
+                "explanation": "Screenshots without URLs or timestamps cannot be verified. They are weak evidence."
+              },
+              {
+                "id": "b",
+                "text": "A full-page screenshot showing the URL, timestamp, and surrounding context, plus an archived copy via archive.today",
+                "isCorrect": true,
+                "explanation": "Correct. This provides verifiable, timestamped evidence that can be independently confirmed through the archive."
+              },
+              {
+                "id": "c",
+                "text": "A written description of what you saw on a platform",
+                "isCorrect": false,
+                "explanation": "Descriptions are opinions about evidence, not evidence itself."
+              },
+              {
+                "id": "d",
+                "text": "A link to the content without any screenshots",
+                "isCorrect": false,
+                "explanation": "Links alone are risky because the content can be deleted before review. You need preserved copies."
+              }
+            ],
+            "explanation": "Strong evidence is verifiable and preserved. A full-page screenshot with context plus an archived copy means the evidence exists even if the original content is removed.",
+            "points": 1
+          },
+          {
+            "id": "dsa-m6-q1",
+            "type": "multiple-choice",
+            "question": "What is the 'reconstruction test' for evidence quality?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Could a lawyer reconstruct a legal case from your evidence alone?",
+                "isCorrect": false,
+                "explanation": "The standard is not legal case-building. It is about whether someone unfamiliar with the situation can understand what happened."
+              },
+              {
+                "id": "b",
+                "text": "Could someone who has never seen the content reconstruct what happened, when, and why it matters, using only your documentation?",
+                "isCorrect": true,
+                "explanation": "Correct. If a person with no prior knowledge can understand the situation from your documentation alone, your evidence passes the test."
+              },
+              {
+                "id": "c",
+                "text": "Can you reconstruct the content after the platform deletes it?",
+                "isCorrect": false,
+                "explanation": "Preservation is important, but the reconstruction test is about whether your documentation tells the full story."
+              },
+              {
+                "id": "d",
+                "text": "Can a platform's AI system parse and categorise your evidence automatically?",
+                "isCorrect": false,
+                "explanation": "The test is about human comprehension, not automated processing."
+              }
+            ],
+            "explanation": "The reconstruction test asks: if someone with no context reads your documentation, can they understand what the content was, when it appeared, what behaviour it was part of, and why it matters? If yes, your evidence is strong enough.",
+            "points": 1
+          },
+          {
+            "id": "dsa-m6-q2",
+            "type": "multiple-choice",
+            "question": "Why is documenting context (account creation dates, posting patterns, network connections) as important as documenting the content itself?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Because platforms only care about account metadata, not content",
+                "isCorrect": false,
+                "explanation": "Platforms assess both, but content alone is often not enough."
+              },
+              {
+                "id": "b",
+                "text": "Because individual content can look harmless, but patterns across accounts reveal coordinated behaviour that is the basis of a FIMI report",
+                "isCorrect": true,
+                "explanation": "Correct. A single post may not violate any rules. But 30 accounts posting similar content within minutes of each other, all created the same month, tells a very different story."
+              },
+              {
+                "id": "c",
+                "text": "Because the DSA requires exactly three types of metadata in every report",
+                "isCorrect": false,
+                "explanation": "The DSA does not specify an exact number of metadata types."
+              },
+              {
+                "id": "d",
+                "text": "Because context is easier to collect than content",
+                "isCorrect": false,
+                "explanation": "Context is often harder to collect, but it is essential for establishing coordination."
+              }
+            ],
+            "explanation": "FIMI is about coordinated behaviour, not individual posts. A single misleading post might be misinformation. The same post shared by 30 recently created accounts in a coordinated pattern is potential FIMI. Context is what transforms content evidence into a pattern.",
+            "points": 1
+          },
+          {
+            "id": "dsa-m6-q3",
+            "type": "open-ended",
+            "question": "You find a Facebook post making a false claim about an EU policy. You want to report it. Describe step by step how you would document this as evidence, and explain what makes each step important.",
+            "evaluationCriteria": [
+              "Captures the specific URL of the post",
+              "Takes a full-page screenshot with visible URL, timestamp, and account details",
+              "Archives the page using a tool like archive.today or the Wayback Machine",
+              "Documents the account context: creation date, posting history, profile details",
+              "Checks for related accounts or coordinated posting patterns",
+              "Explains why each step matters (verifiability, preservation, context)"
+            ],
+            "sampleResponse": "Step 1: Copy the direct URL of the post so it can be located. Step 2: Take a full-page screenshot showing the URL bar, the post timestamp, the account name, and surrounding context. This ensures the evidence is verifiable. Step 3: Archive the page using archive.today so the evidence survives if the post is deleted. Step 4: Note the account's creation date, post frequency, and profile details. A newly created account posting political content is a different signal than a ten-year-old personal account. Step 5: Search for similar posts to check if other accounts are sharing the same content, which would indicate coordination. Each step builds toward passing the reconstruction test: someone reviewing my documentation should understand exactly what was posted, by whom, when, and whether it appears to be part of a pattern.",
+            "maxPoints": 6,
+            "minimumWordCount": 80
+          }
+        ]
+      }
+    ],
+    "passingScore": 80
+  },
+  "Module-DSA-Anatomy-of-an-Effective-Report": {
+    "moduleId": "Module-DSA-Anatomy-of-an-Effective-Report",
+    "sectionQuizzes": [
+      {
+        "sectionTitle": "Test Your Understanding",
+        "questions": [
+          {
+            "id": "dsa-m8-q0",
+            "type": "multiple-choice",
+            "question": "What are the five components of an effective DSA report?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Title, summary, evidence, opinion, signature",
+                "isCorrect": false,
+                "explanation": "Reports should not include personal opinions. The components are more specific."
+              },
+              {
+                "id": "b",
+                "text": "Clear content identification, specific DSA article or policy cited, evidence documentation, impact description, specific requested action",
+                "isCorrect": true,
+                "explanation": "Correct. Each component serves a specific function: identification tells them what, the article citation tells them why it matters legally, evidence proves it, impact shows why it matters, and the requested action tells them what you want done."
+              },
+              {
+                "id": "c",
+                "text": "Problem statement, legal analysis, witness testimony, platform response history, court filing",
+                "isCorrect": false,
+                "explanation": "DSA reports are not court filings. They need to be structured but practical."
+              },
+              {
+                "id": "d",
+                "text": "Headline, body text, screenshots, source list, conclusion",
+                "isCorrect": false,
+                "explanation": "This describes an article structure, not a DSA report."
+              }
+            ],
+            "explanation": "The five components ensure your report is complete and actionable: (1) specific URLs identifying the content, (2) the DSA article or platform policy violated, (3) documented evidence, (4) description of the impact, and (5) a specific action you are requesting the platform to take.",
+            "points": 1
+          },
+          {
+            "id": "dsa-m8-q1",
+            "type": "multiple-choice",
+            "question": "Which of these is a common mistake that gets reports dismissed?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Including too many screenshots",
+                "isCorrect": false,
+                "explanation": "More evidence is generally better, as long as it is organised."
+              },
+              {
+                "id": "b",
+                "text": "Using emotional language instead of factual descriptions, like 'This is disgusting propaganda' instead of describing the specific violation",
+                "isCorrect": true,
+                "explanation": "Correct. Content reviewers process reports at speed. Emotional language does not help them assess the report. Factual, specific descriptions create legal obligations."
+              },
+              {
+                "id": "c",
+                "text": "Citing more than one DSA article",
+                "isCorrect": false,
+                "explanation": "Citing multiple relevant articles can strengthen a report."
+              },
+              {
+                "id": "d",
+                "text": "Filing the report in English rather than the platform's local language",
+                "isCorrect": false,
+                "explanation": "Major platforms accept reports in multiple languages. Language choice is not a common dismissal reason."
+              }
+            ],
+            "explanation": "Platform reviewers process hundreds of reports per shift and spend seconds on initial assessment. 'This is disgusting propaganda that must be stopped' gives them nothing to act on. 'This account (URL) posted content on (date) that violates Article 34 obligations regarding systemic risk, specifically coordinated inauthentic behaviour as documented in the attached evidence' creates a specific, actionable obligation.",
+            "points": 1
+          },
+          {
+            "id": "dsa-m8-q2",
+            "type": "multiple-choice",
+            "question": "Why should you request a specific action in your report rather than just asking the platform to 'deal with it'?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Because vague requests are rude",
+                "isCorrect": false,
+                "explanation": "This is about effectiveness, not politeness."
+              },
+              {
+                "id": "b",
+                "text": "Because platforms are legally required to do whatever you ask",
+                "isCorrect": false,
+                "explanation": "Platforms are not obligated to do whatever reporters request, but they must address the specific legal obligations you reference."
+              },
+              {
+                "id": "c",
+                "text": "Because a specific request (like 'investigate this network under Article 34 and provide a statement of reasons under Article 17') creates a measurable obligation the platform must address in their response",
+                "isCorrect": true,
+                "explanation": "Correct. A specific request tied to specific articles creates a standard against which the platform's response can be measured. If they ignore a specific, legally grounded request, that becomes evidence of non-compliance."
+              },
+              {
+                "id": "d",
+                "text": "Because the DSA requires all reports to end with a specific request",
+                "isCorrect": false,
+                "explanation": "The DSA does not have this formal requirement, but specific requests are far more effective."
+              }
+            ],
+            "explanation": "A specific, article-referenced request transforms your report from something that can be template-dismissed into something that requires a substantive response. If you request action under Article 34 and the platform sends a generic response, that response itself becomes evidence of non-compliance.",
+            "points": 1
+          },
+          {
+            "id": "dsa-m8-q3",
+            "type": "open-ended",
+            "question": "You have evidence of 20 accounts posting identical anti-vaccine content, all created within the same week. Write a brief outline of your report, covering all five components.",
+            "evaluationCriteria": [
+              "Component 1: Lists specific URLs or describes how content would be identified",
+              "Component 2: Cites relevant DSA articles (Article 16 for reporting, Article 34 for systemic risk if targeting a VLOP)",
+              "Component 3: Describes evidence: screenshots, timestamps, account creation dates, posting pattern data",
+              "Component 4: Describes impact: potential public health harm, coordinated nature indicating FIMI",
+              "Component 5: Includes a specific requested action (e.g., investigate the network, provide statement of reasons)",
+              "Uses factual language, not emotional"
+            ],
+            "sampleResponse": "1. Content identification: URLs of the 20 accounts and their specific posts. 2. Legal basis: Article 16 notice regarding coordinated inauthentic behaviour; Article 34 (if VLOP) regarding systemic risk to public health and civic discourse. 3. Evidence: Full-page screenshots of each post with timestamps, account creation dates showing all were made within the same week, analysis of posting timing showing coordinated activity within 3-minute windows. 4. Impact: Coordinated anti-vaccine content reaching estimated audience of X users during a public health campaign, consistent with FIMI patterns. 5. Requested action: Investigation of the account network under Article 34 systemic risk obligations, with a specific statement of reasons under Article 17 explaining the platform's assessment.",
+            "maxPoints": 5,
+            "minimumWordCount": 80
+          }
+        ]
+      }
+    ],
+    "passingScore": 80
+  },
+  "Module-DSA-Why-One-Report-Gets-Ignored-and-Fifty-Get-Investigated": {
+    "moduleId": "Module-DSA-Why-One-Report-Gets-Ignored-and-Fifty-Get-Investigated",
+    "sectionQuizzes": [
+      {
+        "sectionTitle": "Test Your Understanding",
+        "questions": [
+          {
+            "id": "dsa-m10-q0",
+            "type": "multiple-choice",
+            "question": "Why does a single, well-documented report often get a template response while coordinated reports from multiple people trigger an investigation?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Because platforms only investigate when they receive a certain number of reports",
+                "isCorrect": false,
+                "explanation": "It is not about hitting a magic number. It is about the nature of coordinated, quality reports."
+              },
+              {
+                "id": "b",
+                "text": "Because coordinated reports from multiple sources across countries create regulatory and reputational pressure that platforms cannot process through automated systems",
+                "isCorrect": true,
+                "explanation": "Correct. A single report enters an automated queue. Fifty reports from different countries, citing specific DSA articles, with documented evidence, create a pattern that automated systems cannot dismiss and that regulators will notice."
+              },
+              {
+                "id": "c",
+                "text": "Because individual reports violate platform guidelines",
+                "isCorrect": false,
+                "explanation": "Individual reports do not violate any guidelines. They are simply easier for platforms to process through automation."
+              },
+              {
+                "id": "d",
+                "text": "Because the DSA requires platforms to ignore individual reports",
+                "isCorrect": false,
+                "explanation": "The DSA requires platforms to respond to all reports. The difference is in the quality and depth of the response."
+              }
+            ],
+            "explanation": "Platforms are designed to handle individual complaints at scale through automation. Coordinated reports break that system because they come from multiple sources, reference specific legal obligations, and create a paper trail that regulators can review. The platform cannot template-dismiss fifty legally grounded reports without risking regulatory consequences.",
+            "points": 1
+          },
+          {
+            "id": "dsa-m10-q1",
+            "type": "multiple-choice",
+            "question": "What are the three core functions of a Resilience Council?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Lobbying, fundraising, and media outreach",
+                "isCorrect": false,
+                "explanation": "Resilience Councils are reporting and monitoring bodies, not lobbying organisations."
+              },
+              {
+                "id": "b",
+                "text": "Coordinating reports across members, maintaining quality through peer review, and building a track record toward Trusted Flagger status",
+                "isCorrect": true,
+                "explanation": "Correct. Coordination creates pressure, peer review ensures quality, and a consistent track record is the path to Trusted Flagger recognition."
+              },
+              {
+                "id": "c",
+                "text": "Detecting FIMI, debunking false content, and publishing fact-checks",
+                "isCorrect": false,
+                "explanation": "Councils focus on reporting and evidence, not fact-checking or debunking."
+              },
+              {
+                "id": "d",
+                "text": "Training members, issuing certificates, and conducting research",
+                "isCorrect": false,
+                "explanation": "Training is a prerequisite (handled by this learning path), not a core council function."
+              }
+            ],
+            "explanation": "The three functions work together: coordination ensures reports are not isolated, peer review ensures they are high quality, and the consistent track record of quality reporting is what Digital Services Coordinators look at when deciding whether to grant Trusted Flagger status.",
+            "points": 1
+          },
+          {
+            "id": "dsa-m10-q2",
+            "type": "multiple-choice",
+            "question": "What is the difference between 'volume' and 'coordination' in the context of DSA reporting?",
+            "options": [
+              {
+                "id": "a",
+                "text": "They mean the same thing: more reports equals better results",
+                "isCorrect": false,
+                "explanation": "Flooding a platform with low-quality reports is noise, not pressure."
+              },
+              {
+                "id": "b",
+                "text": "Volume means many reports; coordination means those reports are structured, quality-checked, and reference the same legal obligations from multiple independent sources",
+                "isCorrect": true,
+                "explanation": "Correct. Volume without quality is noise. Coordination means each report is independently verified, cites specific articles, and contributes to a pattern that cannot be dismissed."
+              },
+              {
+                "id": "c",
+                "text": "Volume is about reports per day; coordination is about reports per week",
+                "isCorrect": false,
+                "explanation": "The distinction is about quality and structure, not timing."
+              },
+              {
+                "id": "d",
+                "text": "Volume comes from citizens; coordination comes from governments",
+                "isCorrect": false,
+                "explanation": "Coordination in this context comes from citizen councils, not governments."
+              }
+            ],
+            "explanation": "Volume without quality is just noise that platforms can dismiss. Coordination means structured, peer-reviewed reports from verified sources across multiple countries, all citing specific DSA articles and providing documented evidence about the same issue. That is what creates pressure.",
+            "points": 1
+          },
+          {
+            "id": "dsa-m10-q3",
+            "type": "open-ended",
+            "question": "Explain how a Resilience Council's coordinated approach creates both legal and reputational pressure on platforms. Use a concrete example.",
+            "evaluationCriteria": [
+              "Explains legal pressure: multiple reports citing specific DSA articles create a paper trail that regulators can use to assess compliance",
+              "Explains reputational pressure: platforms cannot easily dismiss coordinated, cross-border reporting without it reflecting poorly on their DSA compliance",
+              "Provides a concrete example (e.g., 50 reports from 5 countries about the same network)",
+              "Connects to Trusted Flagger pathway: this track record is what DSCs evaluate",
+              "Distinguishes this from spam or mass-reporting campaigns"
+            ],
+            "sampleResponse": "Legal pressure: When 50 council members across 5 EU countries file reports about the same FIMI network, each citing Article 34, the platform must provide 50 specific statements of reasons under Article 17. If those responses are template dismissals, the council now has documented evidence that the platform is not meeting its DSA obligations. This documentation can be shared with Digital Services Coordinators. Reputational pressure: A platform that demonstrably ignores coordinated, well-documented reports about foreign manipulation faces public and regulatory scrutiny. This is different from mass-reporting because each report is independently verified and evidence-based, not a copy-paste campaign.",
+            "maxPoints": 5,
+            "minimumWordCount": 80
+          }
+        ]
+      }
+    ],
+    "passingScore": 80
+  },
+  "Module-DSA-Peer-Review-and-Quality-Control": {
+    "moduleId": "Module-DSA-Peer-Review-and-Quality-Control",
+    "sectionQuizzes": [
+      {
+        "sectionTitle": "Test Your Understanding",
+        "questions": [
+          {
+            "id": "dsa-m11-q0",
+            "type": "multiple-choice",
+            "question": "What is the primary purpose of peer review in a Resilience Council?",
+            "options": [
+              {
+                "id": "a",
+                "text": "To prevent members from submitting reports",
+                "isCorrect": false,
+                "explanation": "Peer review is about improving reports, not blocking them."
+              },
+              {
+                "id": "b",
+                "text": "To ensure every report meets the quality standard that builds toward Trusted Flagger status",
+                "isCorrect": true,
+                "explanation": "Correct. Every report reflects on the council. A track record of high-quality, accurate reports is what Digital Services Coordinators evaluate for Trusted Flagger status."
+              },
+              {
+                "id": "c",
+                "text": "To create a hierarchy within the council",
+                "isCorrect": false,
+                "explanation": "Peer review is a collaborative process, not a power structure."
+              },
+              {
+                "id": "d",
+                "text": "To slow down the reporting process so platforms have more time to respond",
+                "isCorrect": false,
+                "explanation": "Speed matters in FIMI response. Peer review should be quick but thorough."
+              }
+            ],
+            "explanation": "Every bad report hurts the council's track record and every good one builds it. Peer review exists to catch errors, strengthen evidence, and ensure the council consistently produces reports that cannot be dismissed. This consistency is what leads to Trusted Flagger recognition.",
+            "points": 1
+          },
+          {
+            "id": "dsa-m11-q1",
+            "type": "multiple-choice",
+            "question": "Which of these is part of the five-point peer review checklist?",
+            "options": [
+              {
+                "id": "a",
+                "text": "Check that the report expresses strong enough outrage about the content",
+                "isCorrect": false,
+                "explanation": "Emotional language weakens reports. The checklist focuses on factual accuracy and evidence quality."
+              },
+              {
+                "id": "b",
+                "text": "Verify that the evidence supports the claims and the correct DSA articles are cited",
+                "isCorrect": true,
+                "explanation": "Correct. The reviewer checks: does the evidence support the claims, are the correct articles cited, is the language factual, is there overclaiming, and could someone unfamiliar reconstruct the situation?"
+              },
+              {
+                "id": "c",
+                "text": "Ensure the report is at least 2000 words long",
+                "isCorrect": false,
+                "explanation": "There is no word count requirement. Clarity and evidence matter more than length."
+              },
+              {
+                "id": "d",
+                "text": "Confirm that at least three council members have signed the report",
+                "isCorrect": false,
+                "explanation": "The checklist is about content quality, not signatures."
+              }
+            ],
+            "explanation": "The five-point checklist: (1) Does the evidence support the claims? (2) Are the correct DSA articles cited? (3) Is the language factual, not emotional? (4) Is there any overclaiming or unsupported attribution? (5) Could someone unfamiliar with the case reconstruct what happened from the documentation?",
+            "points": 1
+          },
+          {
+            "id": "dsa-m11-q2",
+            "type": "multiple-choice",
+            "question": "What is the difference between 'gatekeeping' and 'quality improvement' in peer review?",
+            "options": [
+              {
+                "id": "a",
+                "text": "There is no difference; all peer review is gatekeeping",
+                "isCorrect": false,
+                "explanation": "Gatekeeping blocks; quality improvement helps. They are very different."
+              },
+              {
+                "id": "b",
+                "text": "Gatekeeping rejects reports; quality improvement identifies specific weaknesses and suggests how to fix them",
+                "isCorrect": true,
+                "explanation": "Correct. A gatekeeper says 'this is not good enough.' A quality improver says 'the evidence is strong but the DSA article citation is wrong; here is why Article 34 applies instead of Article 16.' The goal is to make every report submittable."
+              },
+              {
+                "id": "c",
+                "text": "Gatekeeping is for admins; quality improvement is for moderators",
+                "isCorrect": false,
+                "explanation": "The distinction is about approach, not role."
+              },
+              {
+                "id": "d",
+                "text": "Gatekeeping takes longer; quality improvement is faster",
+                "isCorrect": false,
+                "explanation": "The distinction is about intent and method, not speed."
+              }
+            ],
+            "explanation": "Peer review in a Resilience Council is about making reports stronger, not about deciding who gets to report. A reviewer who says 'your evidence is insufficient' without explaining what is missing and how to fix it is gatekeeping. A reviewer who says 'add the account creation dates and archive the URLs, then it is ready to go' is improving quality.",
+            "points": 1
+          },
+          {
+            "id": "dsa-m11-q3",
+            "type": "open-ended",
+            "question": "A council member submits a report for review. It says: 'There are many fake Russian accounts spreading anti-EU propaganda on Facebook. This is clearly a violation of the DSA and must be stopped immediately.' Apply the five-point checklist and explain what feedback you would give.",
+            "evaluationCriteria": [
+              "Identifies that the evidence does not support the claims (no specific URLs, screenshots, or data)",
+              "Notes that no specific DSA article is cited",
+              "Points out emotional/vague language ('clearly', 'must be stopped immediately')",
+              "Identifies overclaiming: attributing accounts to Russia without evidence",
+              "Fails the reconstruction test: no one could understand the specific situation from this report",
+              "Provides constructive feedback on how to fix each issue"
+            ],
+            "sampleResponse": "Checklist results: (1) Evidence: None provided. The report mentions 'many fake accounts' but does not list any URLs, screenshots, or data. Fix: identify specific accounts and document them. (2) DSA articles: None cited. Fix: determine if this is a VLOP (Article 34 for systemic risk) and add Article 16 as the reporting basis. (3) Language: 'clearly a violation' and 'must be stopped immediately' are emotional, not factual. Fix: describe exactly what the accounts are doing and why it matches a specific violation type. (4) Overclaiming: attributing accounts to Russia without evidence. Fix: describe the coordination pattern and let the evidence speak. (5) Reconstruction test: fails completely. Fix: start over with specific URLs, timestamps, and documented patterns. This is fixable, but it needs significant rework.",
+            "maxPoints": 6,
+            "minimumWordCount": 80
+          }
+        ]
+      }
+    ],
+    "passingScore": 80
   }
 }
