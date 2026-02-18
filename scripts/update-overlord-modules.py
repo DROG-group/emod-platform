@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Update the 4 Overlord-related modules with full screen-by-screen content from saufex.eu insights."""
+"""Update the 4 modules with exact verbatim content from saufex.eu insight pages, split into screens."""
 import json
 from pathlib import Path
 
@@ -10,495 +10,427 @@ with open(DATA_FILE) as f:
 
 # =============================================================================
 # MODULE 32 – Countering information campaigns (16 screens)
+# Exact text from https://saufex.eu/insights/32-Module-Countering-information-campaigns/
 # =============================================================================
-MODULE_32_CONTENT = r"""## Overview
+MODULE_32_CONTENT = """## Overview
 
-This module examines strategies for combating anti-liberal democratic narratives through two primary approaches: incapacitating harmful myths and promoting positive counter-narratives. Often these two go hand in hand.
+We may use two types of action when countering anti-liberal democratic narratives: incapacitating myths and pushing positive narratives. Often these two go hand in hand.
 
-Key instruments include: strategic communication (StratCom), debunking, information operations, crowdsourced verification, content labeling, content moderation, strategic silence, defamation lawsuits, sanctions, denial of services, and local media support.
+Key instruments include strategic communication (StratCom), debunking, information operations, crowdsourced verification, content labeling, content moderation, strategic silence, defamation lawsuits, sanctions, denial of services, and local media support.
 
-## Strategic Communication (StratCom)
+## StratCom
 
-**Strategic communication (StratCom)** is a planned effort by public bodies to shape public opinion, reinforce alliances, counter disinformation, and support national security interests through strategic communication.
+StratCom is a planned effort by public bodies to shape public opinion, reinforce alliances, counter disinformation, and support national security interests through strategic communication. It focuses on what is communicated, as well as how, when, and why.
 
-StratCom aligns with national policies to counter harmful narratives and promote alternatives. It represents an organized, institutional approach to narrative management at the state level.
+StratCom aligns with national policies to counter harmful myths and promote alternative narratives.
 
 ## Debunking
 
 Debunking aims to correct widespread disinformation campaigns by identifying myths, explaining their falsehoods, often using scientific research and logical reasoning, and providing accurate information with supporting sources.
 
-Its purpose is to systematically dismantle false narratives by replacing them with evidence-based corrections.
+## Debunking in practice
 
-## Debunking in Practice
+Debunking, often carried out by NGOs, can also be performed by public bodies. For maximum impact, public entities sometimes integrate debunking into their broader StratCom efforts rather than issuing isolated statements.
 
-NGOs typically conduct debunking as their primary activity. Public entities, on the other hand, may integrate debunking efforts into broader StratCom strategies rather than issuing isolated corrective statements.
-
-This distinction matters: standalone debunking risks amplifying the original myth, while embedded approaches address the wider narrative context.
-
-## Information Operations
+## Info ops
 
 Information operations work tactically to influence the perceptions, behaviors, and decisions of selected target groups.
 
-Key subtypes include:
+Psyops try to affect adversaries' beliefs to demoralize or sway their decisions. Cyber operations aim to disrupt communication and spread counter-information. Electronic warfare involves jamming and network disruption.
 
-- **Psychological operations** targeting adversaries' beliefs and decision-making
-- **Cyber operations** for communication disruption and information gathering
-- **Electronic warfare** involving jamming and network disruption
+## Crowdsourced verification
 
-These are typically state-level interventions requiring significant resources and coordination.
+Not only state bodies or NGOs engage in countering information campaigns; the public does too by means of crowdsourced factfinding projects that do not necessarily need a centralized organizing body.
 
-## Crowdsourced Verification
+Anyone can use OSINT (open-source intelligence). For instance Bellingcat, an independent investigative collective of researchers, investigators, and citizen journalists, designs and shares verifiable methods for ethical digital investigation.
 
-Non-state actors participate through crowdsourced fact-finding projects without centralized organizing bodies.
+## Content labeling
 
-A prominent example is **Bellingcat**, described as "an independent investigative collective of researchers, investigators, and citizen journalists" that designs verifiable methods for digital investigation.
+Warning labels can be applied to content to indicate that it has undergone fact-checking, debunking, or crowdsourced verification, and was found to be false or at least disputed. These labels help users identify questionable information.
 
-Crowdsourced verification leverages distributed expertise and open-source intelligence (OSINT) to investigate claims at scale.
+## Content moderation
 
-## Content Labeling
+Content moderation involves reviewing, filtering, and managing user-generated content on platforms by human editors or artificial intelligence. It aims to remove or restrict access to content that violates the law and/or community guidelines, including illegal content, myths, hate speech, and other (potentially) harmful material.
 
-Warning labels can be applied to content to indicate that it has undergone fact-checking, debunking, or crowdsourced verification, and was found to be false or at least disputed.
+## Strategic silence
 
-Content labeling serves as a passive intervention: it does not remove content but provides contextual information that helps users evaluate what they are seeing. Its effectiveness depends on user attention and trust in the labeling authority.
+Instead of engaging with information campaigns, it can be decided to ignore these, thereby reducing their amplification. The assumption is that engagement \u2013 also negative engagement \u2013 may increase the reach and spread of information campaigns.
 
-## Content Moderation
+## Defamation lawsuits
 
-Content moderation involves reviewing, filtering, and managing user-generated content on platforms by human editors or artificial intelligence.
+Legal action can be taken by those whose reputation was damaged by presumed libelous information campaigns.
 
-The goal is to remove or restrict access to illegal content, myths, hate speech, and harmful material. It is the primary mechanism through which platforms manage information quality at scale.
-
-## Strategic Silence
-
-An alternative approach involves ignoring information campaigns to reduce amplification. This is based on the assumption that engagement may increase reach and spread.
-
-Strategic silence is most appropriate when the disinformation has limited reach and responding would grant it a larger audience. However, silence carries the risk that unchallenged narratives may gain credibility through repetition.
-
-## Defamation Lawsuits
-
-Legal action can be taken for reputation damage from libelous campaigns.
-
-A notable example: **Alex Jones** faced multiple lawsuits regarding his claims about the Sandy Hook Elementary School shooting, in which he falsely asserted the event was staged. The resulting legal judgments led to his personal bankruptcy, demonstrating that legal consequences can follow the deliberate spread of harmful disinformation.
+Famous defamation lawsuits were directed against Alex Jones for spreading false claims about the Sandy Hook Elementary School shooting, leading to Jones's personal bankruptcy and leaving the fate of his Infowars media platform uncertain.
 
 ## Sanctions
 
-Sanctions are used against international actors when domestic legal action is difficult to pursue.
+For international actors it can be difficult to pursue legal actions. This is why sanctions have been imposed on individuals known to have conducted harmful online campaigns.
 
-They represent a state-level tool for imposing costs on foreign entities engaged in information manipulation, typically applied through diplomatic channels and international frameworks.
+## Denial of services
 
-## Denial of Services: Overview
+Denial of services encompasses any intervention that limits access to content and content suppliers: from content throttling and access restrictions to deplatforming and prohibition. The rationale behind it is to stop myths and publishers of myths from polluting the public discourse.
 
-Denial of services encompasses any intervention that limits access to content and content suppliers: from content throttling and access restrictions to deplatforming and prohibition.
+## Moderate denial of services options
 
-These measures range from moderate to radical in their impact on access and expression.
+A selection of moderate denial of services options:
 
-## Moderate Denial of Services
+- Content throttling/ shadow banning: Reducing the visibility or reach of content.
+- Access restrictions: Limiting features or services available to users.
+- Geo-blocking: Restricting content access based on geographic location.
+- Demonetizing: Restricting or disabling account revenue streams.
 
-Moderate approaches limit visibility or access without fully removing content:
+## Radical denial of services options
 
-- **Content throttling / shadow banning** — reducing visibility or reach of content without notification to the creator
-- **Access restrictions** — limiting user features or services based on behavior or content violations
-- **Geo-blocking** — restricting content based on geographic location
-- **Demonetizing** — restricting or disabling revenue streams for content creators
+A selection of more radical denial of services options:
 
-## Radical Denial of Services
+- Account suspension/ deplatforming: Temporarily or permanently disabling accounts that violate platform policies.
+- Prohibition: Forbidding or making a content publishing service illegal through legislation or legal authority.
 
-More aggressive interventions involve full removal:
+## Local media support
 
-- **Account suspension / deplatforming** — temporarily or permanently disabling accounts that persistently spread disinformation
-- **Prohibition** — forbidding content publishing through legislation
+Another intervention method is bolstering already trusted sources by investing in trusted, high-quality information for people to consume. Although trust in media globally is on the decline many people still trust their local news sources.
 
-These measures are more effective at stopping spread but raise significant concerns about free expression and due process.
+## Effectiveness
 
-## Local Media Support
+It is hard to state anything conclusive about the effectiveness of this type of interventions. Some of the challenges are:
 
-Local media support means bolstering already trusted sources by investing in trusted, high-quality information for people to consume.
-
-While global media trust has been declining, local news sources maintain higher trust levels. Strengthening local journalism creates a foundation of reliable information that makes populations more resilient to disinformation.
-
-## Effectiveness Challenges
-
-Measuring the effectiveness of these interventions remains a significant challenge:
-
-- Most interventions lack a theoretical underpinning
-- Hardly any intervention addresses motivated reasoning — the tendency to evaluate information in ways that confirm pre-existing beliefs
-- Research concentrates on US populations and adults, limiting generalizability
-- Limited knowledge exists about effect longevity — whether interventions produce lasting change or only temporary effects
-
-These gaps mean that practitioners often operate on intuition rather than evidence when selecting and designing counter-campaigns.
+- Most interventions lack a theoretical underpinning;
+- Hardly any intervention of this type addresses motivated reasoning;
+- Effectiveness research mainly concerns the US and adults;
+- Limited knowledge exists about the longevity of effects.
 """
 
 # =============================================================================
 # MODULE 30 – Two perceptions of honesty (Lewandowsky) (11 screens)
+# Exact text from https://saufex.eu/insights/30-Specialist-module-Two-perceptions-of-honesty-Lewandowsky/
 # =============================================================================
-MODULE_30_CONTENT = r"""## Opening Question
+MODULE_30_CONTENT = """## Opening question
 
 Why do many voters still see politicians as honest, even when they spread lies?
 
-This specialist module, drawing on the research of Stephan Lewandowsky and colleagues, examines two competing frameworks for understanding political honesty in democratic discourse.
+## Accuracy
 
-## Accuracy-Based Honesty
+In a liberal democracy, the preferred conception of honesty is that of accuracy. Honesty means that a relationship exists between what a person says and what is happening in the world. An honest person's opinions and beliefs are shaped by the external data and facts they take in.
 
-The preferred conception of honesty within liberal democracies defines honesty as correspondence between statements and reality.
+## Benefits of accuracy
 
-Honest people's opinions and beliefs are shaped by the external data and facts they take in. Under this model, a statement is honest when it accurately reflects verifiable reality.
+Honest people debate by reasoning informed by evidence. This makes politics transparent (because we can see the data that informs what politicians say), accountable, and leads to informed decision-making. Thus, a shared understanding of reality exists, which leads to social cohesion.
 
-## Benefits of the Accuracy Model
+## Fact-speaking
 
-Evidence-based debate produces transparent, accountable political discourse. This enables:
+Communication based on the 'accuracy' version of honesty is called 'fact-speaking'.
 
-- **Informed decision-making** based on shared facts
-- **Shared understanding of reality** across different groups
-- **Social cohesion** through common ground
+It is seen by some as elitist, exclusive, oppressive, and wrong. Opponents of privileging fact-speaking find value in a different form of honesty called 'belief-speaking'.
 
-When politicians and citizens operate under the accuracy model, political disputes can be settled by reference to evidence rather than assertion.
+## Belief-speaking
 
-## Fact-Speaking
+Belief-speakers value a strong relation between what a person says and does. For them, authenticity and sincerity are the main ingredients of honesty. Accuracy in terms of data is less important. It's speaking one's mind that counts.
 
-Communication based on the "accuracy" version of honesty is called **fact-speaking**.
+## Foundation of belief-speaking
 
-However, critics characterize this approach as "elitist, exclusive, oppressive, and wrong." This criticism introduces the alternative model: **belief-speaking**.
+In this view, it is not facts but experiences that are the basis of reasoning. Feelings, instincts, personal values, one's gut, common sense, and intuition are seen as honest. Honest people are vitally important for speaking about currents that are not seen in the available data, exploring social challenges, and solving them.
 
-## Belief-Speaking
+## Balancing both
 
-Belief-speaking prioritizes a strong relation between what a person says and does. Authenticity and sincerity matter more than factual accuracy.
+A productive democratic discourse needs both fact-speaking and belief-speaking. While belief-speaking ensures that debates feel relevant for many, fact-speaking provides data and evidence to settle political disputes and come to agreements.
 
-Under this model, **it's speaking one's mind that counts**. A politician who says what they genuinely think — even if factually incorrect — is perceived as more honest than one who cites accurate statistics but seems calculating or insincere.
+## Historical trend
 
-## Foundation of Belief-Speaking
+During the last decades fact-speaking is in decline among politicians while belief-speaking is on the rise, together with populism. The way the general public speaks has followed this trend, influenced by elites and politicians.
 
-Rather than facts, experiences are the basis of reasoning in the belief-speaking model.
+## Problems with belief-speaking dominance
 
-Feelings, instincts, personal values, one's gut, common sense, and intuition are seen as honest sources of knowledge. This model privileges lived experience and emotional truth over empirical evidence.
+Because of its focus on individual truths, belief-speaking increasingly detaches politics from the observable reality, and individuals from each other. Proponents of belief-speaking suppress reasoned and informed discourse and aim to divert, distract, and deflect rather than to persuade.
 
-## Balancing Both Approaches
+## Democratic consequences
 
-Both approaches serve necessary functions in a healthy democracy:
+The increase in belief-speaking is accompanied by democratic backsliding as a result of democratic norm violations by political elites. It opens the door for ignoring democratic traditions, power grabbing, and spreading misleading claims and false information, especially about political opponents.
 
-- **Belief-speaking** ensures that political discourse remains relevant to people's lived experiences and concerns
-- **Fact-speaking** provides data and evidence to settle political disputes and come to agreements
+Belief-speaking is why many voters still see politicians as honest, even when they spread lies. In this mode of thinking it is not about accuracy, it is about authenticity and sincerity. It is about speaking one's mind, especially by wronged outsiders against corrupted institutions of power.
 
-A functioning democracy requires both: the emotional engagement of belief-speaking and the grounding in reality of fact-speaking.
+## Literature
 
-## Historical Trend
-
-During the last decades, fact-speaking has been in decline among politicians while belief-speaking is on the rise, together with populism.
-
-Public communication mirrors this elite-driven shift. As political leaders increasingly adopt belief-speaking as their primary mode of communication, the broader public discourse follows.
-
-## Problems with Belief-Speaking Dominance
-
-When belief-speaking dominates, it increasingly detaches politics from observable reality, and individuals from each other.
-
-Proponents of belief-speaking emphasize diversion rather than persuasion. Rather than convincing opponents through evidence, the goal becomes rallying supporters through emotional authenticity and shared identity.
-
-## Democratic Consequences
-
-Rising belief-speaking correlates with democratic backsliding as a result of democratic norm violations by political elites.
-
-This trend enables power grabbing and spreading misleading claims under the guise of authenticity. Politicians who present themselves as "telling it like it is" can violate democratic norms while maintaining an image of honesty.
-
-## Answer to the Opening Question
-
-**Belief-speaking is why many voters still see politicians as honest, even when they spread lies.**
-
-Voters evaluate authenticity rather than accuracy. Politicians who position themselves as wronged outsiders against corrupted institutions are perceived as honest because they appear to speak from genuine conviction — regardless of whether their claims are factually accurate.
-
-### References
-
-- Areyohun et al. (2024) — Computational analysis of Congressional speeches
-- Carrella et al. (2023) — Truth contagion effects in US political debate
-- Huttunen & Lewandowsky (2024) — Evolution of truth in political discourse
-- Lasser et al. (2023) — Alternative conceptions of honesty among US politicians
-- Lewandowsky (2021) — Willful construction of ignorance
-- Lewandowsky (2024) — When liars are considered honest
+- Areyohun, S. et al. (2024) Computational analysis of US Congressional speeches reveals a shift from evidence to intuition.
+- Carrella, F. et al. (2023, December 3). The 'Truth Contagion' Effect in the US Political Online Debate.
+- Huttunen, K. J. A., & Lewandowsky, S. (2024, October 7). The evolution of truth in political discourse from fact to feeling and its implications for democracy.
+- Lasser, J. et al. (2023) From alternative conceptions of honesty to alternative facts in communications by US politicians. Nat Hum Behav 7, 2140\u20132151 (2023).
+- Lewandowsky, S. (2021) Willful Construction of Ignorance: A Tale of Two Ontologies. Deliberate ignorance, chapter 7.
+- Lewandowsky, S. (2024) When liars are considered honest. Trends in Cognitive Sciences, Volume 28, Issue 5, 383\u2013385.
 """
 
 # =============================================================================
-# MODULE 29 – Countering information incidents (screens)
+# MODULE 29 – Countering information incidents (9 screens)
+# Exact text from https://saufex.eu/insights/29-Module-Countering-information-incidents/
 # =============================================================================
-MODULE_29_CONTENT = r"""## Overview
+MODULE_29_CONTENT = """## Introduction
 
-Effective counteraction means providing credible, pro-liberal democracy information alternatives to mis- and disinformation. This module focuses on the first level: dealing with individual information incidents.
+Countering mis and disinformation is about protecting liberal democracy \u2014 defending both the autonomy and agency of individuals, as well as the institutions and processes that support these.
 
-The goal is defending liberal democracy by protecting individual autonomy, institutional integrity, and democratic processes.
+Effective counteraction involves offering credible, pro-liberal democracy information alternatives to mis and disinformation and/or incapacitating mis and disinformation, across the six levels outlined in the learning path 'Anatomy of mis and disinformation'.
 
-## Fact-Checking: Definition
+## Fact-checking
 
-**Fact-checking** is the use of an evidence-based method to verify the accuracy of claims made in the public sphere (European Fact-Checking Standards Network / EFCSN).
+One method to protect liberal democracy is by disproving incorrect anti-liberal democratic claims using fact-checking which is defined as: "the use of an evidence-based method to verify the accuracy of claims made in the public sphere" (European Fact-Checking Standards Network/ EFCSN).
 
-It represents the foundational tool for countering individual false claims at the information incident level.
+## Information incident level - dealing with statements (level 1)
 
-## The Fact-Checking Process
+Fact-checking on an information incident level means addressing individual, verifiable mis and disinformation statements that legitimize and empower anti-liberal democratic confirmation biases. It consists of the following steps: identifying, source checking, contextual analysis, comparing with existing knowledge, and logical evaluation.
 
-At the information incident level, fact-checking targets individual, verifiable false claims that reinforce anti-democratic biases. The process involves five sequential steps:
+## Standards for fact-checkers
 
-- **Identification** — selecting claims worthy of verification
-- **Source verification** — tracing claims to their origin
-- **Contextual examination** — understanding the circumstances surrounding the claim
-- **Comparison against existing knowledge** — checking against established facts
-- **Logical assessment** — evaluating internal consistency and reasoning
+To be successful fact-checkers need to:
 
-## Standards for Fact-Checkers
+- Be transparent about their methods;
+- Provide multiple sources underlying their conclusions so that others can replicate them;
+- Have someone other than the author edit the fact check;
+- And finally, "[p]resent findings in precise, factual and non-emotive language, while taking care not to overstate conclusions" (EFCSN).
 
-Four essential practices are required for credible fact-checking:
+## Support mechanisms
 
-- Demonstrate **transparency regarding methodology** — explain how conclusions are reached
-- Provide **multiple source materials** enabling verification by others
-- Require **editorial review** independent of the original author
-- Present conclusions using **precise, factual and non-emotive language**, while taking care not to overstate conclusions
+Fact-checking contends with confirmation biases and could thus benefit from added support. Authority figures can offer this, though their influence might be limited to certain groups. Social proof may also be effective: when 'people like you' support the conclusion, dissent may seem to carry a social cost.
 
-These standards ensure that fact-checking itself remains accountable and trustworthy.
+## Asymmetric challenge
 
-## Support Mechanisms
+Fact-checking faces an asymmetric challenge: it is time-consuming and costly while generating false or misleading claims is quick and inexpensive. In the age of synthetic content, it's impossible for fact-checkers to verify everything.
 
-Two approaches strengthen fact-checking effectiveness:
+## Other setbacks
 
-**Authority endorsement:** Authority figures can reinforce fact-checking conclusions, though their influence may remain limited to specific audiences who already trust them.
+Fact-checking suffers from other setbacks: it's reactive, meaning it often cannot fully counteract the initial impact, and it often fails to reach the intended target groups. In addition, it does not effectively address more complex and value-based disinformation campaigns.
 
-**Social validation:** Peer endorsement of corrections can make dissent from established facts socially costly. When a critical mass of people accept a correction, continuing to spread the original false claim becomes reputationally risky.
+## Criticism
 
-## Challenge: Asymmetric Effort
+Inspired by President Trump and Elon Musk, interventions such as fact-checking are heavily criticized as politically motivated and equalling censorship. According to the critics, fact-checking interferes with the democratic process of letting free speech play out freely with all of its underlying messy feelings, instincts, personal values, gut notions, common sense, and intuitions.
 
-A fundamental challenge in fact-checking is the asymmetric effort burden.
+## Conclusion
 
-False claim creation requires minimal time and expense — a single social media post can reach millions. Verification, however, demands substantial resources: research time, expert consultation, evidence gathering, and careful editorial processes.
-
-This asymmetry means fact-checkers can never keep pace with the volume of false claims produced.
-
-## Challenge: Reactive Nature
-
-Fact-checking typically responds after initial misinformation has already spread, which limits damage mitigation.
-
-By the time a fact-check is published, the original false claim may have been seen, shared, and internalized by a large audience. The correction must then compete with the established false narrative — and research shows that initial impressions are difficult to fully override.
-
-## Challenge: Limited Reach and Scope
-
-Two additional limitations constrain fact-checking effectiveness:
-
-**Limited reach:** Fact-checks frequently fail to connect with target populations. Those most susceptible to a false claim may never encounter the correction, or may dismiss it as biased.
-
-**Scope limitations:** The approach inadequately addresses elaborate, values-based disinformation campaigns. Fact-checking works best on discrete, verifiable claims — but many disinformation efforts operate through broader narratives, emotional appeals, and identity-based messaging that cannot be simply "fact-checked."
-
-## Contemporary Criticism
-
-Inspired by Trump and Musk, critics characterize fact-checking interventions as politically biased and censorious.
-
-They argue such efforts undermine democratic discourse by constraining free expression — which, in their view, includes emotional responses, instincts, personal convictions, and common sense reasoning. This criticism connects to the broader debate about fact-speaking versus belief-speaking.
-
-## Concluding Perspective
-
-Fact-checking functions either as a reserved moral obligation for high-priority cases, or as one element within comprehensive counter-disinformation strategies.
-
-Practitioners must remain vigilant against perceptions of bias or democratic interference. The most effective approach combines fact-checking with other interventions — strategic communication, media literacy, and community resilience — rather than relying on it as a standalone solution.
+In conclusion, fact-checking either serves as a moral duty, reserved for priority cases that justify the use of resources, or could function as part of a broader strategy that addresses challenges more comprehensively but it should avoid appearing biased or interfering with freedom of speech.
 """
 
 # =============================================================================
-# MODULE 91 – Learning path: Demand side (many screens for 4 sub-modules)
+# MODULE 91 – Learning path: Demand side
+# Exact text from https://saufex.eu/insights/91-Learning-path-Demand-side/
 # =============================================================================
-MODULE_91_CONTENT = r"""## Overview
+MODULE_91_CONTENT = """## Module: Outrageous beliefs
 
-This learning path examines how outrageous beliefs form, persist, and can be countered across six interconnected levels of analysis.
+People are capable of having outrageous beliefs which may seem like madness to us but are completely normal to them. There are four major types of outrageous beliefs.
 
-It consists of four modules:
+Not all outrageous beliefs constitute misinformation; only one type of outrageous belief constitutes disinformation.
 
-- **Module 1:** Outrageous Beliefs — Four types of beliefs, only one of which is disinformation
-- **Module 2:** How Beliefs Form — Six levels of belief formation
-- **Module 3:** Sustaining Beliefs — How beliefs persist at each level
-- **Module 4:** Countering Beliefs — Interventions at each level
+## Type 1
 
-## Module 1: Outrageous Beliefs
+"The Industrial Revolution and its consequences have been a disaster for the human race. /\u2026/ There is no way of reforming or modifying the system." Meet Ted Kaczynski, better known as the Unabomber: math professor turned domestic terrorist.
 
-People hold beliefs that seem irrational to observers but feel entirely normal to believers. Four major belief types exist, with only one constituting disinformation.
+Kaczynski's belief represents outrageous belief type one: an individual belief that is 'intuitive': it motivates behavior.
 
-Understanding these distinctions is essential: different types of beliefs require fundamentally different responses.
+Not all intuitive outrageous beliefs are destructive. Some of the finest scientists were motivated by it.
 
-## Type 1: Individual Intuitive Belief
+## Type 2
 
-**Example: Ted Kaczynski (the Unabomber)**
+"Everyone associated with [Comet Ping Pong] is making /\u2026/ inferences towards sex with minors." A now-deleted Reddit message started a conspiracy theory, 'pizza gate', claiming high-ranking US Democrats were pedophiles working from a pizza parlor, Comet Ping Pong.
 
-*"The Industrial Revolution and its consequences have been a disaster for the human race... There is no way of reforming or modifying the system."*
+Edgar Maddison Welch drove to the pizza parlor and fired three shots. Welch represents outrageous belief type two: an external, intuitive belief. Welch's commented: "I just wanted to do some good and went about it the wrong way."
 
-This is an individual belief that motivates behavior. Not all such beliefs are destructive — some inspire scientific achievement and social progress. The belief is generated internally through personal reasoning and experience.
+## Type 3
 
-## Type 2: External Intuitive Belief
+While Welch and others acted on their belief in 'pizza gate', many did not. They continued their lives as if nothing disturbing was happening even though they believed the conspiracy theory to be true.
 
-**Example: "Pizzagate" conspiracy theory**
+The thousands are examples of outrageous belief type three: an external belief that is reflective. This outrageous belief type has little or no consequences for a person's behavior.
 
-*"Everyone associated with [Comet Ping Pong] is making... inferences towards sex with minors."*
+The distinction between 'intuitive' and 'reflective' beliefs stems from the writings of Dan Sperber.
 
-This belief originated from a Reddit message claiming US Democrats were pedophiles operating from a pizza parlor. It had real consequences: Edgar Maddison Welch fired shots at the establishment. Welch later commented: *"I just wanted to do some good and went about it the wrong way."*
+## Type 4
 
-This is an external belief — originating from outside the individual — that motivates action.
+"I've been saying the last few months, get ready for big mass shootings, and then magically, it happens." Meet Alex Jones who claimed that a mass shooting at the Sandy Hook Elementary School, in which 26 people were killed, was "completely fake with actors" and that no one actually died.
 
-## Type 3: External Reflective Belief
+Jones represents outrageous belief type four, disinformation: a false belief as a means to a goal, in Jones's case financial gain.
 
-**Example: Believers in "Pizzagate" who took no action**
+Jones at some point admitted that he believed the Sandy Hook shooting did occur.
 
-Thousands maintained this belief passively, without it motivating any consequential behavior. This type draws on Dan Sperber's distinction between intuitive and reflective beliefs.
+## Module: How beliefs form
 
-External reflective beliefs are held intellectually but do not drive behavior in the way that intuitive beliefs do.
+Our beliefs are shaped on an individual level by our life experiences and on a social level by the groups that we are members of.
 
-## Type 4: Disinformation (False Instrumental Belief)
+## Level 1 \u2013 Information incidents
 
-**Example: Alex Jones and Sandy Hook shooting claims**
+"For brains, everything is noise at first." Science journalist David McRaney summarizes how beliefs form. Surrounded by noise, our brains, mostly unconsciously, start recognizing causal patterns. This recognition involves formulating and testing causal predictions.
 
-Jones claimed the shooting was "completely fake with actors" and that "no one actually died." In reality, 26 people were killed. Jones's goal was financial gain through audience engagement. He later admitted the shooting occurred.
+## Level 2 \u2013 Information campaigns
 
-**This is the only outrageous belief type that constitutes disinformation.** The distinguishing feature is that the spreader knows the claim is false and uses it instrumentally for personal gain.
+Based on our experiences, we construct broader beliefs about how things work. Out of noise, we create a predictable order. Since everybody experiences different life situations, everyone's beliefs are different. This is hard for us to understand because our beliefs feel normal.
 
-## Module 2: How Beliefs Form
+## Level 3 \u2013 Rationality
 
-Beliefs develop through six levels. Individual experiences and social group membership shape them at every stage.
+"[Brain] modules /\u2026/ can simultaneously hold different, mutually contradictory views". According to evolutionary psychologist Robert Kurzban the brain consists of multiple modules, each with a different function and often working independently. The modules can have different views and even keep information from each other.
 
-## Level 1: Information Incidents
+The modularity of our brain causes our beliefs to be inconsistent. This inconsistency brings the risk of being seen as hypocrites and cast out of society.
 
-The brain recognizes causal patterns from noise.
+## Level 4 \u2013 Meta-cognition
 
-Journalist David McRaney explains: *"For brains, everything is noise at first."* Our unconscious minds recognize causal patterns, formulating and testing predictions about how the world works. This is the most basic level of belief formation — the brain extracting signal from noise.
+"Our brains are /\u2026/ relentless and compelling improvisers, creating the mind, moment by moment." Behavioral scientist Nick Chater rejects the idea of us having an inner world with beliefs. He writes: "We generate our beliefs /\u2026/ in-the-moment."
 
-## Level 2: Information Campaigns
+Chater doesn't think that our beliefs are created out of nothing. Our past experiences constitute the starting point but only to be creatively reinterpreted. In effect, Chater tells us that we continually reinvent ourselves.
 
-Broader belief systems emerge from accumulated experiences.
+## Level 5 \u2013 Prophylactics
 
-Everyone experiences different situations, which leads to different beliefs. Our own beliefs feel normal to us, making it difficult to understand others' perspectives. At this level, the brain creates a predictable order from the accumulated noise of many information incidents.
+"[P]eople are surprisingly ignorant, more ignorant than they think." Cognitive scientists Steven Sloman and Philip Fernbach claim that our brains are too limited to create justified beliefs about our complicated, dynamic surroundings. We fill the gaps with other people's beliefs.
 
-## Level 3: Rationality
+We don't know how ignorant we are, because we don't notice how heavily our beliefs depend on others. Since other people's beliefs and our beliefs reinforce each other we unjustly think there must be a firm basis for our beliefs.
 
-Brain modularity creates inconsistency.
+## Level 6 \u2013 (De-)radicalisation
 
-Evolutionary psychologist Robert Kurzban explains: *"[Brain] modules... can simultaneously hold different, mutually contradictory views."* The brain contains multiple modules with different functions that often work independently and maintain separate views. This inconsistency threatens social standing through the risk of ostracism.
+"[T]he groups people belong to are often fundamental to their /\u2026/ understanding of who they are" According to psychologists Jay Van Bavel and Dominic Packer, we are members of multiple groups. To a different degree, every group triggers a particular social identity in us with accompanying beliefs.
 
-## Level 4: Meta-cognition
+When activated, each social identity has a profound effect on us. Each social identity co-shapes our perception and interpretation of the world.
 
-Beliefs are generated moment-by-moment through improvisation.
+## Module: Sustaining beliefs
 
-Behavioral scientist Nick Chater argues: *"Our brains are... relentless and compelling improvisers, creating the mind, moment by moment."* Chater rejects the idea of an inner world with pre-formed beliefs. Instead, *"we generate our beliefs... in-the-moment."* Past experiences inform but are creatively reinterpreted, leading to continuous self-reinvention.
+This module builds on the six levels introduced in the module: How beliefs form.
 
-## Level 5: Prophylactics
+## Sustaining \u2013 Level 1: Information incidents
 
-Our beliefs are interdependent with others' beliefs.
+Our identities are threatened when our causal predictions fail. So, we protect them: when new information confirms our predictions, we accept it without opposition; when it disproves our beliefs, we resist. This is our first bias sustaining our beliefs: confirmation bias.
 
-Cognitive scientists Steven Sloman and Philip Fernbach observe: *"[P]eople are surprisingly ignorant, more ignorant than they think."* Our brains are too limited for justified beliefs about complex dynamics, so we adopt others' beliefs to fill knowledge gaps. We do not recognize our belief dependence on others, and this creates a reinforcement cycle where our beliefs and others' beliefs continuously strengthen each other.
+## Sustaining \u2013 Level 2: Information campaigns
 
-## Level 6: (De-)radicalisation
+Our beliefs follow our experiences, so they seem normal and unbiased. Other people's beliefs are different and therefore seem abnormal and biased. This is sustaining bias two \u2013 na\u00efve realism: thinking that our beliefs are objective and other people's beliefs are subjective.
 
-Group membership shapes identity and beliefs.
+## Sustaining \u2013 Level 3: Rationality
 
-Psychologists Jay Van Bavel and Dominic Packer write: *"[T]he groups people belong to are often fundamental to their... understanding of who they are."* We hold multiple group memberships, and each group triggers a distinct social identity. Each identity profoundly influences perception and how we interpret the world.
+In order to avoid being ostracised, we need to convince others that our beliefs are consistent. This requirement holds our public beliefs to a large degree hostage. Fortunately, we need only be as consistent as others notice and hold us accountable for.
 
-## Module 3: Sustaining Beliefs
+The requirement to appear consistent means that those spreading legal disinformation must appear to believe in it. As long as their hypocrisy holds, they enjoy legal protection as they exercise their right to freedom of expression.
 
-This module examines how beliefs persist at each of the six levels. Understanding sustainability mechanisms is essential for designing effective counter-interventions.
+## Sustaining \u2013 Level 4: Meta-cognition
 
-## Sustaining at Level 1: Confirmation Bias
+Although the task of our improvising mind is to make our thoughts and behavior seem as coherent as possible to others, we sometimes are caught being incoherent. In those cases, our improvisation turns into confabulation to defend the status quo.
 
-Failed causal predictions threaten identities. The response is to accept confirming information and resist disproving information.
+According to Chater all our explanations of how the world works and justifications for our acts are confabulations. Although they are generated on the spot, we are convinced that they reflect our deep beliefs.
 
-This is **confirmation bias** — the tendency to sustain existing beliefs and identities by selectively processing information that supports what we already believe.
+## Sustaining \u2013 Level 5: Prophylactics
 
-## Sustaining at Level 2: Naive Realism
+Often our peer groups consist of people with similar experiences and beliefs, although any reason, no matter how superficial, suffices to feel like a group member. Still, even in less coherent groups, the beliefs of our peers are heavily intertwined with our individual beliefs.
 
-We perceive our own beliefs as normal and unbiased (because they are rooted in our experience), while perceiving others' beliefs as abnormal and biased.
+Changing beliefs is thus often not an individual but a social matter. Discarding our beliefs would mean forsaking our communities and going against those we trust and love.
 
-This is the **naive realism bias**: thinking our beliefs are objective while others' are subjective. It makes us resistant to considering that our own perspective may be limited or wrong.
+## Sustaining \u2013 Level 6: (De-)radicalisation
 
-## Sustaining at Level 3: Consistency Pressure
+We prefer our in-group peers and beliefs. But we are not automatically against out-group people and beliefs. This changes when relations between groups polarise. In that situation, we start thinking that 'we' are inherently good and 'they' are inherently bad.
 
-We need to appear consistent to avoid ostracism. Our public beliefs are held hostage by consistency requirements — though we only need to be as consistent as others notice and hold us accountable.
+Polarisation can turn beliefs into sacred truths that cannot be abandoned or compromised. In-group members become bound to conformity. Radicalisation is fueled by grandstanding: peers using moral talk for self-promotion.
 
-A legal consequence: disinformation spreaders must appear to believe their false claims. As long as this hypocrisy holds, they enjoy legal protection under free expression rights.
+## Module: Countering beliefs
 
-## Sustaining at Level 4: Confabulation
+This module builds on the six levels introduced in the modules: How beliefs form and Sustaining beliefs.
 
-Our task is to make our thoughts and behavior seem coherent to others. When we are caught being incoherent, improvisation turns into **confabulation**.
+## Countering \u2013 Level 1: Information incidents
 
-According to Chater, all our explanations of world dynamics and act justifications are confabulations — generated on-the-spot yet feeling like deep, considered beliefs.
+We need to showcase scientific evidence to provide objective, testable information that can undermine confirmation biases. Scientific evidence confronts the limitations of our mental shortcuts, allowing us to revise or abandon flawed patterns and beliefs.
 
-## Sustaining at Level 5: Peer Group Interdependence
+## Countering \u2013 Level 2: Information campaigns
 
-Our peer groups consist of people with similar experiences and beliefs (though superficial reasons may suffice for group membership). Peer beliefs are heavily intertwined with our individual beliefs.
+The introduction of authoritative narratives along with the blocking of false narratives, encourages us to reassess our beliefs. These interventions challenge the reinforcement of naive realism by disrupting the flow of information that confirms our biases.
 
-Critically, **belief change is social, not individual**. Discarding beliefs means forsaking communities and betraying trusted loved ones — a cost that deters change even when evidence warrants it.
+## Countering \u2013 Level 3: Rationality
 
-## Sustaining at Level 6: Polarisation and Sacred Truths
+We need to engage in logical and critical thinking, particularly by using Kahneman's System 2 (deliberative thinking). While moving beyond intuitive, automatic responses (System 1) we scrutinize our beliefs more carefully and may uncover contradictions between the beliefs of our semi-autonomous brain modules.
 
-We prefer in-group peers and beliefs but are not automatically opposed to out-group people and beliefs. However, **polarisation** changes this: it triggers a shift where "we" are seen as inherently good and "they" as inherently bad.
+We can also be taught how to analyse, evaluate, and interpret the information we encounter by using System 2. We can learn to identify misinformation, evaluate perspectives, question assumptions, analyse arguments, and self-reflect.
 
-This creates **sacred truths** that cannot be abandoned or compromised. In-group members are bound to conformity, fueled by grandstanding — peers using moral talk for self-promotion.
+## Countering \u2013 Level 4: Meta-cognition
 
-## Module 4: Countering Beliefs
+We need to reflect on our thinking to understand how we arrived at a conclusion and whether our reasoning is sound \u2013 use the so-called 'technique rebuttal'. By thinking about our thinking we may identify when our brain's improvisations actually were confabulations.
 
-This module presents interventions at each of the six levels, building on the formation and sustaining mechanisms described above.
+## Countering \u2013 Level 5: Prophylactics
 
-## Countering at Level 1: Scientific Evidence
+'Belonging' is just one of our basic needs. Other basic needs are 'autonomy', 'achievement', and 'safety'. We need to satisfy all our basic needs to become more resilient.
 
-**Intervention:** Provide objective, testable information to undermine confirmation biases.
+More resilience means we feel more secure about ourselves. It helps us separate our identity from what we believe so that doubts about a belief need not lead to an identity crisis. It brings us the confidence and humility needed to rethink and unlearn.
 
-Scientific evidence confronts mental shortcut limitations, allowing individuals to revise or abandon flawed patterns and beliefs. The key is presenting evidence in ways that make it difficult to dismiss.
+## Countering \u2013 Level 6: (De-)radicalisation
 
-## Countering at Level 2: Authoritative Narratives
+Tensions can arise between our personal beliefs and the radicalised views of our group. If it's worth it, we might voice disagreement; if not, we may leave the group.
 
-**Intervention:** Introduce authoritative narratives and block false narratives.
+While a group can dominate our identity, leaving is possible because we belong to multiple groups, and we can choose to join less polarised ones. Having alternative groups makes it easier to distance ourselves from radicalising groups and their rigid, moralistic beliefs.
 
-This encourages reassessment of beliefs by challenging naive realism reinforcement and disrupting the flow of bias-confirming information. The goal is to replace false narratives with credible alternatives.
+## Learning path 'Demand side' summary
 
-## Countering at Level 3: Critical Thinking
+People are capable of having outrageous beliefs. There are four major types of outrageous beliefs: (1) individual intuitive; (2) external intuitive; (3) external reflective; (4) false instrumental \u2013 disinformation.
 
-**Intervention:** Develop logical and critical thinking using System 2 (deliberative thinking).
+Not all outrageous beliefs are misinformation. Only one type of outrageous belief (false instrumental) constitutes disinformation.
 
-Drawing on Kahneman's framework, the goal is to move beyond intuitive, automatic responses (System 1) and scrutinize beliefs carefully. This can uncover contradictions between semi-autonomous brain module beliefs.
+Forming, sustaining, and countering beliefs takes place on six levels: (1) information incidents; (2) information campaigns; (3) rationality; (4) meta-cognition; (5) prophylactics; (6) (de-)radicalisation.
 
-Key skills include learning to analyze, evaluate, and interpret encountered information — identifying misinformation, evaluating perspectives, questioning assumptions, analyzing arguments, and self-reflecting.
+## Summary \u2013 Level 1: Information incidents
 
-## Countering at Level 4: Technique Rebuttal
+After birth, our brain develops from perceiving noise to recognizing subjective causal patterns. This recognition involves formulating and testing causal predictions.
 
-**Intervention:** Practice reflective thinking — thinking about thinking.
+Confirmation bias helps us disregard unfavorable test results to maintain our existing beliefs about the patterns we think we perceive.
 
-The process involves reflecting on one's own reasoning to understand how conclusions were reached, and whether that reasoning was sound. This helps identify when the brain's improvisations were actually confabulations.
+Presenting evidence can challenge and weaken our confirmation bias.
 
-## Countering at Level 5: Satisfying Basic Needs
+## Summary \u2013 Level 2: Information campaigns
 
-**Intervention:** Satisfy all basic needs — belonging, autonomy, achievement, and safety.
+Our experiences fuel the patterns we perceive. The patterns gradually form broader belief systems.
 
-By satisfying needs beyond just belonging, individuals develop increased resilience. This resilience allows them to feel more secure, separate their identity from their beliefs, avoid identity crises when experiencing doubt, and gain the confidence and humility needed for rethinking and unlearning.
+As they are rooted in our experiences, we perceive our belief systems as 'normal' and 'objective' and those of others as 'abnormal' and 'subjective' \u2013 na\u00efve realism bias.
 
-## Countering at Level 6: Group Diversification
+Introducing authoritative beliefs in the form of narratives and suppressing conflicting ones can challenge and weaken our na\u00efve realism.
 
-**Intervention:** Encourage diverse group memberships.
+## Summary \u2013 Level 3: Rationality
 
-When personal beliefs diverge from a radicalized group's views, individuals can choose to voice disagreement (if the group is worth saving) or leave. Because they belong to multiple groups, leaving one is possible without total social isolation.
+The brain consists of semi-autonomous modules, resulting in potential inconsistencies within our belief systems.
 
-Alternative, less polarized groups ease distancing from radicalizing groups and rigid, moralistic beliefs.
+Inconsistencies pose a social risk, as they may lead to ostracism. To avoid this, we tend to claim consistency.
 
-## Summary: Four Types of Outrageous Beliefs
+Engaging in logical and critical thinking helps us improve the accuracy of our beliefs.
 
-- **Type 1:** Individual intuitive belief — internally generated, motivates behavior
-- **Type 2:** External intuitive belief — externally generated, motivates behavior
-- **Type 3:** External reflective belief — externally generated, minimal behavioral impact
-- **Type 4:** False instrumental belief (disinformation) — known to be false, used for personal gain
+Engaging in logical and critical thinking can reveal our internal contradictions, prompting us to reconsider and revise our beliefs.
 
-**Only Type 4 constitutes true disinformation.** The other types are misinformation or non-harmful beliefs.
+It also helps us to analyse, evaluate, and interpret the information we encounter.
 
-## Summary: The Six-Level Framework
+## Summary \u2013 Level 4: Meta-cognition
 
-The six levels of belief formation, sustainability, and countering:
+Based on our past experiences our brain improvises in the now to produce seemingly coherent beliefs.
 
-- **Level 1 — Information Incidents:** Formation through pattern recognition; sustained by confirmation bias; countered by scientific evidence
-- **Level 2 — Information Campaigns:** Formation through accumulated experience; sustained by naive realism; countered by authoritative narratives
-- **Level 3 — Rationality:** Formation through brain modularity; sustained by consistency pressure; countered by critical thinking
-- **Level 4 — Meta-cognition:** Formation through improvisation; sustained by confabulation; countered by technique rebuttal
-- **Level 5 — Prophylactics:** Formation through belief borrowing; sustained by peer interdependence; countered by satisfying basic needs
-- **Level 6 — (De-)radicalisation:** Formation through group identity; sustained by polarisation; countered by group diversification
+When others do catch an incoherence, our brain turns its improvisation into confabulation.
 
-## Selected Literature
+By reflecting on our thought processes, we can identify and correct these confabulations.
 
-- Chater, N. (2018). *The mind is flat. The illusion of mental depth and the improvised mind.* Allen Lane.
-- Kahneman, D. (2011). *Thinking, fast and slow.* Penguin Books.
-- Kurzban, R. (2010). *Why everyone (else) is a hypocrite. Evolution and the modular mind.* Princeton University Press.
-- McRaney, D. (2022). *How minds change. The surprising science of belief, opinion, and persuasion.* Portfolio Penguin.
-- Mercier, H. (2020). *Not born yesterday. The science of who we trust and what we believe.* Princeton University Press.
-- Sperber, D. (1997). *Intuitive and reflective beliefs.* Sperber.fr.
-- Van Bavel, J. & Packer, D. (2021). *The power of us. Harnessing our shared identities for personal and collective success.* Wildfire.
+## Summary \u2013 Level 5: Prophylactics
+
+We often fill gaps in our belief systems with beliefs borrowed from others.
+
+Since our beliefs are closely tied to those of our peer groups, changing them can come with significant social costs.
+
+By meeting our basic needs beyond the desire for belonging, we strengthen our resilience.
+
+Increased resilience helps us separate our sense of identity from our beliefs.
+
+Increased resilience gives us the confidence and humility to rethink and unlearn our beliefs.
+
+## Summary \u2013 Level 6: (De-)radicalisation
+
+We belong to multiple groups, each of which influences and shapes our beliefs.
+
+As groups become more polarised, they tend to demand greater conformity from their members.
+
+When a group radicalises and our personal beliefs diverge, we may choose to dissent or leave and seek out less rigid, less polarising alternatives.
+
+## Selected literature
+
+Chater, N. (2018) The mind is flat. The illusion of mental depth and the improvised mind. Allen Lane.
+
+Kahneman, D. (2011). Thinking, fast and slow. Penguin Books.
+
+Kurzban, R. (2010). Why everyone (else) is a hypocrite. Evolution and the modular mind. Princeton University Press.
+
+McRaney, D. (2022), How minds change. The surprising science of belief, opinion, and persuasion. Portfolio Penguin.
+
+Mercier, H. (2020). Not born yesterday. The science of Who we trust and What we believe. Princeton University Press.
+
+Sperber, D. (1997). Intuitive and reflective beliefs. Sperber.fr.
+
+Van Bavel, J. & Packer, D. (2021). The power of us. Harnessing our shared identities for personal and collective success. Wildfire.
 """
 
 
@@ -508,23 +440,15 @@ The six levels of belief formation, sustainability, and countering:
 UPDATES = {
     "32-Module-Countering-information-campaigns": {
         "content": MODULE_32_CONTENT.strip(),
-        "estimatedTime": "10 minutes",
-        "description": "Strategies for combating anti-liberal democratic narratives through incapacitating harmful myths and promoting positive counter-narratives. Covers StratCom, debunking, information operations, crowdsourced verification, content labeling, content moderation, strategic silence, legal and economic measures, and local media support.",
     },
     "30-Specialist-module-Two-perceptions-of-honesty-Lewandowsky": {
         "content": MODULE_30_CONTENT.strip(),
-        "estimatedTime": "10 minutes",
-        "description": "Examining two competing frameworks for understanding political honesty in democratic discourse — accuracy-based fact-speaking versus authenticity-based belief-speaking — drawing on research by Stephan Lewandowsky and colleagues.",
     },
     "29-Module-Countering-information-incidents": {
         "content": MODULE_29_CONTENT.strip(),
-        "estimatedTime": "8 minutes",
-        "description": "How to protect liberal democracy by countering misinformation through evidence-based interventions, particularly fact-checking methodologies. Covers the five-step process, professional standards, support mechanisms, and challenges.",
     },
     "91-Learning-path-Demand-side": {
         "content": MODULE_91_CONTENT.strip(),
-        "estimatedTime": "20 minutes",
-        "description": "A comprehensive learning path examining how outrageous beliefs form, persist, and can be countered across six interconnected levels of analysis. Covers four modules: Outrageous Beliefs, How Beliefs Form, Sustaining Beliefs, and Countering Beliefs.",
     },
 }
 
@@ -534,7 +458,6 @@ for module in modules:
     if mid in UPDATES:
         for key, val in UPDATES[mid].items():
             module[key] = val
-        # Count sections
         sections = [l for l in module["content"].split('\n') if l.startswith('## ')]
         print(f"Updated {mid}: {len(sections)} sections, {len(module['content'])} chars")
         updated += 1
