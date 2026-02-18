@@ -32,7 +32,7 @@ export default function AboutPage() {
                   foreign information manipulation and interference (FIMI).
                 </p>
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  The platform offers <strong>64 modules</strong> across <strong>10 learning paths</strong>,
+                  The platform offers <strong>63 modules</strong> across <strong>10 learning paths</strong>,
                   covering topics from basic media literacy to advanced concepts like platform governance
                   and the economics of disinformation.
                 </p>

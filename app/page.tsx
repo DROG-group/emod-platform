@@ -439,7 +439,7 @@ export default function Home() {
         <div className="container text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">Ready to Start Learning?</h2>
           <p className="text-lg text-purple-100 mb-8 max-w-2xl mx-auto">
-            64 modules. 10 learning paths. Practical methods you can apply immediately.
+            63 modules. 10 learning paths. Practical methods you can apply immediately.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link href="/dashboard" className="btn bg-white text-purple hover:bg-gray-100 text-base px-6 py-3">

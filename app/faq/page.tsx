@@ -18,7 +18,7 @@ const FAQ_ITEMS: FAQItem[] = [
   },
   {
     question: "Is EMOD really free?",
-    answer: "Yes, EMOD is completely free. All 64 modules across 10 learning paths are accessible without any payment. The platform is funded through the SAUFEX consortium as a public good to strengthen democratic resilience.",
+    answer: "Yes, EMOD is completely free. All 63 modules across 10 learning paths are accessible without any payment. The platform is funded through the SAUFEX consortium as a public good to strengthen democratic resilience.",
     category: "About EMOD",
   },
   {

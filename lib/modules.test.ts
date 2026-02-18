@@ -20,7 +20,7 @@ describe('modules-data.json', () => {
   })
 
   it('has expected number of modules', () => {
-    expect(modules.length).toBe(66)
+    expect(modules.length).toBe(63)
   })
 
   describe('each module', () => {

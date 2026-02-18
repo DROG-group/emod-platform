@@ -82,7 +82,7 @@ export default function HandbookPage() {
                 <div className="prose prose-gray max-w-none">
                   <p className="text-gray-700 leading-relaxed mb-4">
                     EMOD (European Master of Countering Disinformation) is a free e-learning
-                    platform developed by the SAUFEX consortium. It provides <strong>64 modules</strong> across{" "}
+                    platform developed by the SAUFEX consortium. It provides <strong>63 modules</strong> across{" "}
                     <strong>10 learning paths</strong>, covering identification, analysis, and response
                     to foreign information manipulation and interference (FIMI).
                   </p>
@@ -484,7 +484,7 @@ export default function HandbookPage() {
                         </tr>
                         <tr>
                           <td className="py-3 px-4 text-gray-700">Complete Programme</td>
-                          <td className="py-3 px-4 text-gray-600">64 modules</td>
+                          <td className="py-3 px-4 text-gray-600">63 modules</td>
                           <td className="py-3 px-4 text-gray-600">10-12 hours</td>
                         </tr>
                       </tbody>
