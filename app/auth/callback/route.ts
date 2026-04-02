@@ -2,7 +2,7 @@ import { createClient } from '@/lib/supabase/server'
 import { NextResponse } from 'next/server'
 
 // Allowed redirect paths to prevent open redirect attacks
-const ALLOWED_REDIRECTS = ['/dashboard', '/modules', '/about', '/faq', '/glossary', '/handbook']
+const ALLOWED_REDIRECTS = ['/dashboard', '/modules', '/about', '/faq', '/glossary', '/handbook', '/reset-password']
 
 function isValidRedirect(path: string): boolean {
   // Must start with / and not contain protocol or double slashes
