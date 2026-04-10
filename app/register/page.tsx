@@ -47,7 +47,7 @@ export default function RegisterPage() {
     })
 
     if (error) {
-      setError(error.message)
+      setError(error.message || 'An error occurred. Please try again.')
       setLoading(false)
     } else {
       setSuccess(true)

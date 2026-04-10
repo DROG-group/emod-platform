@@ -29,7 +29,7 @@ export default function LoginPage() {
     const { error } = await signIn(email, password)
 
     if (error) {
-      setError(error.message)
+      setError(error.message || 'An error occurred. Please try again.')
       setLoading(false)
     } else {
       router.push('/dashboard')
