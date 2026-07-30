@@ -19,8 +19,10 @@ describe('modules-data.json', () => {
     expect(modules.length).toBeGreaterThan(0)
   })
 
-  it('has expected number of modules', () => {
-    expect(modules.length).toBe(63)
+  it('has a reasonable number of modules', () => {
+    // Sanity bound — catches catastrophic loss without breaking on every content add.
+    expect(modules.length).toBeGreaterThanOrEqual(50)
+    expect(modules.length).toBeLessThan(200)
   })
 
   describe('each module', () => {
