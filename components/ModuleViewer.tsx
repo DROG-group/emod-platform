@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useCallback, useEffect, useRef } from "react";
-import DOMPurify from "isomorphic-dompurify";
+import DOMPurify from "dompurify";
 import { useAuth } from "@/contexts/AuthContext";
 import { useProgress } from "@/hooks/useProgress";
 import { useQuizProgress } from "@/hooks/useQuizProgress";
@@ -58,7 +58,11 @@ function parseMarkdown(text: string): string {
     .replace(/^(?!<[huol]|<li|<p|<strong|<div)(.+)$/gm, '<p class="mb-4 text-gray-700 leading-relaxed">$1</p>')
     .replace(/<p class="mb-4 text-gray-700 leading-relaxed"><\/p>/g, '');
 
-  // Sanitize output as defense-in-depth
+  // Input was escaped before adding the fixed markup above. Browser-side
+  // sanitization remains a defense-in-depth layer without bundling jsdom into
+  // the server prerender output.
+  if (typeof window === "undefined") return html;
+
   return DOMPurify.sanitize(html, {
     ALLOWED_TAGS: ['p', 'h3', 'ul', 'li', 'strong', 'em', 'div', 'img'],
     ALLOWED_ATTR: ['class', 'src', 'alt'],
